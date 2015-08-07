@@ -48,6 +48,20 @@ Base
 *    user zoom.
 */
 
+/*** Font definitions ***/
+@font-face {
+    font-family: theMixBlack;
+    src: url(fonts/themix/TheMixBlack-Plain.otf);
+}
+@font-face {
+    font-family: theMixBold;
+    src: url(fonts/themix/TheMixBold-Plain.otf);
+}
+@font-face {
+    font-family: theMix;
+    src: url(fonts/themix/TheMix-Plain.otf);
+}
+
 html {
     font-size: 100%; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -61,7 +75,7 @@ html {
 */
 html, button, input, select, textarea {
     font-family: sans-serif;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'theMix', sans-serif;
 }
 html, body {
     overflow-x: hidden;
@@ -73,7 +87,7 @@ html, body {
 */
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'theMix', sans-serif;
     min-height: 100%;
 }
 
@@ -518,7 +532,7 @@ Navigation
 .nav-toggle {
     position: absolute;
     top: 0;
-    right: 15px;
+    left: 0;
     z-index: 999999;
     padding: 10px 35px 16px 0px;
     cursor: pointer;
@@ -533,7 +547,7 @@ Navigation
     width: 35px;
     height: 5px;
     border-radius: 1px;
-    background: #fff;
+    background: #262325;
     cursor: pointer;
 }
 .nav-toggle span:before {
@@ -577,6 +591,23 @@ Navigation
 }
 
 /* ==========================================================================
+Header
+========================================================================== */
+header {
+    padding: 25px;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 1rem;
+    font-family: 'theMixBold', 'sans-serif';
+}
+
+header i {
+    margin-left: 5px
+}
+
+/* ==========================================================================
 Hero
 ========================================================================== */
 .hero {
@@ -603,9 +634,6 @@ Hero
 .hero {
     width: 100%;
     height:100vh;
-}
-header i {
-    margin-left: 5px
 }
 
 /* ==========================================================================
