@@ -78,7 +78,7 @@ html, button, input, select, textarea {
     font-family: 'theMix', sans-serif;
 }
 html, body {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;    
 }
 
@@ -450,12 +450,12 @@ Global Styles
     clear: both;
 }
 a {
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    -webkit-transition-duration: 300ms;
-    transition-duration: 300ms;
-    -webkit-transition-property: color, border-color, background-color;
-    transition-property: color, border-color, background-color;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-property: color, border-color, background-color, opacity;
+    transition-property: color, border-color, background-color, opacity;
 }
 .nopadding {
     margin: 0 !important;
@@ -463,22 +463,51 @@ a {
 }
 p {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 18px;
 }
 a {
-    color: #73d0da
+    color: #262325;
 }
-a:hover, a:focus {
-    color: #73d0da;
+a:hover {
+    opacity: 0.6;
+    color: #262325;
     text-decoration: none;
 }
+a:visited, a:focus{
+    color: #262325;
+}
 .texture-overlay {
-    position: absolute;
+    /*position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    background-image: url(../img/grid.png);
+    background-image: url(../img/grid.png);*/
+}
+
+.height100% {
+    height: 100%;
+}
+
+.width100%{
+    width:100%;
+}
+
+/* posicion */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+.abRight{
+    position:absolute; right:0;
+}
+.abBottom{
+    position:absolute; bottom:0;
 }
 
 /* ==========================================================================
@@ -520,6 +549,7 @@ Buttons
 .read-more-btn i, .download-btn i {
     margin-left: 5px
 }
+
 .showcase .download-btn {
     margin-top: 50px
 }
@@ -531,32 +561,41 @@ Buttons
 /** Structure **/
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1380px;
     margin: 0 auto;
     padding: 0 25px;
     position: relative;
 }
 
 .home-cta{
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 2%;
+    margin: 0 auto;
 }
 
 /* ==========================================================================
 Header
 ========================================================================== */
 header {
-    padding: 20px 0;
+    padding: 18px 0 0;
+    height: 70px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #848484;
+    margin-bottom: -68px;
+    background-color: white;
 }
 
 header h1 {
     display: inline-block;
     font-size: 1rem;
     font-family: 'theMixBold', 'sans-serif';
-    margin: 4px 0 0 110px;
+    margin: 4px 0 0 120px;
 }
 
-header h1 a{    
+header .logos a {
+    margin-left: 20px;
+}
+header a{    
     color: #262325;
 }
 
@@ -618,6 +657,7 @@ Navigation
 .navicon {
     position: relative;
     height: 26px;
+    margin-top: 5px;
 }
 .navicon p {
     margin: 1px 50px 0 0
@@ -629,395 +669,91 @@ Navigation
 }
 
 /* ==========================================================================
-Hero
+Hero slide
 ========================================================================== */
 .hero {
     position: relative;
-    padding: 60px 0 60px 0;    
+    padding: 0;    
     /*min-height: 800px;
     background: rgb(40, 70, 102) url('../img/hero-01.jpg') no-repeat center center;
     background-size: cover;*/
-    color: #fff;
+    color: #262325;
+    width: 100%;
+    height:100vh;
+    /*max-width: 1380px;*/
+    z-index: -1;
 }
+
+.hero .wrapper {
+    padding: 0;
+}
+
 .hero h1 {
     margin: 50px 0 0;
     font-weight: 300;
     font-size: 45px;
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    font-size: 4.3em;
+    font-family: theMixBold;
+    font-weight: bold;
 }
+
 .hero h1 span {
-    display: inline-block;
-    color: #a1a9b0;
+    display: block;
 }
-#home {
+
+.slideme{
     width: 100%;
     height: 100%;
 }
-.hero {
-    width: 100%;
-    height:100vh;
-}
 
-/* ==========================================================================
-Video
-========================================================================== */
-section.video i {
-    margin-right: 10px;
-    color: #323a45;
-    vertical-align: middle;
-    font-size: 50px;
-    -webkit-transition: color 300ms ease-in-out;
-    transition: color 300ms ease-in-out;
-}
-section.video h1 {
-    font-weight: 400;
-    font-size: 20px;
-}
-section.video {
-    padding: 60px 0;
-    background-color: #f6f7f9;
-}
-section.video a {
-    color: #323a45
-}
-section.video a:hover, section.video a:focus {
-    color: #73d0da;
-    text-decoration: none;
-}
-section.video a:hover i, section.video a:focus i {
-    color: #73d0da
-}
-
-/* ==========================================================================
-Custom Slider Controls (Flickity)
-========================================================================== */
-.flickity-page-dots .dot {
-    width: 13px;
-    height: 13px;
-    opacity: 1;
-    background: transparent;
-    border: 2px solid white;
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
-}
-.flickity-page-dots .dot.is-selected {
-    background: white;
-}
-
-/* ==========================================================================
-Features Slider
-========================================================================== */
-.features-bg {
-    position: relative;
-    min-height: 400px;
-    background: url('../img/features-intro-01.jpg') no-repeat center center;
-    background-size: cover;
-}
-.features-img {
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    line-height: 400px;
-}
-.features-slider {
-    position: relative;
-    padding: 11% 100px 10% 100px;
-    height: 400px;
-    background-color: #3F6184;
-}
-.features-slider ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.features-slider ul li {
-    width: 100%;
-}
-.features-slider li h1 {
-    margin-bottom: 15px;
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-}
-.features-slider li p {
-    color: #fff;
-    font-size: 14px;
-}
-.features-intro-img {
-    position: relative
-}
-.slides li h1 {
-    margin: 0;
-    padding: 0;
-}
-.features-slider .flickity-page-dots {
-    text-align: left;
-    margin-top: 50px;
-    position: static;
-}
-.features-slider .flickity-page-dots .dot {
-    margin: 0 12px 0 0;
-}
-
-/* ==========================================================================
-Features List
-========================================================================== */
-.features-list {
-    padding: 130px 0
-}
-.features-list h1 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    color: #24374b;
-    font-size: 20px;
-}
-.features-list p {
-    margin-bottom: 20px;
-    color: #778899;
-}
-.feature-content {
-    display: inline-block;
-    margin-left: 0;
-    width: 65%;
-}
-.feature-icon {
-    display: inline-block;
-    margin-right: 25px;
-    width: 90px;
-    height: 90px;
-    border: solid 2px #4e9ba3;
-    border-radius: 50%;
-    vertical-align: top;
-    text-align: center;
-    font-size: 25px;
-    line-height: 90px;
-}
-.feature-icon i {
-    color: #4e9ba3
-}
-
-/* ==========================================================================
-Blockquote
-========================================================================== */
-blockquote {
-    margin: 40px 0 0;
-    padding: 0;
-    border: none;
-}
-blockquote p {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 70%;
-    vertical-align: top;
-    font-style: italic;
-}
-blockquote .avatar {
-    display: inline-block;
-    margin-right: 20px;
-    width: 64px;
-    height: 64px;
-    vertical-align: middle;
-}
-blockquote .logo-quote {
-    display: inline-block;
-    margin: 0 0 0 90px;
-}
-
-/* ==========================================================================
-Showcase
-========================================================================== */
-.showcase {
-    background: url('../img/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-.showcase h1 {
-    margin: 0 0 20px 0;
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-}
-.showcase p {
-    margin-bottom: 25px;
-    color: #fff;
-}
-.device {
-    position: absolute;
-    top: -60px;
-    left: 20%;
-    min-height: 676px;
-    width: 359px;
-    background: url('../img/iphone-skeleton.png') no-repeat center center;
-}
-.device-content {
-    position: absolute;
-    top: 115px;
-    left: 56px;
-    width: 247px;
-    height: 445px;
-    background: rgba(0, 0, 0, 0.3);
-}
-.device-content img {
-    width: 247px;
-    height: 445px;
-}
-.showcase-wrap {
-    position: relative;
-    padding: 100px 0;
-    min-height: 600px;
-}
-.showcase-slider ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.showcase-slider .flickity-page-dots {
-    bottom: 20px;
-}
-
-/* ==========================================================================
-Screenshots Intro
-========================================================================== */
-.screenshots-intro {
-    padding: 170px 0 100px 0;
-    background-color: #f6f7f9;
-}
-.screenshots-intro h1 {
-    margin-bottom: 20px;
-    color: #24374b;
-    font-weight: 400;
-    font-size: 22px;
-}
-.screenshots-intro p {
-    margin-bottom: 25px;
-    color: #778899;
-}
-
-/* ==========================================================================
-Screenshots
-========================================================================== */
-.screenshots ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-.screenshots ul li {
-    float: left;
-    min-height: 100%;
-    width: 25%;
-    background-color: #000;
-    list-style: none;
-}
-.screenshots figure {
-    position: relative;
-    overflow: hidden;
-}
-.screenshots figure img {
-    width: 100%;
+.slideme .wrapper{
     height: 100%;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.screenshots figure:hover img, .screenshots figure:focus img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}
-.screenshots figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 25% 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(63, 97, 132, 0.85);
-    text-align: center;
-    font-size: 15px;
-    opacity: 0;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.screenshots figcaption a {
-    color: #fff
-}
-.screenshots figcaption a:hover, .screenshots figcaption a:focus {
-    color: #73d0da
-}
-.screenshots figure:hover figcaption, .screenshots figure:focus figcaption {
-    opacity: 1
-}
-.visible {
-    opacity: 1
-}
-.screenshots figure.cs-hover figcaption {
-    opacity: 1
-}
-.screenshots figcaption i {
-    font-size: 35px
-}
-.screenshots figcaption p {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-.screenshots figcaption .caption-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -40px;
-    margin-left: -100px;
-    width: 200px;
-    -webkit-transform: translate(0px, 15px);
-    -ms-transform: translate(0px, 15px);
-    transform: translate(0px, 15px);
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.screenshots figure:hover figcaption .caption-content, .screenshots figure:focus figcaption .caption-content {
-    -webkit-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
 }
 
-/* ==========================================================================
-Download Now
-========================================================================== */
-.download {
-    padding: 120px 0;
-    background-color: #3f6184;
-}
-.download h1 {
-    margin: 0 0 15px 0;
-    color: #fff;
-    font-weight: 400;
-    font-size: 40px;
+.slideme li{
+    padding-top: 68px;
+    box-sizing: border-box;
 }
 
-/* ==========================================================================
-Footer
-========================================================================== */
-footer {
-    padding: 100px 0
+.slideme img {
 }
-footer p {
-    color: #c7cacc;
-    font-size: 12px;
+
+.hero .paucke {
+    background-color: black;
 }
-footer ul {
-    margin-top: 30px
+.hero .siglos {
+    background-color: white;
 }
-footer li {
-    float: left;
-    margin-right: 15%;
-    list-style: none;
-    text-transform: uppercase;
-    font-weight: 400;
+.hero .signos {
+    background-color: white;
 }
-footer li a {
-    color: #3f6184
+
+.hero .paucke h1 {
+    color: white;
 }
-footer li:last-child {
-    margin-right: 0
+.hero .siglos h1 {
+    font-size: 3.5em;
 }
+
+.hero .paucke span, .hero .siglos span {
+    color: #fe8000;
+}
+.hero .siglos h1 span{
+    font-size: 1.2em;
+}
+.hero .signos span{
+    color: #00acaa;
+}
+
+.hero .paucke img{
+   /* max-width: 600px;
+    width: 43%;
+    min-width:*/
+}
+
 
 /* ==========================================================================
 Nav Overlay
@@ -1087,6 +823,7 @@ Nav Overlay
 .overlay-boxify {
     visibility: hidden;
     opacity: 0;
+    z-index: 10000;
     -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
     transition: opacity 0.5s, visibility 0s 0.5s;
 }
@@ -1125,20 +862,3 @@ Nav Overlay
     transform: translate3d(0, 0, 0);
 }
 
-/* ==========================================================================
-Waypoints
-========================================================================== */
-.wp1, .wp2, .wp3, .wp4, .wp5, .wp6 {
-    visibility: hidden
-}
-.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .bounceInDown {
-    visibility: visible
-}
-.delay-05s {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-}
-.delay-1s {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}

@@ -17,10 +17,8 @@
         <script src="js/modernizr.custom.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/jquery.fancybox.css" rel="stylesheet">
-        <link href="css/flickity.css" rel="stylesheet" >
-        <link href="css/animate.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/vegas.min.css">
+        <link rel="stylesheet" href="css/slideme.css">
         <link href="css/styles.css" rel="stylesheet">
         <link href="css/queries.css" rel="stylesheet">
 
@@ -44,38 +42,51 @@
                         <a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
                         <h1><a href="index.html" alt='Inicio'>Signos santafesinos</a></h1>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                        <a href="#"><img src="img/logo-white.png" alt="Boxify Logo"></a>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-right logos">
+                        <a href="#"><img src="img/espaciosantafesino.gif" alt="Espacio santafesino"></a>
+                        <a href="#"><img src="img/gobiernosantafe.gif" alt="Gobierno de Santa Fe"></a>
                     </div>                
                 </div>
             </div>
         </header>
 
-        <section class="hero">  
-            <div class="texture-overlay"></div>
-
-            <div class="wrapper">
-                <div class="row hero-content">
-                    <div class="col-md-12">
-                        <h1 class="animated fadeInDown">An Exclusive, Premium HTML5 &amp; CSS3 Template by Peter Finlan, for Codrops.</h1>                        
+        <section class="hero">
+            <ul class="slideme">
+                <li class="paucke">
+                    <div class="wrapper height100%">
+                        <img class=" abRight" src="img/bkg/home-bckg-paucke.jpg"/>
+                        <h1><span>Florian Paucke</span> Hacia allá y para acá</h1>                        
                     </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <div class="row home-cta btns">
-                    <div class="col-md-4">
-                        <a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Use it for free</a> 
+                </li>
+                <li class="siglos">
+                    <div class="wrapper height100%">
+                        <img class="abBottom width100%" src="img/bkg/home-bckg-siglos.jpg"/>
+                        <h1><span>Santa Fe entre dos siglos</span> Fotografías 1860/1910</h1>                        
                     </div>
-                    <div class="col-md-4">
-                        <a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Use it for free</a> 
+                </li>
+                <li class="signos">
+                    <div class="wrapper height100%">
+                        <img class="abRight"src="img/bkg/home-bckg-signos.jpg"/>
+                        <h1><span>Signos santafesinos</span> en el bicentenario</h1>                        
                     </div>
-                    <div class="col-md-4">
-                        <a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Use it for free</a> 
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
+
+        <div class="wrapper">
+            <div class="row home-cta btns">
+                <div class="col-md-4">
+                    <a href="#" class="use-btn animated fadeInUp paucke-btn" data-section="paucke">Florian Paucke <span>Hacia acá y para allá</span></a> 
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="use-btn animated fadeInUp siglos-btn" data-section="siglos">Santa Fe entre dos siglos <span>Fotografías 1860/1910</span></a> 
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="use-btn animated fadeInUp signos-btn" data-section="signos">Signos santafesinos <span>en el bicentenario</span></a> 
+                </div>
+            </div>
+        </div>
+
         
         <!--<section class="video" id="about">
             <div class="container">
@@ -374,13 +385,11 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/min/toucheffects-min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/flickity.pkgd.min.js"></script>
         <script src="js/jquery.fancybox.pack.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/retina.js"></script>
-        <script src="js/waypoints.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/vegas.min.js"></script>
+        <script src="js/jquery.slideme2.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
