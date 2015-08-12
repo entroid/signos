@@ -519,21 +519,41 @@ Buttons
     display: inline-block;
     margin: 0;
     padding: 10px 35px;
-    border-radius: 3px;
+    border-radius: 5px;
     /*color: #4b98a9;*/
     font-size: 18px;
     height: 75px;
     box-sizing: border-box;
     width: 100%;
     color: white;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    position: relative;
+    overflow:hidden;
 }
 .use-btn:hover, .use-btn:focus, .use-btn:visited {
-    background-color: #73d0da;
-    color: #fff;
     text-decoration: none;
+    color: white;
+    margin-top: -5px;
 }
 
-.use-btn span{
+/*.use-btn .overf{
+    width:100px;
+    height:100%;
+    background-color:white;
+    position: absolute;
+    top: 0;
+    left:-100%;
+    opacity:0.3;
+    border-radius: 3px;
+    -webkit-transition: all 100ms ease;
+    transition: all 100ms ease;
+}
+.use-btn:hover .overf{
+    left: 100%;
+}*/
+
+.use-btn .bajada{
     display: block;
 }
 
@@ -542,85 +562,70 @@ Buttons
     position: absolute;
     right: 45px;
     top: 27px;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    opacity:0.4;
 }
-
-.use-btn:hover i{
-
-}
-
-.learn-btn, .download-btn {
-    display: inline-block;
-    padding: 18px 46px;
-    border: 2px solid #fff;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 16px;
-}
-.learn-btn:hover, .download-btn:hover, .learn-btn:focus, .download-btn:focus {
-    border-color: #73d0da;
-    color: #73d0da;
-    text-decoration: none;
-}
-.read-more-btn {
-    display: inline-block;
-    color: #323a45;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-.read-more-btn i, .download-btn i {
-    margin-left: 5px
-}
-
-.showcase .download-btn {
-    margin-top: 50px
-}
-.download .download-btn {
-    margin-top: 25px
+.use-btn:hover i {
+    margin-right:-5px;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari */
+    transform: scale(1.1);
+    opacity:1;
 }
 
 .paucke-btn {
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJiMjgyOSIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzE2MTUxNiIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -moz-linear-gradient(top, rgba(43,40,41,0.8) 0%, rgba(22,21,22,0.8) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,40,41,0.8)), color-stop(100%,rgba(22,21,22,0.8)));
-    background: -webkit-linear-gradient(top, rgba(43,40,41,0.8) 0%,rgba(22,21,22,0.8) 100%);
-    background: -o-linear-gradient(top, rgba(43,40,41,0.8) 0%,rgba(22,21,22,0.8) 100%);
-    background: -ms-linear-gradient(top, rgba(43,40,41,0.8) 0%,rgba(22,21,22,0.8) 100%);
-    background: linear-gradient(to bottom, rgba(43,40,41,0.8) 0%,rgba(22,21,22,0.8) 100%);
+    background: -moz-linear-gradient(top, rgba(43,40,41,0.7) 0%, rgba(22,21,22,0.7) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,40,41,0.7)), color-stop(100%,rgba(22,21,22,0.7)));
+    background: -webkit-linear-gradient(top, rgba(43,40,41,0.7) 0%,rgba(22,21,22,0.7) 100%);
+    background: -o-linear-gradient(top, rgba(43,40,41,0.7) 0%,rgba(22,21,22,0.7) 100%);
+    background: -ms-linear-gradient(top, rgba(43,40,41,0.7) 0%,rgba(22,21,22,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(43,40,41,0.7) 0%,rgba(22,21,22,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc2b2829', endColorstr='#cc161516',GradientType=0 );
+
+    
 }
 .paucke-btn:hover {
     opacity: 1;
     background-color: #2B2829;
+    border: 1px solid #2B2829;
 }
 
 .siglos-btn {
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlN2IwOSIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NjNjgxMiIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -moz-linear-gradient(top, rgba(254,123,9,0.8) 0%, rgba(204,104,18,0.8) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,123,9,0.8)), color-stop(100%,rgba(204,104,18,0.8)));
-    background: -webkit-linear-gradient(top, rgba(254,123,9,0.8) 0%,rgba(204,104,18,0.8) 100%);
-    background: -o-linear-gradient(top, rgba(254,123,9,0.8) 0%,rgba(204,104,18,0.8) 100%);
-    background: -ms-linear-gradient(top, rgba(254,123,9,0.8) 0%,rgba(204,104,18,0.8) 100%);
-    background: linear-gradient(to bottom, rgba(254,123,9,0.8) 0%,rgba(204,104,18,0.8) 100%);
+    background: -moz-linear-gradient(top, rgba(254,123,9,0.7) 0%, rgba(204,104,18,0.7) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,123,9,0.7)), color-stop(100%,rgba(204,104,18,0.8)));
+    background: -webkit-linear-gradient(top, rgba(254,123,9,0.7) 0%,rgba(204,104,18,0.7) 100%);
+    background: -o-linear-gradient(top, rgba(254,123,9,0.7) 0%,rgba(204,104,18,0.7) 100%);
+    background: -ms-linear-gradient(top, rgba(254,123,9,0.7) 0%,rgba(204,104,18,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(254,123,9,0.7) 0%,rgba(204,104,18,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccfe7b09', endColorstr='#cccc6812',GradientType=0 );
+
+    
 }
 .siglos-btn:hover {
     opacity: 1;
     background-color: #fe8000;
+    border: 1px solid #fe8000;
 }
 
 .signos-btn {
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYWNhYSIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwN2Y3ZCIgc3RvcC1vcGFjaXR5PSIwLjgiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-    background: -moz-linear-gradient(top, rgba(0,172,170,0.8) 0%, rgba(0,127,125,0.8) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,172,170,0.8)), color-stop(100%,rgba(0,127,125,0.8)));
-    background: -webkit-linear-gradient(top, rgba(0,172,170,0.8) 0%,rgba(0,127,125,0.8) 100%);
-    background: -o-linear-gradient(top, rgba(0,172,170,0.8) 0%,rgba(0,127,125,0.8) 100%);
-    background: -ms-linear-gradient(top, rgba(0,172,170,0.8) 0%,rgba(0,127,125,0.8) 100%);
-    background: linear-gradient(to bottom, rgba(0,172,170,0.8) 0%,rgba(0,127,125,0.8) 100%);
+    background: -moz-linear-gradient(top, rgba(0,172,170,0.7) 0%, rgba(0,127,125,0.7) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,172,170,0.7)), color-stop(100%,rgba(0,127,125,0.7)));
+    background: -webkit-linear-gradient(top, rgba(0,172,170,0.7) 0%,rgba(0,127,125,0.7) 100%);
+    background: -o-linear-gradient(top, rgba(0,172,170,0.7) 0%,rgba(0,127,125,0.7) 100%);
+    background: -ms-linear-gradient(top, rgba(0,172,170,0.7) 0%,rgba(0,127,125,0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0,172,170,0.7) 0%,rgba(0,127,125,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc00acaa', endColorstr='#cc007f7d',GradientType=0 );
+
+    
 }
 .signos-btn:hover {
     opacity: 1;
     background-color: #00ACAA;
+    border: 1px solid #00ACAA;
 }
 
 .siglos-btn{
@@ -768,10 +773,16 @@ Hero slide
     font-size: 45px;
     position: absolute;
     top: 40px;
-    left: 140px;
+    left:-100%;    
     font-size: 3.8em;
     font-family: theMixBold;
     font-weight: bold;
+    -webkit-transition: left 200ms ease-in-out;
+    transition: left 200ms ease-in-out;
+}
+
+.hero h1.txtAnimacion{
+    left: 140px;
 }
 
 .hero h1 span {
@@ -826,6 +837,10 @@ Hero slide
    padding-top: 190px;
 }
 
+.pagination{
+    display:none;
+}
+
 
 /* ==========================================================================
 Nav Overlay
@@ -839,12 +854,13 @@ Nav Overlay
     width: 100%;
     height: 100%;
     background: white;
-    padding: 45px;
+    padding: 45px 0;
 }
 
 /* Menu style */
 .overlay nav {
     margin-left: 120px;
+    padding-right:80px;
     /*position: absolute;
     top: 0px;
     left: 145px;
@@ -865,11 +881,15 @@ Nav Overlay
     /*display: block;
     float: left;
     margin-right: 20px;*/
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding-bottom:20px;
+    position:relative;
+    border-bottom: 1px solid #848484;
 }
 .overlay ul li:last-child {
     margin-right: 0px
 }
+
 .overlay ul li span {
     display: block;
 }
@@ -880,8 +900,9 @@ Nav Overlay
 }
 .overlay ul li a {
     /*text-transform: uppercase;*/
-    font-size: 1.1em;
+    font-size: 0.9em;
     color:#868686;
+    display:block;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
@@ -891,6 +912,23 @@ Nav Overlay
 .overlay ul li a:hover, .overlay ul li a:focus {
     color: #262325;
     opacity: 1;
+}
+
+.overlay ul li a:hover{
+    padding-left:5px;
+}
+
+.overlay ul li i{
+    opacity:0;
+    position:absolute;
+    top:5px;
+    left:-25px;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    font-size:0.9em;
+}
+.overlay ul li:hover i{
+    opacity:1;
 }
 
 
@@ -910,6 +948,7 @@ Nav Overlay
 }
 .overlay-boxify nav ul li, .overlay-boxify .txtInfo p{
     opacity: 0;
+    text-align: justify;
     -webkit-transform: translate3d(0, -80px, 0);
     transform: translate3d(0, -80px, 0);
     -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
@@ -938,7 +977,7 @@ Nav Overlay
 }
 
 .overlay .txtInfo {
-    padding-right: 100px;
+    padding-right: 105px;
 }
 
 .overlay-boxify.open .txtInfo p {    

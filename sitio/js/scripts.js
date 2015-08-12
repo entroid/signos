@@ -13,11 +13,11 @@
     return false;
 });*/
 var hideTxt = function () {
-    $('.slideme li h1').fadeOut();
+    $('.slideme li h1').fadeOut().toggleClass('txtAnimacion');
 }
 
 var txtEffect = function () {
-    $('.slideme li h1').fadeIn();
+    $('.slideme li h1').toggleClass('txtAnimacion').fadeIn();
 }
 
 var btnHover = function (btnSection) {
@@ -95,17 +95,17 @@ function init () {
     $('.hero').slideme({
         pagination: "numbers",
         autoslide : true,
-        interval : 4000,
+        interval : 6000,
         loop : true,
         onCreatedCallback : startSlide, //init slide
         onEndCallback : txtEffect, //end animaton
         onStartCallback : hideTxt, //before start animation
-        speed : 200,        
+        speed : 10,        
         /*resizable: {
             width: 990,
             height: 450,
         }*/
-        transition : 'fade' // Values: 'fade/slide/page/zoom'
+        transition : 'slide' // Values: 'fade/slide/page/zoom'
     });
 
 } 
