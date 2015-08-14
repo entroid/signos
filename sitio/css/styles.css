@@ -860,7 +860,8 @@ Nav Overlay
 /* Menu style */
 .overlay nav {
     margin-left: 120px;
-    padding-right:80px;
+    margin-right: 60px;
+    border-right: 1px solid #848484;
     /*position: absolute;
     top: 0px;
     left: 145px;
@@ -883,8 +884,7 @@ Nav Overlay
     margin-right: 20px;*/
     margin-bottom: 20px;
     padding-bottom:20px;
-    position:relative;
-    border-bottom: 1px solid #848484;
+    position:relative;    
 }
 .overlay ul li:last-child {
     margin-right: 0px
