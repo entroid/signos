@@ -1,17 +1,4 @@
-/***************** Fancybox ******************/
-/*$(".youtube-media").on("click", function(e) {
-    var jWindow = $(window).width();
-    if (jWindow <= 768) {
-        return;
-    }
-    $.fancybox({
-        href: this.href,
-        padding: 4,
-        type: "iframe",
-        'href': this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-    });
-    return false;
-});*/
+
 var hideTxt = function () {
     $('.slideme li h1').fadeOut().toggleClass('txtAnimacion');
 }
@@ -40,56 +27,18 @@ var startSlide = function () {
     var btns = $('.home-cta .use-btn');
 
     $(btns).mouseenter(function() {
-        console.log('enter')
         var btnSection = $(this).attr('data-section');
         btnHover(btnSection);
     })
 
     $(btns).mouseleave(function() {
-        console.log('out')
         $('.hero').slideme('play');
     })
 }
 
-function init () {
 
-/***************** Flickity ******************/
-    /*$('#featuresSlider').flickity({
-        cellAlign: 'left',
-        contain: true,
-        prevNextButtons: false
-    });
-
-    $('#showcaseSlider').flickity({
-        cellAlign: 'left',
-        contain: true,
-        prevNextButtons: false,
-        imagesLoaded: true
-    });*/
-
-
-/***************** Fancybox Init ******************/
-    /*$("a.single_image").fancybox({
-        padding: 4,
-    });*/
-
-
-/***************** Vegas (background slide) ******************/
-    /*$(".hero").vegas({
-        delay: 7000,
-        transition: 'flash',
-        transitionDuration: 2000,
-        cover: true,
-        slides: [
-            { src: "img/bkg/home-bckg-paucke.jpg" },
-            { src: "img/bkg/home-bckg-siglos.jpg" },
-            { src: "img/bkg/home-bckg-signos.jpg" }
-        ],
-
-        pause: function (index, slideSettings) {
-            // body...
-        }
-    })*/
+var init = function () {
+    loadUrl();
 
 /***************** Slide me (background slide) ******************/
     $('.hero').slideme({
