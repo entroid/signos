@@ -15,6 +15,7 @@
 
         <!-- Bootstrap -->
         <script src="js/modernizr.custom.js"></script>
+
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/jquery.fancybox.css" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,6 +29,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <script data-main="js/application/bootstrap" src="js/libs/require/require.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -50,47 +53,7 @@
             </div>
         </header>
 
-        <div class="contenido">
-
-            <section class="hero">
-                <ul class="slideme">
-                    <li class="paucke">
-                        <div class="wrapper height100prcnt">
-                            <img class=" abRight" src="img/bkg/home-bckg-paucke.jpg"/>
-                            <h1 class="txtAnimacion"><span>Florian Paucke</span> Hacia allá y para acá</h1>                        
-                        </div>
-                    </li>
-                    <li class="siglos">
-                        <div class="wrapper height100prcnt">
-                            <img class="width100prcnt" src="img/bkg/home-bckg-siglos.jpg"/>
-                            <h1 class="txtAnimacion"><span>Santa Fe entre dos siglos</span> Fotografías 1860/1910</h1>                        
-                        </div>
-                    </li>
-                    <li class="signos">
-                        <div class="wrapper height100prcnt">
-                            <img class="abRight"src="img/bkg/home-bckg-signos.jpg"/>
-                            <h1 class="txtAnimacion"><span>Signos santafesinos</span> en el Bicentenario</h1>                        
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
-
-            <div class="wrapper">
-                <div class="row home-cta btns">
-                    <div class="col-md-4">
-                        <a href="#paucke.html" class="use-btn animated fadeInUp paucke-btn" data-section="paucke"><span class="overf"></span>Florian Paucke <span class="bajada">Hacia acá y para allá</span> <i class="fa fa-chevron-right"></i></a> 
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#" class="use-btn animated fadeInUp siglos-btn" data-section="siglos"><span class="overf"></span>Santa Fe entre dos siglos <span class="bajada">Fotografías 1860/1910</span> <i class="fa fa-chevron-right"></i></a> 
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#" class="use-btn animated fadeInUp signos-btn" data-section="signos"><span class="overf"></span>Signos santafesinos <span class="bajada">en el Bicentenario</span> <i class="fa fa-chevron-right"></i></a> 
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <div id="contenido"></div>
 
         <div class="overlay overlay-boxify"> 
             <div class="wrapper">
@@ -103,15 +66,15 @@
                                     <i class="fa fa-angle-double-right"></i>
                                 </li>
                                 <li>
-                                    <a href="paucke.html">Florian Paucke <span>Hacia allá y para acá</span></a>
+                                    <a href="#paucke">Florian Paucke <span>Hacia allá y para acá</span></a>
                                     <i class="fa fa-angle-double-right"></i>
                                 </li>
                                 <li>
-                                    <a href="siglos.html">Santa Fe entre dos siglos <span>Fotografías 1860/1910</span></a>
+                                    <a href="#siglos">Santa Fe entre dos siglos <span>Fotografías 1860/1910</span></a>
                                     <i class="fa fa-angle-double-right"></i>
                                 </li>
                                 <li>
-                                    <a href="#download">Signos santafesinos <span>en el Bicentenario</span></a>
+                                    <a href="#signos">Signos santafesinos <span>en el Bicentenario</span></a>
                                     <i class="fa fa-angle-double-right"></i>
                                 </li>
                             </ul>
@@ -133,14 +96,5 @@
             </div>
         </div>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/min/toucheffects-min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/retina.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.slideme2.js"></script>
-        <script src="js/scripts.js"></script>
     </body>
 </html>
