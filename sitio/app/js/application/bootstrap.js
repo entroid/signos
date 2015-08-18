@@ -6,7 +6,8 @@ require.config({
         bootstrap: '../libs/plugins/bootstrap.min',
         slideme: '../libs/plugins/jquery.slideme2',
         scripts: 'scripts',
-        lightslider: '../libs/plugins/lightslider.min'
+        lightslider: '../libs/plugins/lightslider.min',
+        fancybox: '../libs/plugins/jquery.fancybox.pack'
     },
     shim: {
         underscore: {
@@ -23,6 +24,9 @@ require.config({
             deps: ['slideme']
         },
         lightslider: {
+            deps: ['jquery']
+        },
+        fancybox: {
             deps: ['jquery']
         },
     }
