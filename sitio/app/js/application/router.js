@@ -26,9 +26,7 @@ define([
 				pauckeView.render();
 			},
 			libroAbrir: function(name) {
-				console.log(name)
 				if (name === "paucke") {
-					console.log('entraaaaa')
 		            pauckeView.render(); 
 
 		        } else if (name === "siglos") {

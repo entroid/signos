@@ -5,7 +5,8 @@ require.config({
         backbone: '../libs/backbone/backbone.min',
         bootstrap: '../libs/plugins/bootstrap.min',
         slideme: '../libs/plugins/jquery.slideme2',
-        scripts: 'scripts'
+        scripts: 'scripts',
+        lightslider: '../libs/plugins/lightslider.min'
     },
     shim: {
         underscore: {
@@ -20,6 +21,9 @@ require.config({
         },
         scripts: {
             deps: ['slideme']
+        },
+        lightslider: {
+            deps: ['jquery']
         },
     }
 });

@@ -502,6 +502,13 @@ a:visited, a:focus{
     float: right;
 }
 
+.hide{
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+
 
 .abRight{
     position:absolute; right:0;
@@ -510,11 +517,15 @@ a:visited, a:focus{
     position:absolute; bottom:0;
 }
 
+/* Estructura */
+#contenido{
+    padding-top: 68px;
+}
+
+
 /* ==========================================================================
 Buttons
 ========================================================================== */
-
-
 .use-btn {
     display: inline-block;
     margin: 0;
@@ -646,7 +657,7 @@ Buttons
 .home-cta{
     /*position: absolute;
     bottom: 2%;*/
-    margin: -100px auto 0;
+    margin: -170px auto 0;
     width: 100%;
 }
 
@@ -688,7 +699,7 @@ Navigation
 .nav-toggle {
     position: absolute;
     top: 0;
-    left: 20px;
+    left: auto;
     z-index: 999999;
     padding: 10px 35px 16px 0px;
     cursor: pointer;
@@ -800,7 +811,6 @@ Hero slide
 }
 
 .slideme li{
-    padding-top: 68px;
     box-sizing: border-box;
 }
 
@@ -992,4 +1002,19 @@ Nav Overlay
 }
 
 
+/***** Carrusel libros *****/
+#lightSlider{
+    /*width: 100%;
+    height: 100%;*/
+}
+
+#lightSlider li{
+    /*width: 100%;    */
+    width: 600px;
+}
+
+.sliderWrapper .lSAction > a {
+    background: none;
+    font-size: 2em;
+}
 
