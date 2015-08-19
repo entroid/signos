@@ -7,7 +7,8 @@ require.config({
         slideme: '../libs/plugins/jquery.slideme2',
         scripts: 'scripts',
         lightslider: '../libs/plugins/lightslider.min',
-        fancybox: '../libs/plugins/jquery.fancybox.pack'
+        fancybox: '../libs/plugins/jquery.fancybox.pack',
+        popup: '../libs/plugins/jquery.popupoverlay'
     },
     shim: {
         underscore: {
@@ -27,6 +28,9 @@ require.config({
             deps: ['jquery']
         },
         fancybox: {
+            deps: ['jquery']
+        },
+        popup: {
             deps: ['jquery']
         },
     }

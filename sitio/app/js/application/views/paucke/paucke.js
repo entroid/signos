@@ -3,15 +3,17 @@ define([
     'underscore',
     'backbone',
     'text!views/paucke/helpers/paucke.html',
-    'lightslider',
-    'fancybox'
+    'lightslider',/*
+    'fancybox',
+    */'popup'
 
-    ], function($, _, Backbone, pauckeTemplate, lightslider, fancybox) {
+    ], function($, _, Backbone, pauckeTemplate, lightslider/*, fancybox*/, popup) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
             events: {
-                'click #lightSlider li img': 'lightbox'
+                'click #lightSlider li img': 'lightbox',
+                'click #lightSlider .hoverTitle': 'hoverLightbox'
             },
 
             render: function() {
@@ -24,18 +26,34 @@ define([
 
             pluginsInit: function () {
                 $("#lightSlider").lightSlider({
-                    item: 1,
+                    item: 2,
                     loop:false,
                     /*autoWidth: true,*/
                     mode: 'slide',
                     easing: 'linear',
                     speed: '400',
-                    loop: true,
                     keyPress: true,
                     controls: true,
                     prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left"></i></span>',
                     nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
                 });
+
+                $('#popupContent').popup({
+                    opacity: 0.8,
+                    pagecontainer: '.contenido'
+                })
+            },
+
+            ajaxOverlay: function(url) {
+                $.ajax({
+                  url: url,
+                  dataType: 'html',
+                }).done(function(data) {
+                  /*$(".fancybox").fancybox();*/
+                    /*$.fancybox(data);*/
+                    var content = data + '<i class="popupContent_close fa fa-times-circle"></i>'
+                    $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
+                }); 
             },
 
             lightbox: function (e) {
@@ -43,14 +61,13 @@ define([
                 var target = e.target;
                 var url = $(target).attr('data-src');
 
-                $.ajax({
-                  url: url,
-                  dataType: 'html',
-                }).done(function(data) {
-                  /*$(".fancybox").fancybox();*/
-                    $.fancybox(data);
-                    $('.modalCOntent').removeClass('hide')
-                });               
+                this.ajaxOverlay(url);              
+            },
+
+            hoverLightbox: function(e) {
+                var target = e.target;
+                var url = $(target).siblings('img').attr('data-src');
+                this.ajaxOverlay(url);
             }
         });
         
