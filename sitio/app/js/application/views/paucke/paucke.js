@@ -4,12 +4,9 @@ define([
     'backbone',
     'text!views/paucke/helpers/paucke.html',
     'lightslider',
-    'text!views/paucke/helpers/modalContent.html',
-    'model/paucke/pauckeModel',
-    'fancybox',
-    /*'text!views/description/description',*/
+    'fancybox'
 
-    ], function($, _, Backbone, pauckeTemplate, lightslider, modalContent,pauckeModel, fancybox/*, DescView*/) {
+    ], function($, _, Backbone, pauckeTemplate, lightslider, fancybox) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -20,7 +17,6 @@ define([
             render: function() {
                 $(this.el).html(_.template(pauckeTemplate));
                /* _(this.lightsliderInit).defer();*/
-               $(this.el).append(_.template(modalContent));
                 _.defer(this.pluginsInit);
 
                 
@@ -54,7 +50,6 @@ define([
                   /*$(".fancybox").fancybox();*/
                     $.fancybox(data);
                     $('.modalCOntent').removeClass('hide')
-                    console.log(data)
                 });               
             }
         });
