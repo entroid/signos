@@ -39,7 +39,9 @@ define([
                 });
 
                 $('#popupContent').popup({
-                    opacity: 0.8,
+                    color: '#fff',
+                    opacity: 0.9,
+                    transition: 'all 0.3s',
                     pagecontainer: '.contenido'
                 })
             },
