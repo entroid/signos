@@ -32,7 +32,7 @@ define([
                     }, //init slide
                     onEndCallback : this.txtEffect, //end animaton
                     onStartCallback : this.hideTxt, //before start animation
-                    speed : 100,        
+                    speed : 400,        
                     transition : 'fade' // Values: 'fade/slide/page/zoom'
                 });
             /************** ** **************/
