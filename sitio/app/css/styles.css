@@ -445,6 +445,8 @@ table {
 /* ==========================================================================
 Global Styles
 ========================================================================== */
+
+
 .transitions-fast{
     -webkit-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
@@ -1027,7 +1029,9 @@ Nav Overlay
 
 /**** LIBROS ****/
 .books-cont{
-    margin-top:40px;
+    margin-top:30px;
+    border-bottom: 1px solid #848484;
+    padding-bottom:25px;
 }
 
 /***** Carrusel libros *****/
@@ -1039,7 +1043,9 @@ Nav Overlay
 #lightSlider{
     /*width: 100%;
     height: 100%;*/
-    max-height: 400px; /* ajustar para resoluciones */
+    /*max-height: 400px;*/ /* ajustar para resoluciones */
+    padding-bottom:20px;
+    box-sizing: unset;
 }
 
 #lightSlider li{
@@ -1072,31 +1078,44 @@ Nav Overlay
     width: auto;
 }
 
-#lightSlider .hoverContainer{position: relative;display: inline-block;height: 100%;}
-#lightSlider .hoverContainer .hoverTitle {position: absolute;top:0;left: 0; opacity:0; width: 100%; height: 100%;background-color: rgba(0,0,0,0.4);color: white;}
+#lightSlider .hoverContainer{position: relative;display: inline-block;height: 100%;border-radius: 4px;overflow:hidden;max-height: 400px;}
+#lightSlider li.img19{height:100%;}
+#lightSlider .img19 .hoverContainer{background-color: black;
+    height: 100%;
+    padding-top: 120px;
+}
+#lightSlider .img19 img{width:300px; padding: 0 30px;}
+
+#lightSlider .hoverContainer .hoverTitle {position: absolute;top:0;left: 0; opacity:0; width: 100%; height: 100%;background-color: rgba(0,0,0,0.4);color: white;border-radius: 4px;}
+#lightSlider .hoverContainer .hoverTitle .fullscreen-hover{width:30px; height:30px; display:block; margin:40% auto 0; background: url('../img/fullscreen-icon.png') no-repeat;}
+#lightSlider .ancho .hoverContainer .hoverTitle .fullscreen-hover{margin-top:25%;}
+
+#lightSlider .hoverContainer .hoverTitle h3 {font-weight:bold;padding: 0 30px;}
 #lightSlider .hoverContainer:hover .hoverTitle {opacity:1;}
 
 .sliderWrapper {
     overflow: hidden;
 }
 
-.sliderWrapper .lSSlideOuter .lSPager{
-    margin-bottom: 20px;
-    margin-top: 25px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
-}
-
 .sliderWrapper .lSAction{
-    bottom: -30px;
-    left: 50%;
+    bottom: -33px;
+    right: 0;
     margin-left: -230px;
     position: absolute;
-    width: 460px;
+    width: 100px;
 }
 
 .sliderWrapper .lSAction > a {
-    background: none;
+    background: #333 none repeat scroll 0 0;
+    color: white;
     font-size: 2em;
+    height: 36px;
+    padding: 0 5px;
+    width: 36px;
+    text-align: center;
+    border-radius: 2px;
 }
+
 
 .sliderWrapper .lSAction > .lSNext{
     right: 0;
@@ -1107,20 +1126,44 @@ Nav Overlay
 }
 
 /* pager */
+.sliderWrapper .lSSlideOuter .lSPager{
+    margin-bottom: 20px;
+    margin-top: 25px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
+    text-align:right;
+    padding-right:130px;
+    /*background-image: repeating-linear-gradient(45deg, gray 0px, gray 25px, transparent 25px, transparent 50px, gray 50px);*/
+}
 .lSSlideOuter .lSPager.lSpg > li a{
     background-color: #262325;
+    opacity:0.5;
+    text-indent:50000px;
 }
+.lSSlideOuter .lSPager.lSpg > li a:hover{opacity:1}
 .lSSlideOuter .lSPager.lSpg > li.active a, .lSSlideOuter .lSPager.lSpg > li:hover a{
     background-color: #fe8000;
+}
+
+
+/***** lightSlider2  *****/
+#lightSlider2{
+        padding:100px;
+        box-sizing: unset;
+        width:400px;
+}
+
+.cartas #lightSlider2 li{width: 390px;}
+
+.modalContent .cartas{
+    background-color:black;
 }
 
 /*** Libros nav ***/
 
 .navBook{}
 
-.navBook nav{width:200px; float: left;text-align:right;}
+.navBook nav{float: right; margin-right: 50px;text-align:right;}
 .navBook nav ul{margin: 0;}
-.navBook nav ul li {position:relative; margin-bottom:10px;}
+.navBook nav ul li {position:relative; margin-bottom:15px;}
 .navBook nav li a{font-size: 0.9em; font-style: italic; color: #777;line-height: 0.8rem;}
 .navBook nav li a:hover{color:#fe8000;}
 .navBook nav li a span{display:block;}
@@ -1147,4 +1190,57 @@ Nav Overlay
 }
 .popup_visible #popupContent {
   transform: scale(1);
+}
+
+/** MODAL CONTENT ZOOM **/
+.modalContent{padding: 20px;}
+.modalContent .content-1{background: white;padding: 30px 60px; border: 1px solid #eee;max-width: 1300px;}
+.modalContent h1{margin-top:0;}
+.modalContent .content-1 img{width: 98%;}
+.cartas .modalContent .content-1 img{width: 397px;}
+.cartas .sliderWrapper {max-width: 580px;}
+
+#popupContent_wrapper .popupContent_close{
+    position:absolute; 
+    top:12px; 
+    right:15px; 
+    font-size:2em;
+    cursor:pointer;     
+    -webkit-transition: color 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -moz-transition: color 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -o-transition: color 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    transition: color 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+}
+
+.cartaSlide{background-color:black;}
+.cartaSlide .popupContent_close{color:white;right: 20px;top: 17px;}
+
+blockquote {
+    font-style: italic;
+    margin-top: 35px;
+    font-size:1.1em;
+}
+.traduccion{
+    color:#fe8000;
+    margin-top: 30px;
+
+}
+.traduccion b{
+    color:#262325;
+}
+
+#txt{
+    background-color: white;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+    opacity:1;
+}
+
+#txt.afuera{
+    opacity:0;
+    height:1px;
 }

@@ -6,7 +6,7 @@ require.config({
         bootstrap: '../libs/plugins/bootstrap.min',
         slideme: '../libs/plugins/jquery.slideme2',
         scripts: 'scripts',
-        lightslider: '../libs/plugins/lightslider.min',
+        lightslider: '../libs/plugins/lightslider',
         fancybox: '../libs/plugins/jquery.fancybox.pack',
         popup: '../libs/plugins/jquery.popupoverlay'
     },

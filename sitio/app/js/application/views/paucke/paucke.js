@@ -3,9 +3,8 @@ define([
     'underscore',
     'backbone',
     'text!views/paucke/helpers/paucke.html',
-    'lightslider',/*
-    'fancybox',
-    */'popup'
+    'lightslider',
+    'popup',
 
     ], function($, _, Backbone, pauckeTemplate, lightslider/*, fancybox*/, popup) {
         var pauckeView = Backbone.View.extend({
@@ -13,7 +12,10 @@ define([
 
             events: {
                 'click #lightSlider li img': 'lightbox',
-                'click #lightSlider .hoverTitle': 'hoverLightbox'
+                'click #lightSlider .hoverTitle *': 'stopProp',
+                'click #lightSlider .hoverTitle': 'hoverLightbox',
+                'click .navBook nav a': 'openTxt',
+                'click .cerrar': 'cerrar'
             },
 
             render: function() {
@@ -25,7 +27,7 @@ define([
             },
 
             pluginsInit: function () {
-                $("#lightSlider").lightSlider({
+                var lightSlider = $("#lightSlider").lightSlider({
                     item: 2,
                     loop:false,
                     /*autoWidth: true,*/
@@ -42,8 +44,29 @@ define([
                     color: '#fff',
                     opacity: 0.9,
                     transition: 'all 0.3s',
-                    pagecontainer: '.contenido'
-                })
+                    pagecontainer: '#contenido',
+                    blur: true,
+                    onopen: function() {               
+                        if($('.cartas #lightSlider2').length){
+                            $('#popupContent').addClass('cartaSlide');
+                            var lightSlider2 = $("#lightSlider2").lightSlider({
+                                item: 1,
+                                mode: 'slide',
+                                easing: 'linear',
+                                speed: '400',
+                                keyPress: true,
+                                controls: true,
+                                prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left"></i></span>',
+                                nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
+                            });
+                        }
+                       
+                    },
+
+                    onclose: function() { 
+                        $('#popupContent').removeClass('cartaSlide');
+                    }
+                });
             },
 
             ajaxOverlay: function(url) {
@@ -60,6 +83,7 @@ define([
 
             lightbox: function (e) {
                 e.preventDefault();
+                e.stopPropagation();
                 var target = e.target;
                 var url = $(target).attr('data-src');
 
@@ -70,6 +94,33 @@ define([
                 var target = e.target;
                 var url = $(target).siblings('img').attr('data-src');
                 this.ajaxOverlay(url);
+            },
+            stopProp: function(e){
+                e.stopPropagation();
+            },
+
+            openTxt: function(e){
+                e.preventDefault();
+                var target = e.currentTarget,
+                    seccion = $(target).attr('data-seccion'),
+                    url = 'js/application/views/paucke/helpers/' + seccion + '.html',
+                    element;
+
+                    if(seccion == 'bioPaucke') {
+
+                    }    
+
+                    $.ajax({
+                      url: url,
+                      dataType: 'html',
+                    }).done(function(data) {
+                        $('#txt').html(data).removeClass('afuera');
+                    }); 
+
+            },
+
+            cerrar: function() {
+                $('#txt').addClass('afuera')
             }
         });
         
