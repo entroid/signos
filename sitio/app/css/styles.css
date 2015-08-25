@@ -132,6 +132,7 @@ Typography
 h1 {
     margin: 0.67em 0;
     font-size: 2em;
+    font-family: 'theMixBold', sans-serif;
 }
 h2 {
     margin: 0.83em 0;
@@ -452,6 +453,12 @@ Global Styles
     -moz-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     -o-transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
     transition: all 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+}
+.transitions-mid{
+    -webkit-transition: all 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -moz-transition: all 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    -o-transition: all 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+    transition: all 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
 }
 
 .menuArrow{
@@ -973,7 +980,7 @@ Nav Overlay
 .overlay-boxify {
     visibility: hidden;
     opacity: 0;
-    z-index: 10000;
+    z-index: 100001;
     -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
     transition: opacity 0.5s, visibility 0s 0.5s;
 }
@@ -1046,11 +1053,12 @@ Nav Overlay
     /*max-height: 400px;*/ /* ajustar para resoluciones */
     padding-bottom:20px;
     box-sizing: unset;
+    min-height: 400px;
 }
 
 #lightSlider li{
-    height: 100%;
-    text-align: center;    
+    /*text-align: center;    */
+    cursor: pointer;
 }
 /*#lightSlider li img{
     max-height: 100%;
@@ -1066,19 +1074,26 @@ Nav Overlay
     width: auto;
 }*/
 /* Fijar o el alto, o el ancho en las imagenes para que agarre el hover */
-#lightSlider li.ancho{
+/*#lightSlider li.ancho{
     height: auto;
+}*/
+#lightSlider li.ancho .hoverContainer{
+    width: 400px;
 }
 #lightSlider li.ancho img{
-    width: 400px;
-    height: auto;
+    width: 100%;
+}
+#lightSlider li.alto .hoverContainer{
+    height: 400px;
 }
 #lightSlider li.alto img{
-    height: 400px;
-    width: auto;
+    height: 100%;
 }
 
-#lightSlider .hoverContainer{position: relative;display: inline-block;height: 100%;border-radius: 4px;overflow:hidden;max-height: 400px;}
+#lightSlider li img:hover{}
+
+
+#lightSlider .hoverContainer{position: relative;display: inline-block;height: 100%;border-radius: 2px;overflow:hidden;max-height: 400px;}
 #lightSlider li.img19{height:100%;}
 #lightSlider .img19 .hoverContainer{background-color: black;
     height: 100%;
@@ -1086,12 +1101,13 @@ Nav Overlay
 }
 #lightSlider .img19 img{width:300px; padding: 0 30px;}
 
-#lightSlider .hoverContainer .hoverTitle {position: absolute;top:0;left: 0; opacity:0; width: 100%; height: 100%;background-color: rgba(0,0,0,0.4);color: white;border-radius: 4px;}
+#lightSlider .hoverContainer .hoverTitle {position: absolute;top:0;left: 0; opacity:0; width: 100%; height: 100%;background-color: rgba(240, 240, 210, 0.8);/*color: white;*//*border-radius: 4px;*/border:1px solid rgba(0, 0, 0, 0.1); transform: translate(0px, 100%);}
 #lightSlider .hoverContainer .hoverTitle .fullscreen-hover{width:30px; height:30px; display:block; margin:40% auto 0; background: url('../img/fullscreen-icon.png') no-repeat;}
 #lightSlider .ancho .hoverContainer .hoverTitle .fullscreen-hover{margin-top:25%;}
 
-#lightSlider .hoverContainer .hoverTitle h3 {font-weight:bold;padding: 0 30px;}
-#lightSlider .hoverContainer:hover .hoverTitle {opacity:1;}
+#lightSlider .hoverContainer .hoverTitle h3 {font-size: 2em;opacity:0; font-weight:bold;padding: 15px 30px;/*background-color:black;*/margin-top:30px;margin-bottom:30px;transform: translate(0px, -100px);}
+#lightSlider .hoverContainer:hover .hoverTitle {opacity:1;transition-delay: 0s;transform: translate(0px, 0px);}
+#lightSlider .hoverContainer:hover .hoverTitle h3{opacity:1;transition-delay: 0.1s;transform: translate(0px, 0px);}
 
 .sliderWrapper {
     overflow: hidden;
@@ -1102,24 +1118,37 @@ Nav Overlay
     right: 0;
     margin-left: -230px;
     position: absolute;
-    width: 100px;
+    width: 490px;
 }
 
 .sliderWrapper .lSAction > a {
-    background: #333 none repeat scroll 0 0;
-    color: white;
+    /*background: #333 none repeat scroll 0 0;
+    color: white;*/
+    color: #262325;
     font-size: 2em;
     height: 36px;
-    padding: 0 5px;
-    width: 36px;
+    padding: 0 15px;
+    width: auto;
     text-align: center;
     border-radius: 2px;
+    opacity: 1;
 }
+.sliderWrapper .lSAction > a:hover {opacity:0.6;}
+.sliderWrapper .lSAction > a:active{opacity:1;}
+.sliderWrapper .lSAction a span{display: block;
+    margin-top: -3px;}
+
+.sliderWrapper .lSAction a i{font-size: 0.8em;}
 
 
 .sliderWrapper .lSAction > .lSNext{
     right: 0;
+    border-right:1px solid #262325;
 }
+.sliderWrapper .lSAction > .lSPrev{border-left:1px solid #262325;}
+
+.sliderWrapper .lSAction > .lSNext:hover i{margin-right:-5px;}
+.sliderWrapper .lSAction > .lSPrev:hover i{margin-left:-5px;}
 
 .sliderWrapper .lSSlideWrapper, .sliderWrapper .lSSlideOuter{
     overflow: visible;
@@ -1130,12 +1159,11 @@ Nav Overlay
     margin-bottom: 20px;
     margin-top: 25px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
     text-align:right;
-    padding-right:130px;
+    padding-right:78px;
     /*background-image: repeating-linear-gradient(45deg, gray 0px, gray 25px, transparent 25px, transparent 50px, gray 50px);*/
 }
 .lSSlideOuter .lSPager.lSpg > li a{
     background-color: #262325;
-    opacity:0.5;
     text-indent:50000px;
 }
 .lSSlideOuter .lSPager.lSpg > li a:hover{opacity:1}
@@ -1164,7 +1192,7 @@ Nav Overlay
 .navBook nav{float: right; margin-right: 50px;text-align:right;}
 .navBook nav ul{margin: 0;}
 .navBook nav ul li {position:relative; margin-bottom:15px;}
-.navBook nav li a{font-size: 0.9em; font-style: italic; color: #777;line-height: 0.8rem;}
+.navBook nav li a{font-size: 0.9em; font-style: italic; /*color: #777;*/line-height: 0.8rem;}
 .navBook nav li a:hover{color:#fe8000;}
 .navBook nav li a span{display:block;}
 
@@ -1196,6 +1224,7 @@ Nav Overlay
 .modalContent{padding: 20px;}
 .modalContent .content-1{background: white;padding: 30px 60px; border: 1px solid #eee;max-width: 1300px;}
 .modalContent h1{margin-top:0;}
+.modalContent .content-1 p{font-size:1.1em;}
 .modalContent .content-1 img{width: 98%;}
 .cartas .modalContent .content-1 img{width: 397px;}
 .cartas .sliderWrapper {max-width: 580px;}
@@ -1215,15 +1244,18 @@ Nav Overlay
 .cartaSlide{background-color:black;}
 .cartaSlide .popupContent_close{color:white;right: 20px;top: 17px;}
 
-blockquote {
-    font-style: italic;
+blockquote {    
     margin-top: 35px;
     font-size:1.1em;
 }
+blockquote .fa{font-size: 1.2em;}
+blockquote .fa-angle-double-left {margin-left:-15px; margin-right:5px;}
+blockquote .fa-angle-double-right { margin-left:5px;}
+
 .traduccion{
     color:#fe8000;
     margin-top: 30px;
-
+    font-style: italic;
 }
 .traduccion b{
     color:#262325;
@@ -1231,26 +1263,36 @@ blockquote {
 
 #txt{
     background-color: white;
-    height: 100%;
+    /*height:1px;*/
+    height:100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 100000;
-    opacity:1;
+    opacity:0;
+    z-index: -1;
 }
 
-#txt.afuera{
-    opacity:0;
-    height:1px;
+#txt.adentro{
+    opacity:1;
+    z-index: 100000;
+    /*height: 100%;*/
 }
+#txt h1{transform: translate(0px, -150%);transition-delay: 0.1s; opacity:0;}
+#txt.adentro h1{height: 100%;transition-delay: 0.2s; transform: translate(0px, 0px);opacity:1;margin-top:0;}
+
+#txt p{transform: translate(0px, -150%); transition-delay: 0s; opacity:0;}
+#txt.adentro p{transition-delay: 0.1s; transform: translate(0px, 0px);opacity:1;}
+
 
 #txt .cerrar{
     position:absolute;
     top: 10px;
     right:10px;
     cursor:pointer;
-    font-size:1.1em;
+    font-size:1.3em;
 }
 #txt .cerrar:hover{text-decoration:underline;}
 #txt .cerrar i{margin-right:10px;}
+
+#txt .txtArea{padding: 0 20% 0 10%;font-size:1em;}

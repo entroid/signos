@@ -36,8 +36,9 @@ define([
                     speed: '400',
                     keyPress: true,
                     controls: true,
-                    prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left"></i></span>',
-                    nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
+                    enableDrag: false,
+                    prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
+                    nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>'
                 });
 
                 $('#popupContent').popup({
@@ -78,6 +79,10 @@ define([
                     /*$.fancybox(data);*/
                     var content = data + '<i class="popupContent_close fa fa-times-circle"></i>'
                     $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
+
+                        $('img').on('contextmenu', function(e) {
+                            return false;
+                        });
                 }); 
             },
 
@@ -104,23 +109,40 @@ define([
                 var target = e.currentTarget,
                     seccion = $(target).attr('data-seccion'),
                     url = 'js/application/views/paucke/helpers/' + seccion + '.html',
-                    element;
+                    element,
+                    este = this;                     
 
-                    if(seccion == 'bioPaucke') {
+                    var ajaxCall = function(){
+                        $.ajax({
+                          url: url,
+                          dataType: 'html',
+                        }).done(function(data) {
+                            var hacerVisible = function(){                             
+                                $('#txt').addClass('adentro');
+                            }
 
-                    }    
+                            $('#txt').html(data);
 
-                    $.ajax({
-                      url: url,
-                      dataType: 'html',
-                    }).done(function(data) {
-                        $('#txt').html(data).removeClass('afuera');
-                    }); 
+                            este.timeOut(hacerVisible, 100);
+                                      
+                            
+                        }); 
+                    }
 
+                    $('#txt').removeClass('adentro');
+
+                    este.timeOut(ajaxCall, 100);
             },
 
-            cerrar: function() {
-                $('#txt').addClass('afuera')
+            cerrar: function() {                
+                var hacerInvisible = function(){ 
+                    $('#txt').removeClass('adentro')
+                }
+                this.timeOut(hacerInvisible, 100);
+            },
+
+            timeOut: function(fn, temp) {
+                setTimeout(fn, temp);
             }
         });
         
