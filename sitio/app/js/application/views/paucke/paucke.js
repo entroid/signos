@@ -5,8 +5,10 @@ define([
     'text!views/paucke/helpers/paucke.html',
     'lightslider',
     'popup',
+    'views/paucke/sliderPaucke',
+    'views/paucke/grillaPaucke'
 
-    ], function($, _, Backbone, pauckeTemplate, lightslider/*, fancybox*/, popup) {
+    ], function($, _, Backbone, pauckeTemplate, lightslider, popup, SliderPaucke,GrillaPaucke) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -20,14 +22,15 @@ define([
                 'click .navBook nav a': 'openTxt',
                 'click .cerrar': 'cerrar',
                 'click .grillaBtn': 'openGrilla',
-                'click .closeGrillaBtn': 'closeGrilla'
+                'click .sliderBtn': 'openSlider'
             },
 
             render: function() {
                 $(this.el).html(_.template(pauckeTemplate));
+                var sliderPaucke = new SliderPaucke();
+                sliderPaucke.render();
                /* _(this.lightsliderInit).defer();*/
                 _.defer(this.pluginsInit);
-
                 
             },
 
@@ -162,16 +165,21 @@ define([
 
             openGrilla: function(e) {
                 this.cerrar(e, $('#txt'));
-                this.openTxt(e);
+                //this.openTxt(e);
+                var grillaPaucke = new GrillaPaucke({});
+                grillaPaucke.render();
+
                 $('#txt').removeClass
-                $('.navBook .closeGrillaBtn').removeClass('hide');
+                $('.navBook .sliderBtn').removeClass('hide');
                 $('.navBook .grillaBtn').addClass('hide');
                 
             },
-            closeGrilla: function(e) {
+            openSlider: function(e) {
                 this.cerrar(e, $('#txt'));
-                this.cerrar(e, $('#grillaContent'));
-                $('.navBook .closeGrillaBtn').addClass('hide');
+                var sliderPaucke = new SliderPaucke();
+                sliderPaucke.render();
+                this.pluginsInit();
+                $('.navBook .sliderBtn').addClass('hide');
                 $('.navBook .grillaBtn').removeClass('hide');
             }
         });
