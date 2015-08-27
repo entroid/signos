@@ -270,7 +270,7 @@ menu, ol, ul {
 /*
 * Corrects list images handled incorrectly in IE 7.
 */
-nav ul, nav ol {
+nav ul, nav ol, menu ul, menu ol {
     list-style: none;
     list-style-image: none;
 }
@@ -1197,12 +1197,14 @@ Nav Overlay
 
 .navBook{}
 
-.navBook nav{float: right; margin-right: 50px;text-align:right;}
+.navBook nav, .navBook menu{float: right; margin-right: 50px;text-align:right;}
 .navBook nav ul{margin: 0;}
 .navBook nav ul li {position:relative; margin-bottom:15px;}
 .navBook nav li a{font-size: 0.9em; font-style: italic; /*color: #777;*/line-height: 0.8rem;}
 .navBook nav li a:hover{color:#fe8000;}
 .navBook nav li a span{display:block;}
+
+menu li {cursor:pointer;}
 
 .libroTitle{
     /*position:absolute;*/

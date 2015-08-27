@@ -6,9 +6,10 @@ define([
     'lightslider',
     'popup',
     'views/paucke/sliderPaucke',
-    'views/paucke/grillaPaucke'
+    'views/paucke/grillaPaucke',
+    'views/paucke/pauckeTxt',
 
-    ], function($, _, Backbone, pauckeTemplate, lightslider, popup, SliderPaucke,GrillaPaucke) {
+    ], function($, _, Backbone, pauckeTemplate, lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -117,13 +118,13 @@ define([
                 e.preventDefault();
 
                 var target = e.currentTarget,
-                    seccion = $(target).attr('data-seccion'),
-                    url = 'js/application/views/paucke/helpers/' + seccion + '.html',
+                    seccion = $(target).attr('data-seccion');/*,
+                   url = 'js/application/views/paucke/helpers/' + seccion + '.html',
                     element,
                     este = this,
-                    cont = seccion === 'grilla' ? $('#grillaContent') : $('#txt');
+                    cont = seccion === 'grilla' ? $('#grillaContent') : $('#txt');*/
 
-                $('#txt .txtArea').fadeOut();                    
+                /*$('#txt .txtArea').fadeOut();                    
 
                 if (seccion){
                     var ajaxCall = function(){
@@ -142,19 +143,18 @@ define([
                             
                         }); 
                     }
-                }                
+                }            */               
 
-                $(cont).removeClass('adentro');
+                var pauckeTxt = new PauckeTxt();
+                pauckeTxt.render(seccion);
+                
 
-                este.timeOut(ajaxCall, 100);
+                /*este.timeOut(ajaxCall, 100);*/
             },
 
             cerrar: function(e, el) { 
                 var elemento = el ? el : '#txt';          
-                /*var hacerInvisible = function(){ 
-                    $('#txt').removeClass('adentro')
-                }
-                this.timeOut(hacerInvisible, 100);*/
+
                 $(elemento).removeClass('adentro fondoAdentro').html('');
 
             },
