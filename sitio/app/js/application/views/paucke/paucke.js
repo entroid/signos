@@ -8,8 +8,9 @@ define([
     'views/paucke/sliderPaucke',
     'views/paucke/grillaPaucke',
     'views/paucke/pauckeTxt',
+    'mlens'
 
-    ], function($, _, Backbone, pauckeTemplate, lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt) {
+    ], function($, _, Backbone, pauckeTemplate, lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -22,8 +23,8 @@ define([
                 'click #lightSlider .hoverTitle': 'hoverLightbox',
                 'click .navBook nav a': 'openTxt',
                 'click .cerrar': 'cerrar',
-                'click .grillaBtn': 'openGrilla',
-                'click .sliderBtn': 'openSlider'
+                'click .grillaBtn i': 'openGrilla',
+                'click .sliderBtn span': 'openSlider'
             },
 
             render: function() {
@@ -36,10 +37,10 @@ define([
             },
 
             pluginsInit: function () {
-                var lightSlider = $("#lightSlider").lightSlider({
+                $("#lightSlider").lightSlider({
                     item: 2,
-                    loop:false,
                     /*autoWidth: true,*/
+                    slideMargin:60,
                     mode: 'slide',
                     easing: 'linear',
                     speed: '400',
@@ -56,7 +57,9 @@ define([
                     transition: 'all 0.3s',
                     pagecontainer: '#contenido',
                     blur: true,
-                    onopen: function() {               
+                    onopen: function() {       
+
+                        //naipes        
                         if($('.cartas #lightSlider2').length){
                             $('#popupContent').addClass('cartaSlide');
                             var lightSlider2 = $("#lightSlider2").lightSlider({
@@ -70,6 +73,21 @@ define([
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
                             });
                         }
+
+                        //zoom
+                        $(".modalContent .content-1 img").mlens({
+                            imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
+                            /*imgSrc2x: $(".modalContent .content-1 img").attr("data-big2x"),*/  // path of the hi-res @2x version of the image
+                                                                                       //for retina displays (optional)
+                            lensShape: "circle",                // shape of the lens (circle/square)
+                            lensSize: 180,                  // size of the lens (in px)
+                            borderSize: 1,                  // size of the lens border (in px)
+                            borderColor: "#fff",                // color of the lens border (#hex)
+                            /*borderRadius: 0, */               // border radius (optional, only if the shape is square)
+                            /*imgOverlay: $(".modalContent .content-1 img").attr("data-overlay"),*/ // path of the overlay image (optional)
+                            /*overlayAdapt: true,*/ // true if the overlay image has to adapt to the lens size (true/false)
+                            zoomLevel: 1.1                                    // zoom level multiplicator (number)
+                        });
                        
                     },
 
@@ -164,23 +182,26 @@ define([
             },
 
             openGrilla: function(e) {
+                console.log('entr')
                 this.cerrar(e, $('#txt'));
-                //this.openTxt(e);
-                var grillaPaucke = new GrillaPaucke({});
-                grillaPaucke.render();
 
                 $('#txt').removeClass
-                $('.navBook .sliderBtn').removeClass('hide');
-                $('.navBook .grillaBtn').addClass('hide');
+                $('.navBook .sliderBtn').removeClass('inactive').fadeIn('100');
+                $('.navBook .grillaBtn').addClass('inactive').fadeOut('100');
+                //this.openTxt(e);
+                var grillaPaucke = new GrillaPaucke({});
+                grillaPaucke.render();              
                 
             },
             openSlider: function(e) {
                 this.cerrar(e, $('#txt'));
+
+                $('.navBook .sliderBtn').addClass('inactive').fadeOut('100');
+                $('.navBook .grillaBtn').removeClass('inactive').fadeIn('100');
+
                 var sliderPaucke = new SliderPaucke();
                 sliderPaucke.render();
                 this.pluginsInit();
-                $('.navBook .sliderBtn').addClass('hide');
-                $('.navBook .grillaBtn').removeClass('hide');
             }
         });
         

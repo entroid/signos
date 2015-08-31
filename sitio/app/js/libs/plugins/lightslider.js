@@ -121,6 +121,7 @@
                     if (slideValue > 0 && slideWidth > 0) {
                         if (item !== settings.item) {
                             scene = Math.round(slideValue / ((slideWidth + settings.slideMargin) * settings.slideMove));
+
                         }
                     }
                 }
@@ -130,20 +131,24 @@
         refresh.calSW = function () {
             if (settings.autoWidth === false) {
                 slideWidth = (elSize - ((settings.item * (settings.slideMargin)) - settings.slideMargin)) / settings.item;
-                 console.log(elSize)
             }
         };
 
         refresh.calWidth = function (cln) {
             var ln = cln === true ? $slide.find('.lslide').length : $children.length;
+
+
             if (settings.autoWidth === false) {
                 w = ln * (slideWidth + settings.slideMargin);
             } else {
                 w = 0;
                 for (var i = 0; i < ln; i++) {
                     w += (parseInt($children.eq(i).width()) + settings.slideMargin);
+                    console.log($children.eq(i).width())
                 }
             }
+
+                
             return w;
         };
         plugin = {

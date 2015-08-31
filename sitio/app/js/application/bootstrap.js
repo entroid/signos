@@ -8,7 +8,8 @@ require.config({
         scripts: 'scripts',
         lightslider: '../libs/plugins/lightslider',
         fancybox: '../libs/plugins/jquery.fancybox.pack',
-        popup: '../libs/plugins/jquery.popupoverlay'
+        popup: '../libs/plugins/jquery.popupoverlay',
+        mlens: '../libs/plugins/jquery.mlens-1.5'
     },
     shim: {
         underscore: {
@@ -31,6 +32,9 @@ require.config({
             deps: ['jquery']
         },
         popup: {
+            deps: ['jquery']
+        },
+        mlens: {
             deps: ['jquery']
         },
     }
