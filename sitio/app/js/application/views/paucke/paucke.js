@@ -77,8 +77,7 @@ define([
                         //zoom
                         $(".modalContent .content-1 img").mlens({
                             imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
-                            /*imgSrc2x: $(".modalContent .content-1 img").attr("data-big2x"),*/  // path of the hi-res @2x version of the image
-                                                                                       //for retina displays (optional)
+                            /*imgSrc2x: $(".modalContent .content-1 img").attr("data-big2x"),*/  // path of the hi-res @2x version of the image //for retina displays (optional)
                             lensShape: "circle",                // shape of the lens (circle/square)
                             lensSize: 180,                  // size of the lens (in px)
                             borderSize: 1,                  // size of the lens border (in px)
