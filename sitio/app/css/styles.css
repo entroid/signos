@@ -1140,32 +1140,40 @@ Nav Overlay
 
 .sliderWrapper .lSAction > a {
     /*background: #333 none repeat scroll 0 0;
-    color: white;*/
+    color: white;
+    background-color: #262325;*/
+    box-sizing: border-box;
     color: #262325;
-    font-size: 2em;
-    height: 36px;
-    padding: 0 15px;
-    width: auto;
-    text-align: center;
-    border-radius: 2px;
+    font-size: 1.8em;
+    height: 30px;
     opacity: 1;
+    padding-top: 4px;
+    text-align: center;
+    width: 30px;
+
+    -webkit-transition: all 100ms;
+    -moz-transition: all 100ms;
+    -o-transition: all 100ms;
+    transition: all 100ms; /* ease-in-out */
 }
-.sliderWrapper .lSAction > a:hover {opacity:0.6;}
-.sliderWrapper .lSAction > a:active{opacity:1;}
+.sliderWrapper .lSAction > a:hover {
+     margin-left:-1px; 
+     margin-right:-1px;
+     opacity:0.8;
+    /*-ms-transform: scale(1.1, 1); 
+    -webkit-transform: scale(1.5, 1); 
+    transform: scale(1.1, 1);
+    font-size:2em;*/
+}
+.sliderWrapper .lSAction > a:active{opacity:1;margin-left:-4px; margin-right:-4px;  }
 .sliderWrapper .lSAction a span{display: block;
     margin-top: -3px;}
 
 .sliderWrapper .lSAction a i{font-size: 0.8em;}
 
-
-.sliderWrapper .lSAction > .lSNext{
-    right: 0;
-    border-right:1px solid #262325;
+.sliderWrapper .lSAction > .lSNext:hover i{
+    
 }
-.sliderWrapper .lSAction > .lSPrev{border-left:1px solid #262325;}
-
-.sliderWrapper .lSAction > .lSNext:hover i{margin-right:-5px;}
-.sliderWrapper .lSAction > .lSPrev:hover i{margin-left:-5px;}
 
 .sliderWrapper .lSSlideWrapper, .sliderWrapper .lSSlideOuter{
     overflow: visible;
@@ -1174,9 +1182,9 @@ Nav Overlay
 /* pager */
 .sliderWrapper .lSSlideOuter .lSPager{
     margin-bottom: 20px;
-    margin-top: 25px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
+    margin-top: 28px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
     text-align:right;
-    padding-right:78px;
+    padding-right:82px;
     /*background-image: repeating-linear-gradient(45deg, gray 0px, gray 25px, transparent 25px, transparent 50px, gray 50px);*/
 }
 
@@ -1184,6 +1192,8 @@ Nav Overlay
     background-color: #262325;
     text-indent:50000px;
     z-index: 0;
+    width: 6px;
+    height: 6px;
 }
 .lSSlideOuter .lSPager.lSpg > li a:hover{opacity:1;}
 
