@@ -48,7 +48,23 @@ define([
                     controls: true,
                     enableDrag: false,
                     prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                    nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>'
+                    nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
+
+                    responsive : [{
+                        breakpoint:768,
+                        settings: {
+                            item:1,
+                            slideMove:1,
+                            slideMargin:6,
+                        }
+                    },
+                    {
+                        breakpoint:480,
+                        settings: {
+                            item:1,
+                            slideMove:1
+                          }
+                    }]
                 });
 
                 $('#popupContent').popup({

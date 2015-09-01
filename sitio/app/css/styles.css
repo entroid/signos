@@ -735,6 +735,8 @@ header h1 {
 
 header .logos a {
     margin-left: 20px;
+    display: inline-block;
+    box-sizing: border-box;
 }
 header a{    
     color: #262325;

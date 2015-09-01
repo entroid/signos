@@ -18,6 +18,11 @@ define([
                     autoslide : true,
                     interval : 6000,
                     loop : true,
+                    resizable : {
+                        width: 360,
+                        height: 640
+                    },
+                    nativeTouchScroll: true,
                     onCreatedCallback : function(){
                         var btns = $('.home-cta .use-btn');
 
