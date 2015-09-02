@@ -39,7 +39,7 @@ define([
             pluginsInit: function () {
                 $("#lightSlider").lightSlider({
                     item: 2,
-                    /*autoWidth: true,*/
+                    autoWidth: true,
                     slideMargin:60,
                     mode: 'slide',
                     easing: 'linear',
