@@ -1087,7 +1087,7 @@ Nav Overlay
 /*#lightSlider li.ancho{
     height: auto;
 }*/
-#lightSlider .hoverContainer img{
+.hoverContainer img{
     -webkit-transition: all 80ms;
     -moz-transition: all 80ms;
     -o-transition: all 80ms;
@@ -1097,6 +1097,10 @@ Nav Overlay
 #lightSlider .hoverContainer:hover img{
   box-shadow: 6px 7px 0 0 black;
   margin: -6px 6px 6px -6px; 
+}
+.grilla .hoverContainer:hover img{
+  box-shadow: 4px 4px 0 0 black;
+  margin: -3px 3px 3px -3px; 
 }
 
 #lightSlider .img19 .hoverContainer:hover img{
@@ -1260,8 +1264,9 @@ Nav Overlay
 }
 
 /* Grilla */
-.grilla .hoverContainer{cursor: pointer; overflow: hidden; position: relative; margin-bottom: 30px;}
+.grilla .hoverContainer{cursor: pointer; position: relative; margin-bottom: 40px;}
 .grilla .hoverContainer img{width: 100%;}
+.grilla .hoverContainer h3{margin-top: 15px;text-align: lef;}
 
 
 /***** lightSlider2  *****/
