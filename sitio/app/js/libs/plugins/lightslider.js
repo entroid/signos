@@ -144,7 +144,6 @@
                 w = 0;
                 for (var i = 0; i < ln; i++) {
                     w += (parseInt($children.eq(i).width()) + settings.slideMargin);
-                    console.log($children.eq(i).width())
                 }
             }
 
