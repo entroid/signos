@@ -3,6 +3,7 @@ define([
     'underscore',
     'backbone',
     'text!views/paucke/helpers/paucke.html',
+    'text!views/paucke/helpers/modal.html',
     'lightslider',
     'popup',
     'views/paucke/sliderPaucke',
@@ -10,7 +11,7 @@ define([
     'views/paucke/pauckeTxt',
     'mlens'
 
-    ], function($, _, Backbone, pauckeTemplate, lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens) {
+    ], function($, _, Backbone, pauckeTemplate, modaltemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -33,7 +34,16 @@ define([
                 sliderPaucke.render();
                /* _(this.lightsliderInit).defer();*/
                 _.defer(this.pluginsInit);
-                
+                this.jsonData ;
+                var este = this;
+                $.ajax({
+                          url: 'js/application/views/paucke/helpers/json/detalle.json',
+                        }).done(function(data) {
+                        
+                        este.jsonData = data;  
+
+                            
+                        }); 
             },
 
             pluginsInit: function () {
@@ -113,19 +123,24 @@ define([
             },
 
             ajaxOverlay: function(url) {
-                $.ajax({
+                var este = this;
+                var dataToShow = este.jsonData.img01;
+                var modal = _.template(modaltemplate,{dataToShow:dataToShow});
+                var content = modal + '<i class="popupContent_close fa fa-times-circle"></i>'
+                    $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
+                /*$.ajax({
                   url: url,
                   dataType: 'html',
                 }).done(function(data) {
                   /*$(".fancybox").fancybox();*/
                     /*$.fancybox(data);*/
-                    var content = data + '<i class="popupContent_close fa fa-times-circle"></i>'
+                    /*var content = data + '<i class="popupContent_close fa fa-times-circle"></i>'
                     $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
 
                         $('img').on('contextmenu', function(e) {
                             return false;
                         });
-                }); 
+                });*/ 
             },
 
             lightbox: function (e) {
@@ -133,7 +148,6 @@ define([
                 e.stopPropagation();
                 var target = e.target;
                 var url = $(target).attr('data-src');
-
                 this.ajaxOverlay(url);              
             },
 
@@ -141,6 +155,7 @@ define([
                 console.log('entr')
                 var target = e.target;
                 var url = $(target).parents('.hoverContainer').find('img').attr('data-src');
+
                 this.ajaxOverlay(url);
             },
             stopProp: function(e){
