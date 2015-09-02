@@ -124,23 +124,11 @@ define([
 
             ajaxOverlay: function(url) {
                 var este = this;
-                var dataToShow = este.jsonData.img01;
+                var dataToShow = este.jsonData[url];
                 var modal = _.template(modaltemplate,{dataToShow:dataToShow});
                 var content = modal + '<i class="popupContent_close fa fa-times-circle"></i>'
-                    $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
-                /*$.ajax({
-                  url: url,
-                  dataType: 'html',
-                }).done(function(data) {
-                  /*$(".fancybox").fancybox();*/
-                    /*$.fancybox(data);*/
-                    /*var content = data + '<i class="popupContent_close fa fa-times-circle"></i>'
-                    $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
-
-                        $('img').on('contextmenu', function(e) {
-                            return false;
-                        });
-                });*/ 
+                $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
+                
             },
 
             lightbox: function (e) {
