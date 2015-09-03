@@ -41,7 +41,8 @@ define([
                           url: 'js/application/views/paucke/helpers/json/detalle.json',
                         }).done(function(data) {  
                 
-                            este.jsonData = jQuery.parseJSON(data); 
+                            este.jsonData = este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
+                            console.log(este.jsonData)
                             
                         }); 
             },
