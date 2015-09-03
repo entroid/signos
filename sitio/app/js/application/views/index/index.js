@@ -22,16 +22,17 @@ define([
                         width: 360,
                         height: 640
                     },
-                    nativeTouchScroll: true,
                     onCreatedCallback : function(){
                         var btns = $('.home-cta .use-btn');
 
-                        $(btns).mouseenter(function() {
+                       $(btns).mouseenter(function() {
+                            console.log('enter');
                             var btnSection = $(this).attr('data-section');
                             este.btnHover(btnSection);
                         })
 
                         $(btns).mouseleave(function() {
+                            console.log('leave');
                             $('.hero').slideme('play');
                         })
                     }, //init slide
@@ -72,7 +73,7 @@ define([
                 $('.slideme li h1').toggleClass('txtAnimacion').fadeIn();
             },
 
-            btnHover: function (btnSection) {
+            btnHover: function (btnSection) {                
                 var slide;
 
                 if (btnSection === 'paucke') {
@@ -84,8 +85,9 @@ define([
                 if (btnSection === 'signos') {
                     slide = 2;
                 }
-                $('.hero').slideme('playTo', slide);
-                $('.hero').slideme('stop');
+
+                console.log(slide)
+                $('.hero').slideme('playTo', slide).slideme('stop');
             },
 
             navToggle: function() {
