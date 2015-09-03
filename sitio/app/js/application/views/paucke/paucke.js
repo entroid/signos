@@ -9,9 +9,10 @@ define([
     'views/paucke/sliderPaucke',
     'views/paucke/grillaPaucke',
     'views/paucke/pauckeTxt',
-    'mlens'
+    'mlens',
+    'tooltip'
 
-    ], function($, _, Backbone, pauckeTemplate, modaltemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens) {
+    ], function($, _, Backbone, pauckeTemplate, modaltemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens, tooltip) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -113,6 +114,7 @@ define([
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
                             });
                         }
+                        var myOpentip = new Opentip($(".modalContent .content-1 img"));
 
                         //zoom
                         $(".modalContent .content-1 img").mlens({
