@@ -39,12 +39,9 @@ define([
                 var este = this;
                 $.ajax({
                           url: 'js/application/views/paucke/helpers/json/detalle.json',
-                        }).done(function(data) {
-                        
-                            
-                console.log(data)
-                        este.jsonData = data;  
-
+                        }).done(function(data) {  
+                
+                            este.jsonData = jQuery.parseJSON(data); 
                             
                         }); 
             },
@@ -114,7 +111,11 @@ define([
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
                             });
                         }
-                        var myOpentip = new Opentip($(".modalContent .content-1 img"));
+                        
+                    // tooltip
+                        $('.ttCont').mousetip('.tip');
+                        // Custom Position
+                        $('.ttCont').mousetip('.tip', 20, 30);
 
                         //zoom
                         $(".modalContent .content-1 img").mlens({

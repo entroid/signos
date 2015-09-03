@@ -9,18 +9,18 @@ $.fn.mousetip = function(tip, x, y) {
     
     $this.hover(function() {
         
-        $(tip, this).show();
+        $(tip, this).fadeIn();
     
     }, function() {
     
-        $(tip, this).hide().removeAttr('style');
+        $(tip, this).fadeOut().removeAttr('style');
     
     }).mousemove(function(e) {
         
         var mouseX = e.pageX + (x || 10);
         var mouseY = e.pageY + (y || 10);
     
-        $(tip, this).show().css({
+        $(tip, this).fadeIn().css({
             
             top:mouseY, left:mouseX
             

@@ -1449,4 +1449,20 @@ menu li {cursor:pointer;}
     top:-100px;
 }
 
+/*** tooltip ***/
+span.tip {
 
+    /* Required */
+    position: absolute;
+    z-index: 2;
+    display: none;
+
+    /* Optional */
+    font-size: 15px;
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #666;
+    background: #FD0;
+} 
