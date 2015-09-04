@@ -124,7 +124,8 @@
 
         "traduccion": "Vista de San Javier en la fiesta de homenaje al rey español. En el ángulo izquierdo superior de la casa parroquial y dependencias, las leyendas expresan: Horno de ladrillos. Cobertizos para ladrilleros. Sigue la vista de la casa parroquial. Las leyendas expresan desde arriba hacia abajo: Jardín del misionero, corral de carneada, la vivienda nueva, la vivienda vieja del misionero, lugar donde se secan bajo el sol los cueros vacunos, sacristía, cementerio, iglesia, antepatio, iglesia vieja, el cobertizo donde las niñas hilan y tejen. Al lado niños jugando a los caballitos y por los tres lados las viviendas de los indios; arriba a la derecha unos toldos con la leyenda: Vivienda de los aún paganos. Unos toldos iguales en el costado derecho de abajo; tras la cruz a la izquierda se lee: Niños, varones, niñitas. Mujeres saludando. Gritería jubilosa de las indias. Procesión de los mocovíes ya cristianos en la fiesta del santo Xavier formados como en compañías. Cada compañía de caballos de un color uniforme excepto los de los oficiales y portaestandartes que montan caballos de diferentes colores. Serpentea la procesión por entre las casas y la leyenda expresa: Procesión de a caballo hacia la iglesia. La reducción. En la formación de abajo un indio vestido con uniforme español y llevando bandera española. La leyenda expresa: Alférez real.",
 
-        "fragmento": "Como el sexo femenino europeo es tan ansioso por todas las modas y sólo trata siempre de llevar sobre sí nuevos y exóticos vestidos de gala y aprecia en lo más a aquella moda que proviene de tierras lejanas, podría también complacerse con aquella moda que procede de algunos miles de leguas. Ahora yo preguntaría qué diferencia habría entre una locuela por las modas europeas y una india americana. Yo digo: ninguna, porque ambas son fantaseadoras y quieren ser bellas mediante la fealdad."
+        "fragmento": "Como el sexo femenino europeo es tan ansioso por todas las modas y sólo trata siempre de llevar sobre sí nuevos y exóticos vestidos de gala y aprecia en lo más a aquella moda que proviene de tierras lejanas, podría también complacerse con aquella moda que procede de algunos miles de leguas. Ahora yo preguntaría qué diferencia habría entre una locuela por las modas europeas y una india americana. Yo digo: ninguna, porque ambas son fantaseadoras y quieren ser bellas mediante la fealdad.",
+        "type":"panoramica"
     },
 
     "img17": {
@@ -132,7 +133,9 @@
 
         "traduccion": "La leyenda expresa: Los indios saltan desde un árbol al agua y se buscan mutuamente debajo del agua.",
 
-        "fragmento": ""
+        "fragmento": "",
+        "type":"panoramica"
+
     },
 
     "img18": {
@@ -140,27 +143,25 @@
 
         "traduccion": "Indio mocoví preparado para la guerra. Su armadura de cuero crudo de buey. Macana. Arco y flecha. Su cuchillo en la vaina.",
 
-        "fragmento": ""
+        "fragmento": "",
+        "type":"panoramica"
+
     },
 
     "img19": {
-        "src": "indio-para-la-guerra.jpg",
+        "slide": [
+            "carta-1.jpg",
+            "carta-2.jpg",
+            "carta-3.jpg",
+            "carta-4.jpg",
+            "carta-5.jpg",
+            "carta-6.jpg",
+            "carta-7.jpg",
+            "carta-8.jpg",
+            "carta-9.jpg",
+            "carta-10.jpg"
+        ],
+        "type":"slide"
 
-        "traduccion": "Indio mocoví preparado para la guerra. Su armadura de cuero crudo de buey. Macana. Arco y flecha. Su cuchillo en la vaina.",
-
-        "fragmento": "",
-
-        "slide": {
-            "01": "carta-1.jpg",
-            "02": "carta-2.jpg",
-            "03": "carta-3.jpg",
-            "04": "carta-4.jpg",
-            "05": "carta-5.jpg",
-            "06": "carta-6.jpg",
-            "07": "carta-7.jpg",
-            "08": "carta-8.jpg",
-            "09": "carta-9.jpg",
-            "10": "carta-10.jpg"
-        }
     }
 }

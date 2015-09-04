@@ -4,6 +4,8 @@ define([
     'backbone',
     'text!views/paucke/helpers/paucke.html',
     'text!views/paucke/helpers/modal.html',
+    'text!views/paucke/helpers/modal_panoramica.html',
+    'text!views/paucke/helpers/modal_slide.html',
     'lightslider',
     'popup',
     'views/paucke/sliderPaucke',
@@ -12,7 +14,7 @@ define([
     'mlens',
     'tooltip'
 
-    ], function($, _, Backbone, pauckeTemplate, modaltemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens, tooltip) {
+    ], function($, _, Backbone, pauckeTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens, tooltip) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -144,7 +146,15 @@ define([
             ajaxOverlay: function(url) {
                 var este = this;
                 var dataToShow = este.jsonData[url];
-                var modal = _.template(modaltemplate,{dataToShow:dataToShow});
+                if(!dataToShow.type){
+                    var modal = _.template(modaltemplate,{dataToShow:dataToShow});
+                    }else{
+                        if(dataToShow.type == "panoramica"){
+                        var modal = _.template(modalpanoramicatemplate,{dataToShow:dataToShow});
+                        }else if(dataToShow.type == "slide"){
+                          var modal = _.template(modalslidetemplate,{dataToShow:dataToShow});
+                        }
+                    }
                 var content = modal + '<i class="popupContent_close fa fa-times-circle"></i>'
                 $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
                 
