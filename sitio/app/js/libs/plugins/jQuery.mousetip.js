@@ -5,24 +5,30 @@
     
 $.fn.mousetip = function(tip, x, y) {
     
-    var $this = $(this);
+    var $this = $(this);        
     
     $this.hover(function() {
         
-        $(tip, this).show();
+        $(tip, this).fadeIn();
     
     }, function() {
     
-        $(tip, this).hide().removeAttr('style');
+        $(tip, this).fadeOut().removeAttr('style');
     
     }).mousemove(function(e) {
-        
-        var mouseX = e.pageX + (x || 10);
-        var mouseY = e.pageY + (y || 10);
+        var offset = $(this).offset();
+        var mouseX = e.pageX - x;
+        var mouseY = e.pageY - y;
+
+        var X = mouseX - offset.left;
+        var Y = mouseY - offset.top;
+
+        /*var mouseX = e.pageX + (x || 10);
+        var mouseY = e.pageY + (y || 10);*/
     
         $(tip, this).show().css({
             
-            top:mouseY, left:mouseX
+            top:Y, left:X
             
         });
     });

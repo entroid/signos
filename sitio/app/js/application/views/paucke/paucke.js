@@ -18,11 +18,11 @@ define([
 
             events: {
                 'click #lightSlider li img': 'lightbox',
-                'click #grilla .hoverContainer *': 'stopProp',
-                'click #grilla .hoverContainer .hoverTitle': 'hoverLightbox',
-                'click #grilla .hoverContainer h3': 'hoverLightbox',
-                'click #lightSlider .hoverTitle *': 'stopProp',
-                'click #lightSlider .hoverTitle': 'hoverLightbox',
+                //'click #grilla .hoverContainer *': 'stopProp',
+                'click #grilla .hoverContainer img': 'lightbox',
+                //'click #grilla .hoverContainer h3': 'hoverLightbox',
+                //'click #lightSlider .hoverTitle *': 'stopProp',
+                //'click #lightSlider .hoverTitle': 'hoverLightbox',
                 'click .navBook nav a': 'openTxt',
                 'click .cerrar': 'cerrar',
                 'click .grillaBtn i': 'openGrilla',
@@ -38,13 +38,14 @@ define([
                 this.jsonData ;
                 var este = this;
                 $.ajax({
-                          url: 'js/application/views/paucke/helpers/json/detalle.json',
-                        }).done(function(data) {  
-                
-                            este.jsonData = este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
-                            console.log(este.jsonData)
-                            
-                        }); 
+
+                    url: 'js/application/views/paucke/helpers/json/detalle.json',
+
+                }).done(function(data) {       
+
+                    este.jsonData = este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data;  
+
+                }); 
             },
 
             pluginsInit: function () {
@@ -116,7 +117,7 @@ define([
                     // tooltip
                         $('.ttCont').mousetip('.tip');
                         // Custom Position
-                        $('.ttCont').mousetip('.tip', 20, 30);
+                        $('.ttCont').mousetip('.tip', 0, -130);
 
                         //zoom
                         $(".modalContent .content-1 img").mlens({
@@ -154,16 +155,17 @@ define([
                 e.stopPropagation();
                 var target = e.target;
                 var url = $(target).attr('data-src');
+                console.log(url)
                 this.ajaxOverlay(url);              
             },
 
-            hoverLightbox: function(e) {
+            /*hoverLightbox: function(e) {
                 console.log('entr')
                 var target = e.target;
                 var url = $(target).parents('.hoverContainer').find('img').attr('data-src');
 
                 this.ajaxOverlay(url);
-            },
+            },*/
             stopProp: function(e){
                 e.stopPropagation();
             },
@@ -218,7 +220,6 @@ define([
             },
 
             openGrilla: function(e) {
-                console.log('entr')
                 this.cerrar(e, $('#txt'));
 
                 $('#txt').removeClass

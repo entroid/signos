@@ -1047,7 +1047,7 @@ Nav Overlay
 
 /***** Carrusel libros *****/
 /* sobreescribir del plugin */
-.lightSlider{overflow: visible;}
+.lightSlider{overflow: visible; z-index: 10;}
 .lightSlider.lsGrab > *{
     cursor: pointer;
 }
@@ -1450,19 +1450,19 @@ menu li {cursor:pointer;}
 }
 
 /*** tooltip ***/
+.ttCont{position:relative;}
 span.tip {
 
-    /* Required */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    box-shadow: 0 2px 3px #666;
+    color: white;
+    display: none;
+    font-size: 15px;
+    height: auto;
+    width: 70%;
+    padding: 10px;
     position: absolute;
     z-index: 2;
-    display: none;
-
-    /* Optional */
-    font-size: 15px;
-    max-width: 150px;
-    height: auto;
-    padding: 10px;
-    border-radius: 3px;
-    box-shadow: 0 1px 2px #666;
-    background: #FD0;
+    margin-left: -34%;
 } 
