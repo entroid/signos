@@ -45,7 +45,9 @@ define([
 
                 }).done(function(data) {       
 
-                    este.jsonData = este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data;  
+                    este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data;  
+
+                    console.log(este.jsonData)
 
                 }); 
             },
