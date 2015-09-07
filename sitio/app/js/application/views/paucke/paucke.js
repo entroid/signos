@@ -19,9 +19,10 @@ define([
             el: '#contenido',
 
             events: {
-                'click #lightSlider li img': 'lightbox',
+                //'click #lightSlider li img': 'lightbox',
                 //'click #grilla .hoverContainer *': 'stopProp',
-                'click #grilla .hoverContainer img': 'lightbox',
+                'click .hoverContainer img': 'lightbox',
+                'click .hoverContainer h3': 'lightbox',
                 //'click #grilla .hoverContainer h3': 'hoverLightbox',
                 //'click #lightSlider .hoverTitle *': 'stopProp',
                 //'click #lightSlider .hoverTitle': 'hoverLightbox',
@@ -92,6 +93,9 @@ define([
                             });
                     }
                 })
+
+                var popupContainer = '<div id="popupContent"></div>';
+                $('body').append(popupContainer);
                 
                 //popup
                 $('#popupContent').popup({
@@ -162,8 +166,12 @@ define([
                           var modal = _.template(modalslidetemplate,{dataToShow:dataToShow});
                         }
                     }
-                var content = modal + '<i class="popupContent_close fa fa-times-circle"></i>'
-                $('#popupContent').html(content).popup('show');
+                var content = modal;
+                var close = '<i class="popupContent_close fa fa-times-circle"></i>';
+
+                $('#popupContent').html(content).popup('show')
+                $('.modalContent > div:first-child').append(close);
+
 
                 if ( dataToShow.type == "alone" ){                  
                     $('.modalContent').addClass('alone').removeClass('hide');

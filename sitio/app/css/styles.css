@@ -1285,6 +1285,7 @@ Nav Overlay
 
 .modalContent .cartas{
     background-color:black;
+    position: relative;
 }
 
 /*** Libros nav ***/
@@ -1321,14 +1322,14 @@ menu li {cursor:pointer;}
 
 /** MODAL CONTENT ZOOM **/
 .modalContent{padding: 20px;}
-.modalContent .content-1{background: white;padding: 30px 60px 30px 90px; border: 1px solid #eee;max-width: 1300px;}
+.modalContent .content-1{background: white;padding: 30px 60px 30px 90px; border: 1px solid #eee;max-width: 1300px;margin: 0 auto; position:relative;}
 .modalContent h1{margin-top:0;}
 .modalContent .content-1 p{font-size:1.1em;}
 .modalContent .content-1 img{width: 100%;}
 .cartas .modalContent .content-1 img{width: 397px;}
 .cartas .sliderWrapper {max-width: 580px;}
 
-#popupContent_wrapper .popupContent_close{
+.popupContent_close{
     position:absolute; 
     top:12px; 
     right:15px; 
@@ -1343,7 +1344,7 @@ menu li {cursor:pointer;}
 
 #popupContent.cartaSlide{background-color:black; height:auto;}
 
-.cartaSlide .popupContent_close{color:white;right: 20px;top: 17px;}
+.cartaSlide .popupContent_close{color:white;right: 0;top: 0;}
 
 .modalContent blockquote {    
     /*margin-top: 35px;*/
@@ -1353,19 +1354,18 @@ menu li {cursor:pointer;}
     padding-top: 0;
     position: relative;
     text-align: justify;
+    color: #fe8000;
 }
 .modalContent.panoramica blockquote {margin-top: 60px;}
-.modalContent blockquote .fa{font-size: 0.9em;}
-.modalContent blockquote .fa-angle-double-left {color: #fe8000;
+.modalContent blockquote span{}
+.modalContent blockquote .izq {color: #fe8000;
     color: #fe8000;
     display: block;
-    font-size: 8em;
-    height: 1em;
+    font-size: 10em;
     left: 0;
     position: absolute;
-    top: -28px;
+    top: -100px;
 }
-.modalContent blockquote .fa-angle-double-right { margin-left:3px;}
 
 .content-1 p.traduccion{
     /*color:#fe8000;*/
