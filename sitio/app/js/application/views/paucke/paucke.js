@@ -12,9 +12,9 @@ define([
     'views/paucke/grillaPaucke',
     'views/paucke/pauckeTxt',
     'mlens',
-    'tooltip'
+    /*'tooltip'*/
 
-    ], function($, _, Backbone, pauckeTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens, tooltip) {
+    ], function($, _, Backbone, pauckeTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens/*, tooltip*/) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -36,26 +36,26 @@ define([
                 var sliderPaucke = new SliderPaucke();
                 sliderPaucke.render();
                /* _(this.lightsliderInit).defer();*/
-                _.defer(this.pluginsInit);
+                _.defer(this.pluginsInit(this));
                 this.jsonData ;
                 var este = this;
+
                 $.ajax({
 
                     url: 'js/application/views/paucke/helpers/json/detalle.json',
 
                 }).done(function(data) {       
 
-                    este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data;  
-
-                    console.log(este.jsonData)
-
+                    este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
+                    
                 }); 
             },
 
-            pluginsInit: function () {
+            pluginsInit: function (este) {
                 $("#lightSlider").hide();
                 var totalimg = $("#lightSlider img").size();
                 var currentimg = 0;
+
                 $("#lightSlider img").load(function(){
                     currentimg++;
                     if(currentimg==totalimg){
@@ -92,9 +92,8 @@ define([
                             });
                     }
                 })
-
-               
-
+                
+                //popup
                 $('#popupContent').popup({
                     color: '#fff',
                     opacity: 0.9,
@@ -117,11 +116,16 @@ define([
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
                             });
                         }
+
+                        $('.traduccion-btn').click(function(e){
+                            var el = $(this)
+                            este.openTrad(e, el);
+                        });
                         
                     // tooltip
-                        $('.ttCont').mousetip('.tip');
+                        /*$('.ttCont').mousetip('.tip');
                         // Custom Position
-                        $('.ttCont').mousetip('.tip', 0, -130);
+                        $('.ttCont').mousetip('.tip', 0, -130);*/
 
                         //zoom
                         $(".modalContent .content-1 img").mlens({
@@ -148,17 +152,28 @@ define([
             ajaxOverlay: function(url) {
                 var este = this;
                 var dataToShow = este.jsonData[url];
+
                 if(!dataToShow.type){
                     var modal = _.template(modaltemplate,{dataToShow:dataToShow});
                     }else{
-                        if(dataToShow.type == "panoramica"){
+                        if(dataToShow.type == "panoramica" || dataToShow.type == "alone" ){
                         var modal = _.template(modalpanoramicatemplate,{dataToShow:dataToShow});
                         }else if(dataToShow.type == "slide"){
                           var modal = _.template(modalslidetemplate,{dataToShow:dataToShow});
                         }
                     }
                 var content = modal + '<i class="popupContent_close fa fa-times-circle"></i>'
-                $('#popupContent').html(content).popup('show').find('.modalContent').removeClass('hide');
+                $('#popupContent').html(content).popup('show');
+
+                if ( dataToShow.type == "alone" ){                  
+                    $('.modalContent').addClass('alone').removeClass('hide');
+                }
+
+                if ( !dataToShow.fragmento ) {
+                    $('.modalContent blockquote').addClass('hide');
+                }
+
+                $('.modalContent').removeClass('hide');
                 
             },
 
@@ -167,17 +182,9 @@ define([
                 e.stopPropagation();
                 var target = e.target;
                 var url = $(target).attr('data-src');
-                console.log(url)
                 this.ajaxOverlay(url);              
             },
-
-            /*hoverLightbox: function(e) {
-                console.log('entr')
-                var target = e.target;
-                var url = $(target).parents('.hoverContainer').find('img').attr('data-src');
-
-                this.ajaxOverlay(url);
-            },*/
+            
             stopProp: function(e){
                 e.stopPropagation();
             },
@@ -251,6 +258,18 @@ define([
                 var sliderPaucke = new SliderPaucke();
                 sliderPaucke.render();
                 this.pluginsInit();
+            },
+            openTrad: function(e, el) {
+                var target = el;
+                var trad = $('.tip');
+
+                if($(target).hasClass('active')) {
+                    $(target).removeClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
+                    $(trad).removeClass('showTt');
+                } else {
+                    $(target).addClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
+                    $(trad).addClass('showTt');
+                }
             }
         });
         
