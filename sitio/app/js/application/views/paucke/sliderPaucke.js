@@ -13,7 +13,8 @@ define([
             },
 
             render: function() {
-                $(this.el).html(_.template(slider));
+                var jsonData = this.model.get("jsonData");
+                $(this.el).html(_.template(slider,{jsonData:jsonData}));
             }
         });
         

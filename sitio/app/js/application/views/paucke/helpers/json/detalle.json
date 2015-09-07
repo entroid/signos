@@ -114,7 +114,7 @@
     "img09": {
         "src": "su-fruta.jpg",
 
-        "lowres": "su-fruta.jpg-low.jpg",
+        "lowres": "su-fruta-low.jpg",
 
         "titulo": "Su fruta",
 
@@ -257,6 +257,7 @@
     },
 
     "img19": {
+        "lowres":"carta-low.jpg",
         "slide": [
             "carta-1.jpg",
             "carta-2.jpg",
