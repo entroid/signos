@@ -34,10 +34,8 @@ define([
 
             render: function() {
                 $(this.el).html(_.template(pauckeTemplate));
-                var sliderPaucke = new SliderPaucke();
-                sliderPaucke.render();
-               /* _(this.lightsliderInit).defer();*/
-                _.defer(this.pluginsInit(this));
+                /* _(this.lightsliderInit).defer();*/
+               
                 this.jsonData ;
                 var este = this;
 
@@ -47,13 +45,19 @@ define([
 
                 }).done(function(data) {       
 
-                    este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data;  
-
+                    este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
+                    var SliderModel = Backbone.Model.extend({});
+                    var sliderModel = new SliderModel({jsonData:data})
+                    var sliderPaucke = new SliderPaucke({model:sliderModel});
+                    sliderPaucke.render();
+                    este.pluginsInit(este);
+                    
                 }); 
             },
 
             pluginsInit: function (este) {
-                $("#lightSlider").hide();
+
+                //$("#lightSlider").hide();
                 var totalimg = $("#lightSlider img").size();
                 var currentimg = 0;
 
@@ -154,6 +158,9 @@ define([
             },
 
             ajaxOverlay: function(url) {
+                if(!$("#popupContent").size()){
+                    $("body").append('<div id="popupContent"></div>')
+                }
                 var este = this;
                 var dataToShow = este.jsonData[url];
 
