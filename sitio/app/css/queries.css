@@ -70,7 +70,7 @@
        margin-top: 0;
   }
 
-  .lightSlider li {
+  .lightSlider li .hoverContainer{
     text-align: center;
   }
 
@@ -114,7 +114,7 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
 
     header h1 {
         margin-left: 50px;
@@ -125,15 +125,53 @@
         display: none;
     }
 
+    .overlay{
+      padding: 20px;
+      overflow:auto;
+    }
+    .overlay nav{
+      margin:0;
+    }
+
+    .overlay ul li{
+      padding:15px 0;
+      font-size:1.2em;
+      margin-bottom:0;
+    }
+
+    .overlay ul li a{
+      text-align:center;
+    }
       /*header .logos a{
         margin-bottom: 5px;
       }*/
+      .overlay .txtInfo{
+        padding:0;
+        margin-bottom: 60px;
+      }
+
+      .text-left{margin-bottom: 30px;}
+      .text-left p{
+        margin-right:0;
+      }
 
   .sliderWrapper .lSAction{
     left: 0;
     margin: 0;
     top: 0;
     width: 100%;
+  }
+
+  #lightSlider li{
+    width: 85vw;
+  }
+
+  .lightSlider{
+    margin: 0 20px;
+  }
+
+  #lightSlider li.ancho .hoverContainer{
+    width:auto;
   }
 }
 
@@ -150,18 +188,18 @@
     max-width: 480px;
     max-height: 640px;
     width: 100%;
-    height: 100%;
+    height: 100% !important;
   }
   /*header .logos{
     margin-top: -10px;
   }*/
 
   .lSAction > .lSPrev{
-    left:0;
+    left: -14px;
   }
 
   .lSAction > .lSNext{
-    right:0;
+    right: -14px;
   }
 
   .use-btn{

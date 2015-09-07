@@ -802,8 +802,8 @@ Navigation
     height: 26px;
     margin-top: 5px;
 }
-.navicon p {
-    margin: 1px 50px 0 0
+.text-left p {
+    margin: 1px 50px 0 0;
 }
 .navicon-fixed {
     position: fixed;
@@ -856,7 +856,7 @@ Hero slide
 
 .slideme{
     width: 100%;
-    height: 100%;
+    height: 100% !important;
 }
 
 .slideme .wrapper{
@@ -1095,11 +1095,11 @@ Nav Overlay
 }
 
 #lightSlider .hoverContainer:hover img{
-  box-shadow: 6px 7px 0 0 black;
+  box-shadow: 6px 7px 0 0 #666;
   margin: -6px 6px 6px -6px; 
 }
 .grilla .hoverContainer:hover img{
-  box-shadow: 4px 4px 0 0 black;
+  box-shadow: 4px 4px 0 0 #666;
   margin: -3px 3px 3px -3px; 
 }
 
@@ -1168,7 +1168,6 @@ Nav Overlay
     margin-left: -230px;
     position: absolute;
     width: 490px;
-    z-index: 10;
 }
 
 .sliderWrapper .lSAction > a {
@@ -1354,7 +1353,7 @@ menu li {cursor:pointer;}
     padding-top: 0;
     position: relative;
     text-align: justify;
-    color: #fe8000;
+    /*color: #fe8000;*/
 }
 .modalContent.panoramica blockquote {margin-top: 60px;}
 .modalContent blockquote span{}

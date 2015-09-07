@@ -83,16 +83,10 @@ define([
                                     breakpoint:768,
                                     settings: {
                                         item:1,
+                                        autoWidth: false,
                                         slideMove:1,
-                                        slideMargin:6,
+                                        slideMargin:30,
                                     }
-                                },
-                                {
-                                    breakpoint:480,
-                                    settings: {
-                                        item:1,
-                                        slideMove:1
-                                      }
                                 }]
                             });
                     }
@@ -108,6 +102,7 @@ define([
                     transition: 'all 0.3s',
                     pagecontainer: '#contenido',
                     blur: true,
+                    scrolllock: true,
                     onopen: function() {       
 
                         //naipes        
