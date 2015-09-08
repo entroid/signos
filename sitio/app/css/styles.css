@@ -1418,8 +1418,8 @@ menu li {cursor:pointer;}
 .grilla .row{margin-bottom: 30px;}
 
 .grillaBtns ul{position:relative;}
-.grillaBtns li{ position:absolute; overflow:hidden; width:30px; height:30px; top:0; right:0;}
-.grillaBtns li:hover{opacity:0.7;}
+.grillaBtns li{ position:absolute; /*overflow:hidden;*/ width:30px; height:30px; top:0; right:0;}
+.grillaBtns li:hover{/*opacity:0.7;*/}
 .grillaBtns li.inactive{opacity:0;}
 
 .grillaBtn{
@@ -1456,7 +1456,7 @@ menu li {cursor:pointer;}
 /*** tooltip ***/
 .ttCont{position:relative;}
 .alone .ttCont{width: 639px; margin: 0 auto;}
-span.tip {
+span.tips {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 2px;
     box-shadow: 0 2px 0 #666;
@@ -1473,15 +1473,15 @@ span.tip {
     overflow:hidden;
     width: 100%;
 } 
-span.tip i{/*max-width:800px;*/text-align:left; display:block;margin: -100% auto 0;}
+span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% auto 0;}
 
-.tip.showTt {
+.tips.showTt {
     opacity:1;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.05s;
 }
 
-.tip.showTt i{
+.tips.showTt i{
     margin-top:0;
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.05s;
@@ -1502,7 +1502,7 @@ span.tip i{/*max-width:800px;*/text-align:left; display:block;margin: -100% auto
 .traduccion-btn:hover{
     color:#fe8000;
     /*color:#262325;*/
-    opacity:0.8;
+    /*opacity:0.8;*/
 }
 
 .traduccion-btn.active{
@@ -1510,13 +1510,30 @@ span.tip i{/*max-width:800px;*/text-align:left; display:block;margin: -100% auto
     color:#999;
 }
 
-.traduccion-btn span{
-    color: #262325;
-    left: 0;
-    opacity: 0;
+.ttip{
+    color: #fff;
+    /* Required */
     position: absolute;
-    top: -20px;
+    z-index: 2;
+    display: none;
+
+    /* Optional */
+    font-size: 1rem;
+    /*max-width: 150px;*/
+    height: auto;
+    padding: 10px;
+    /*border-radius: 3px;
+    box-shadow: 0 1px 2px #666;*/
+    background: #262325;
 }
 .traduccion-btn:hover span{
     /*opacity:1;*/
+}
+
+.grillaBtns li .tipr_content{    
+     min-width:150px;
+}
+
+.sliderBtn .tipr_container_bottom{
+    margin-top:50px;
 }

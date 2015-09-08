@@ -12,9 +12,9 @@ define([
     'views/paucke/grillaPaucke',
     'views/paucke/pauckeTxt',
     'mlens',
-    /*'tooltip'*/
+    'tooltip'
 
-    ], function($, _, Backbone, pauckeTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens/*, tooltip*/) {
+    ], function($, _, Backbone, pauckeTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderPaucke,GrillaPaucke,PauckeTxt,mlens, tooltip) {
         var pauckeView = Backbone.View.extend({
             el: '#contenido',
 
@@ -51,6 +51,7 @@ define([
                     var sliderPaucke = new SliderPaucke({model:sliderModel});
                     sliderPaucke.render();
                     este.pluginsInit(este);
+                    este.tooltipInit();
                     
                 }); 
             },
@@ -75,7 +76,7 @@ define([
                                 speed: '400',
                                 keyPress: true,
                                 controls: true,
-                                enableDrag: false,
+                                /*enableDrag: false,*/
                                 prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
 
@@ -123,12 +124,7 @@ define([
                         $('.traduccion-btn').click(function(e){
                             var el = $(this)
                             este.openTrad(e, el);
-                        });
-                        
-                    // tooltip
-                        /*$('.ttCont').mousetip('.tip');
-                        // Custom Position
-                        $('.ttCont').mousetip('.tip', 0, -130);*/
+                        });        
 
                         //zoom
                         $(".modalContent .content-1 img").mlens({
@@ -143,13 +139,17 @@ define([
                             /*overlayAdapt: true,*/ // true if the overlay image has to adapt to the lens size (true/false)
                             zoomLevel: 1.1                                    // zoom level multiplicator (number)
                         });
+
+                        // tooltip
+                        este.tooltipInit();
                        
                     },
 
                     onclose: function() { 
                         $('#popupContent').removeClass('cartaSlide');
                     }
-                });
+                });              
+
             },
 
             ajaxOverlay: function(url) {
@@ -271,7 +271,7 @@ define([
             },
             openTrad: function(e, el) {
                 var target = el;
-                var trad = $('.tip');
+                var trad = $('.tips');
 
                 if($(target).hasClass('active')) {
                     $(target).removeClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
@@ -280,6 +280,16 @@ define([
                     $(target).addClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
                     $(trad).addClass('showTt');
                 }
+            },
+
+            tooltipInit: function(){
+
+                /*$('.tooltipBtn, .tooltipBtn i').tipso({
+                  animationIn: '',
+                  animationOut: ''
+                });*/
+                //$('.tooltipBtn').mousetip('.ttip', 50, -40);
+                $('.tooltipBtn').tipr();
             }
         });
         

@@ -10,7 +10,7 @@ require.config({
         fancybox: '../libs/plugins/jquery.fancybox.pack',
         popup: '../libs/plugins/jquery.popupoverlay',
         mlens: '../libs/plugins/jquery.mlens-1.5',
-        tooltip: '../libs/plugins/jQuery.mousetip'
+        tooltip: '../libs/plugins/tipr.min'
     },
     shim: {
         underscore: {
