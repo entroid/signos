@@ -51,7 +51,7 @@ define([
                     var sliderPaucke = new SliderPaucke({model:sliderModel});
                     sliderPaucke.render();
                     este.pluginsInit(este);
-                    este.tooltipInit();
+                    $('.tooltipBtn').tipr();
                     
                 }); 
             },
@@ -141,7 +141,7 @@ define([
                         });
 
                         // tooltip
-                        este.tooltipInit();
+                      $('.tooltipBtn').tipr();
                        
                     },
 
@@ -255,7 +255,11 @@ define([
                 $('.navBook .sliderBtn').removeClass('inactive').fadeIn('100');
                 $('.navBook .grillaBtn').addClass('inactive').fadeOut('100');
                 //this.openTxt(e);
-                var grillaPaucke = new GrillaPaucke({});
+
+                var jsonData = this.jsonData;
+                var GrillaModel = Backbone.Model.extend({});
+                var grillaModel = new GrillaModel({jsonData:jsonData})
+                var grillaPaucke = new GrillaPaucke({model:grillaModel});
                 grillaPaucke.render();              
                 
             },
@@ -265,7 +269,10 @@ define([
                 $('.navBook .sliderBtn').addClass('inactive').fadeOut('100');
                 $('.navBook .grillaBtn').removeClass('inactive').fadeIn('100');
 
-                var sliderPaucke = new SliderPaucke();
+                var jsonData = this.jsonData;
+                var SliderModel = Backbone.Model.extend({});
+                var sliderModel = new SliderModel({jsonData:jsonData})
+                var sliderPaucke = new SliderPaucke({model:sliderModel});
                 sliderPaucke.render();
                 this.pluginsInit();
             },
@@ -282,15 +289,6 @@ define([
                 }
             },
 
-            tooltipInit: function(){
-
-                /*$('.tooltipBtn, .tooltipBtn i').tipso({
-                  animationIn: '',
-                  animationOut: ''
-                });*/
-                //$('.tooltipBtn').mousetip('.ttip', 50, -40);
-                $('.tooltipBtn').tipr();
-            }
         });
         
         return new pauckeView;

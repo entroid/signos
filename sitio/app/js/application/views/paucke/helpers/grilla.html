@@ -1,118 +1,13 @@
 <div id="grilla" class="grilla imgs">
     <div class='row'>
-        <div class="col-md-3 col-sm-3 col-12-xs">
+    <%counter=0%>
+    <%_.each(jsonData,function(elem,ind){%>
+        <%if(counter%5 == 0){%><%if(counter != 0){%></div><%}%><div class="col-md-3 col-sm-3 col-12-xs"> <%}%>
             <div class="hoverContainer">
-                <!--<div class="hoverTitle transitions-fast">
-                    
-                    <h3 class="transitions-fast">Mi travesía por el Saladillo</h3>
-                </div>   -->                     
-                <img src="img/libros/paucke/mi-travesia-por-el-saladillo.jpg" data-src="img01" alt="">  
-                <h3 class="transitions-fast" data-src="img01">Mi travesía por el Saladillo</h3> 
+                <img src="img/libros/paucke/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+                <h3 class="transitions-fast"><%=elem.titulo%></h3>
             </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/sus-ceremonias-durante-el-beber-en-exceso.jpg" data-src="img05" alt="">
-                <h3 class="transitions-fast">Sus ceremonias durante el beber en exceso</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/su-fruta.jpg" data-src="img09" alt="">
-                <h3 class="transitions-fast">Su fruta</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/el-peje-rey.jpg" data-src="img13" alt="">
-                <h3 class="transitions-fast">El peje rey</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/indios-se-arrojan-al-agua.jpg" data-src="img17" alt="">
-                <h3 class="transitions-fast">Indios se arrojan al agua</h3>
-            </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-3 col-12-xs">
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/se-hacen-tatuar-la-cara-para-ser-bellos.jpg" data-src="img02" alt="">
-                <h3 class="transitions-fast">Se hacen tatuar la cara para ser bellos</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/deshacen-la-choza.jpg" data-src="img06" alt="">
-                <h3 class="transitions-fast">Deshacen la choza</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/un-cocodrilo-sin-cabeza-se-arrastra-de-nuevo-a-las-aguas.jpg" data-src="img10" alt="">
-                <h3 class="transitions-fast">Un cocodrilo sin cabeza se arrastra de nuevo al aguas</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/caza-a-los-puercos-silvestres.jpg" data-src="img14" alt="">
-                <h3 class="transitions-fast">Caza a los puercos silvestres</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/indio-para-la-guerra.jpg" data-src="img18" alt="">
-                <h3 class="transitions-fast">Indio para la guerra</h3>
-            </div>
-        </div>
-
-
-        <div class="col-md-3 col-sm-3 col-12-xs">
-            <div class="hoverContainer">                      
-                <img src="img/libros/paucke/del-arbol-del-cual-hacen-sus-lanzas.jpg" data-src="img03" alt=""> 
-                <h3 class="transitions-fast">Del árbol del cual hacen sus lanzas</h3>  
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/combate-entre-indios-salvajes-y-los-mios.jpg" data-src="img07" alt="">
-                <h3 class="transitions-fast">Combate entre indios salvajes y los míos</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/abundancia-de-patos-y-aves.jpg" data-src="img11" alt="">
-                <h3 class="transitions-fast">Abundancia de patos y aves</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <div class="hoverContainer">
-                    <img src="img/libros/paucke/no-necesitan-ninguna-otra-provision.jpg" data-src="img15" alt="">
-                    <h3 class="transitions-fast">No necesitan ninguna otra provisión</h3>
-                </div>
-            </div>
-            
-        </div>
-
-
-        <div class="col-md-3 col-sm-3 col-12-xs">
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/un-delicioso-asadito-indio.jpg" data-src="img04" alt="">
-                <h3 class="transitions-fast">Un delicioso asadito indio</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/de-que-modo-pesca-el-tigre.jpg" data-src="img08" alt="">
-                <h3 class="transitions-fast">De qué modo pesca el tigre</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/como-se-les-prende-con-lazos.jpg" data-src="img12" alt="">
-                <h3 class="transitions-fast">Cómo se les prende con lazos</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <img src="img/libros/paucke/vista-de-san-javier.jpg" data-src="img16" alt="">
-                <h3 class="transitions-fast">Vista de San Javier</h3>
-            </div>
-
-            <div class="hoverContainer">
-                <div class="hoverContainer">
-                    <img src="img/libros/paucke/carta.jpg" data-src="img19" alt="">
-                    <h3 class="transitions-fast">Naipes</h3>
-                </div>
-            </div>
-        </div>
+    <%counter++%>
+    <%})%>
     </div>
 </div>
