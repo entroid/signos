@@ -52,6 +52,10 @@ define([
                     sliderPaucke.render();
                     este.pluginsInit(este);
                     $('.tooltipBtn').tipr();
+
+                    $(".hoverContainer img").mouseup(function (){
+                            $(this).preventDefault;
+                    });
                     
                 }); 
             },
@@ -141,7 +145,7 @@ define([
                         });
 
                         // tooltip
-                      $('.tooltipBtn').tipr();
+                      $('.traduccion-btn').tipr();
                        
                     },
 
