@@ -1096,11 +1096,11 @@ Nav Overlay
 
 #lightSlider .hoverContainer:hover img{
   /*box-shadow: 6px 7px 0 0 #666;*/
-  box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.7);
   margin: -6px 6px 6px -6px; 
 }
 .grilla .hoverContainer:hover img{
-  box-shadow: 4px 4px 0 0 #666;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
   margin: -3px 3px 3px -3px; 
 }
 
