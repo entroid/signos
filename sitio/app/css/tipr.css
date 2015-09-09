@@ -20,7 +20,7 @@ http://www.tipue.com/tipr
      display: none;
      position: absolute;
      margin-top: 20px;
-     box-shadow: 2px 2px 2px #f9f9f9;
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
      z-index: 1000;
 }
 .tipr_container_top
@@ -28,14 +28,14 @@ http://www.tipue.com/tipr
      display: none;
      position: absolute;
      margin-top: -77px;
-     box-shadow: 2px 2px 2px #f9f9f9;
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
      z-index: 1000;
 }
 .tipr_point_top, .tipr_point_bottom 
 {
      position: relative;
 	background: #fff;
-	border: 1px solid #dcdcdc;
+	/*border: 1px solid #dcdcdc;*/
 }
 .tipr_point_top:after, .tipr_point_top:before
 {
