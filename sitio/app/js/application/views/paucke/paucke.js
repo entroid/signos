@@ -21,15 +21,15 @@ define([
             events: {
                 //'click #lightSlider li img': 'lightbox',
                 //'click #grilla .hoverContainer *': 'stopProp',
-                'click .hoverContainer img': 'lightbox',
-                'click .hoverContainer h3': 'lightbox',
+                'click #pauckeBook .hoverContainer img': 'lightbox',
+                'click #pauckeBook .hoverContainer h3': 'lightbox',
                 //'click #grilla .hoverContainer h3': 'hoverLightbox',
                 //'click #lightSlider .hoverTitle *': 'stopProp',
                 //'click #lightSlider .hoverTitle': 'hoverLightbox',
-                'click .navBook nav a': 'openTxt',
-                'click .cerrar': 'cerrar',
-                'click .grillaBtn i': 'openGrilla',
-                'click .sliderBtn span': 'openSlider'
+                'click #pauckeBook .navBook nav a': 'openTxt',
+                'click #pauckeBook .cerrar': 'cerrar',
+                'click #pauckeBook .grillaBtn i': 'openGrilla',
+                'click #pauckeBook .sliderBtn span': 'openSlider'
             },
 
             render: function() {
