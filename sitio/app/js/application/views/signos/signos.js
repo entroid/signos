@@ -2,19 +2,19 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!views/siglos/helpers/siglos.html',
-    'text!views/siglos/helpers/modal.html',
-    'text!views/siglos/helpers/modal_panoramica.html',
-    'text!views/siglos/helpers/modal_slide.html',
+    'text!views/signos/helpers/signos.html',
+    'text!views/signos/helpers/modal.html',
+    'text!views/signos/helpers/modal_panoramica.html',
+    'text!views/signos/helpers/modal_slide.html',
     'lightslider',
     'popup',
-    'views/siglos/SliderSiglos',
-    'views/siglos/grillaSiglos',
-    'views/siglos/siglosTxt',
+    'views/signos/SliderSignos',
+    'views/signos/grillaSignos',
+    'views/signos/signosTxt',
     'mlens',
     'tooltip'
 
-    ], function($, _, Backbone, siglosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSiglos,GrillaSiglos,SiglosTxt,mlens, tooltip) {
+    ], function($, _, Backbone, signosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSignos,GrillaSignos,signosTxt,mlens, tooltip) {
         var SignosView = Backbone.View.extend({
             el: '#contenido',
 
@@ -33,22 +33,22 @@ define([
             },
 
             render: function() {
-                $(this.el).html(_.template(siglosTemplate));
+                $(this.el).html(_.template(signosTemplate));
                 /* _(this.lightsliderInit).defer();*/
                
                 this.jsonData ;
                 var este = this;
                 $.ajax({
 
-                    url: 'js/application/views/siglos/helpers/json/detalle.json',
+                    url: 'js/application/views/signos/helpers/json/detalle.json',
 
                 }).done(function(data) {       
 
                     este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
                     var SliderModel = Backbone.Model.extend({});
                     var sliderModel = new SliderModel({jsonData:data})
-                    var sliderSiglos = new SliderSiglos({model:sliderModel});
-                    sliderSiglos.render();
+                    var slidersignos = new SliderSignos({model:sliderModel});
+                    slidersignos.render();
                     este.pluginsInit(este);
                     $('.tooltipBtn').tipr();
 
@@ -233,8 +233,8 @@ define([
                     }
                 }            */               
 
-                var siglosTxt = new SiglosTxt();
-                siglosTxt.render(seccion);
+                var signosTxt = new signosTxt();
+                signosTxt.render(seccion);
                 
 
                 /*este.timeOut(ajaxCall, 100);*/
@@ -262,8 +262,8 @@ define([
                 var jsonData = this.jsonData;
                 var GrillaModel = Backbone.Model.extend({});
                 var grillaModel = new GrillaModel({jsonData:jsonData})
-                var grillaSiglos = new GrillaSiglos({model:grillaModel});
-                grillaSiglos.render();              
+                var grillasignos = new GrillaSignos({model:grillaModel});
+                grillasignos.render();              
                 
             },
             openSlider: function(e) {
@@ -275,8 +275,8 @@ define([
                 var jsonData = this.jsonData;
                 var SliderModel = Backbone.Model.extend({});
                 var sliderModel = new SliderModel({jsonData:jsonData})
-                var sliderSiglos = new SliderSiglos({model:sliderModel});
-                sliderSiglos.render();
+                var slidersignos = new SliderSignos({model:sliderModel});
+                slidersignos.render();
                 this.pluginsInit();
             },
             openTrad: function(e, el) {

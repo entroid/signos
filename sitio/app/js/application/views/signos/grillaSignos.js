@@ -2,10 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!views/paucke/helpers/grilla.html',
+    'text!views/signos/helpers/grilla.html',
 
     ], function($, _, Backbone, grilla) {
-        var GrillaPaucke = Backbone.View.extend({
+        var GrillaSignos = Backbone.View.extend({
             el: '.sliderWrapper',
 
             events: {
@@ -18,5 +18,5 @@ define([
             }
         });
         
-        return GrillaPaucke;
+        return GrillaSignos;
     });

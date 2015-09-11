@@ -2,12 +2,12 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!views/paucke/helpers/pauckeBio.html',
-    'text!views/paucke/helpers/pauckeMemorias.html',
-    'text!views/paucke/helpers/pauckeNotas.html',
+    'text!views/signos/helpers/SignosBio.html',
+    'text!views/signos/helpers/SignosMemorias.html',
+    'text!views/signos/helpers/SignosNotas.html',
 
     ], function($, _, Backbone, Bio, Memorias, Notas) {
-        var TxtPaucke = Backbone.View.extend({
+        var TxtSignos = Backbone.View.extend({
             el: '#txt',
 
             events: {
@@ -39,5 +39,5 @@ define([
             }
         });
         
-        return TxtPaucke;
+        return TxtSignos;
     });

@@ -2,10 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!views/siglos/helpers/slider.html',
+    'text!views/signos/helpers/slider.html',
 
     ], function($, _, Backbone, slider) {
-        var SliderSiglos = Backbone.View.extend({
+        var SliderSignos = Backbone.View.extend({
             el: '.sliderWrapper',
 
             events: {
@@ -18,5 +18,5 @@ define([
             }
         });
         
-        return SliderSiglos;
+        return SliderSignos;
     });
