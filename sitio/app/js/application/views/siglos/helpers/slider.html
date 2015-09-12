@@ -2,8 +2,8 @@
 <%_.each(jsonData,function(elem,ind){%>
     <li class="<%=ind%> <%=elem.claseSlider%>">
         <div class="hoverContainer">
-            <img src="img/libros/paucke/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
-            <h3 class="transitions-fast"><%=elem.titulo%></h3>
+            <img src="img/libros/siglos/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+            <h3 class="transitions-fast"><%=elem.data%> <span><%=elem.autor%></span></h3>
         </div>
     </li>
 <%})%>
