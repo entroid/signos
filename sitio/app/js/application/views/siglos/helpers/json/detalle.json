@@ -317,6 +317,326 @@
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
         "claseSlider": "ancho"
+    },
+
+    "img21": {
+        "src": "SFE2siglos-109_1500.jpg",
+
+        "lowres": "SFE2siglos-109_500.jpg",
+
+        "data": "Monigotes, c. 1889",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Casa Israelita». Es una de las fotos conocidas más antigua de inmigrantes judíos en nuestro país. Las personas fotogra­fiadas serían integrantes de la familia Guibert, llegados al lugar junto a la familia Leibovitz a fines de 1888. Monigotes era entonces apenas un paraje con un aserradero y una pulpería. Al año siguiente arribó al país en el vapor «Wesser» el grueso de los futuros colonos fundadores de Moisés Ville. Álbum Vistas de la provincia de Santa Fe.",
+
+        "coleccion": "Museo de la Coloniza­ción de Esperanza",
+
+        "claseSlider": "ancho"
+    },
+
+    "img22": {
+        "src": "SFE2siglos-150_1500.jpg",
+
+        "lowres": "SFE2siglos-150_500.jpg",
+
+        "data": "Rosario, 1866",
+
+        "autor": "José de Iriondo",
+
+        "txt": "El edificio del Cabildo, terminado aproximadamente en 1830 durante la gobernación del brigadier general Estanislao López y demolido en 1908, durante el mandato de Pedro Antonio Echagüe, para dar paso a la construcción de la actual Casa de Gobierno (Casa Gris). Se puede apreciar su torre sobreedificada en 1877, con el reloj que se incorporó en 1886 y que hoy está colocado en la torre derecha de la Basílica de Nuestra Señora del Carmen.",
+
+        "coleccion": "Museo de la Ciudad Autónoma de Buenos Aires",
+
+        "claseSlider": "ancho"
+    },
+
+    "img23": {
+        "src": "SFE2siglos-112_1500.jpg",
+
+        "lowres": "SFE2siglos-112_500.jpg",
+
+        "data": "Humbolt, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Humboldt. Segadora atadora en trabajo».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img24": {
+        "src": "SFE2siglos-112-1_1500.jpg",
+
+        "lowres": "SFE2siglos-112-1_500.jpg",
+
+        "data": "Rivadavia, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Rivadavia. Segadora californiana en trabajo».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img25": {
+        "src": "SFE2siglos-114_1500.jpg",
+
+        "lowres": "SFE2siglos-114_500.jpg",
+
+        "data": "Santa María Norte, c.1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Santa María. Casa de colonos».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img26": {
+        "src": "SFE2siglos-116_1500.jpg",
+
+        "lowres": "SFE2siglos-116_500.jpg",
+
+        "data": "Felicia, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Felicia. Fábrica de fideos de Alejandro Dreyer».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img27": {
+        "src": "SFE2siglos-117_1500.jpg",
+
+        "lowres": "SFE2siglos-117_500.jpg",
+
+        "data": "Providencia, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "««Colonia Providencia. Iglesia».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img28": {
+        "src": "SFE2siglos-117-1_1500.jpg",
+
+        "lowres": "SFE2siglos-117-1_500.jpg",
+
+        "data": "Susana, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Susana. Molino a cilindros de J. Milesi y Hermano».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img29": {
+        "src": "SFE2siglos-118_1500.jpg",
+
+        "lowres": "SFE2siglos-118_500.jpg",
+
+        "data": "Humberto Primo, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Humberto Primo. Casa de colono».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "alto"
+    },
+
+    "img30": {
+        "src": "SFE2siglos-118-1_1500.jpg",
+
+        "lowres": "SFE2siglos-118-1_500.jpg",
+
+        "data": "Emilia, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "Estación del Ferrocarril de Santa Fe a las Colonias. Instituto de Arte Americano e Investigaciones Estéticas «Mario Buschiazzo».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img31": {
+        "src": "SFE2siglos-120_1500.jpg",
+
+        "lowres": "SFE2siglos-120_500.jpg",
+
+        "data": "Rafaela, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Fundición y taller mecánico de Fanti y Cía.».",
+
+        "coleccion": "Álbum Vistas de la provincia de Santa Fe. Museo de la Colonización de Esperanza",
+
+        "claseSlider": "ancho"
+    },
+
+    "img32": {
+        "src": "SFE2siglos-120-1_1500.jpg",
+
+        "lowres": "SFE2siglos-120-1_500.jpg",
+
+        "data": "San Agustín, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia San Agustín. Molino mixto de Miguel Taverna».",
+
+        "coleccion": "Museo Etnográfico y Colonial de Santa Fe «Juan de Garay»",
+
+        "claseSlider": "ancho"
+    },
+
+    "img33": {
+        "src": "SFE2siglos-121_1500.jpg",
+
+        "lowres": "SFE2siglos-121_500.jpg",
+
+        "data": "Franck, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Franck. Molino La Estrella de Berraz Hermanos».",
+
+        "coleccion": "Museo Etnográfico y Colonial de Santa Fe «Juan de Garay»",
+
+        "claseSlider": "ancho"
+    },
+
+    "img34": {
+        "src": "SFE2siglos-124_1500.jpg",
+
+        "lowres": "SFE2siglos-124_500.jpg",
+
+        "data": "Grutly, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Grutly. Casa del colono Santiago Reutemann».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img35": {
+        "src": "SFE2siglos-124-1_1500.jpg",
+
+        "lowres": "SFE2siglos-124-1_500.jpg",
+
+        "data": "Guadalupe Norte, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Guadalupe. Casa del colono Federico Bock».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img36": {
+        "src": "SFE2siglos-125_1500.jpg",
+
+        "lowres": "SFE2siglos-125_500.jpg",
+
+        "data": "Coronda, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Jefatura Política».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img37": {
+        "src": "SFE2siglos-125-1_1500.jpg",
+
+        "lowres": "SFE2siglos-125-1_500.jpg",
+
+        "data": "Santo Tomé, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Templo en construcción».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "alto"
+    },
+
+    "img38": {
+        "src": "SFE2siglos-81_1500.jpg",
+
+        "lowres": "SFE2siglos-81_500.jpg",
+
+        "data": "Las Toscas, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Las Toscas. Plantación Villa de Carmen, de Eugenio Valençon».",
+
+        "coleccion": "Biblioteca Nacional",
+
+        "claseSlider": "ancho"
+    },
+
+    "img39": {
+        "src": "SFE2siglos-86_1500.jpg",
+
+        "lowres": "SFE2siglos-86_500.jpg",
+
+        "data": "San Javier, c. 1890",
+
+        "autor": "Luis Augusto Bugnon",
+
+        "txt": "«Bazar de beneficencia en casa de Norberto Cabral de Martí, fundador del Hospital de Beneficencia».",
+
+        "coleccion": "Colección Elvira Cabral",
+
+        "claseSlider": "ancho"
+    },
+
+    "img40": {
+        "src": "SFE2siglos-208_1500.jpg",
+
+        "lowres": "SFE2siglos-208_500.jpg",
+
+        "data": "Puerto General San Martín, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Casa y depósito escocés de Guillermo Kirk».",
+
+        "coleccion": "Museo Etnográfico y Colonial de Santa Fe «Juan de Garay»",
+
+        "claseSlider": "ancho"
     }
 
 }
