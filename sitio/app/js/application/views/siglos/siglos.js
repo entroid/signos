@@ -61,7 +61,7 @@ define([
 
             pluginsInit: function (este) {
 
-                //$("#lightSlider").hide();
+                $("#lightSlider").hide();
                 var totalimg = $("#lightSlider img").size();
                 var currentimg = 0;
 
@@ -69,6 +69,7 @@ define([
                     currentimg++;
                     if(currentimg==totalimg){
                          $("#lightSlider").show();
+                         $(".spinner").hide();
 
                          $("#lightSlider").lightSlider({
                                 item: 2,

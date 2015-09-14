@@ -1548,3 +1548,41 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .sliderBtn .tipr_container_bottom{
     margin-top:50px;
 }
+
+.spinner{
+    background: url('../img/fancybox_loading@2x.gif') no-repeat;
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siglos-info h2,
+.siglos-info h3{
+    float:left;
+    font-size: 1.3rem;
+    margin-top:15px;
+}
+
+.siglos-info p{
+    clear: left;
+}
+
+.siglos-info h2{
+    font-weight: bold;
+}
+.siglos-info h3{
+    margin-left:1rem;
+}
+
+.siglos-info .coleccion{
+    color:#666;
+}
+
+#siglosBook .lSPager li{
+    display: none;
+}
+
+#siglosBook .sliderWrapper .lSAction{
+    bottom: 0;
+}
