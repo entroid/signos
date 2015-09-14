@@ -184,7 +184,7 @@
 
         "autor": "Samuel Boote",
 
-        "txt": "ngenio azucarero Manolo, el primero instalado en el Gran Chaco en 1884, propiedad del empresario de origen peruano Manuel Ocampo Samanes, quien fundó y organizó Colonia Ocampo a partir de 1878.",
+        "txt": "Ingenio azucarero Manolo, el primero instalado en el Gran Chaco en 1884, propiedad del empresario de origen peruano Manuel Ocampo Samanes, quien fundó y organizó Colonia Ocampo a partir de 1878.",
 
         "coleccion": "Álbum Vistas de la Colonia Ocampo, Gran Chaco. Colección Matteo Goretti",
 
@@ -635,6 +635,707 @@
         "txt": "«Casa y depósito escocés de Guillermo Kirk».",
 
         "coleccion": "Museo Etnográfico y Colonial de Santa Fe «Juan de Garay»",
+
+        "claseSlider": "ancho"
+    },
+
+    "img41": {
+        "src": "SFE2siglos-209_1500.jpg",
+
+        "lowres": "SFE2siglos-209_500.jpg",
+
+        "data": "Amstrong, c. 1890",
+
+        "autor": "Ernesto H. Schlie",
+
+        "txt": "«Colonia Armstrong. Casa habitación de Juan Boidi».",
+
+        "coleccion": "Museo Etnográfico y Colonial de Santa Fe «Juan de Garay»",
+
+        "claseSlider": "ancho"
+    },
+
+    "img42": {
+        "src": "SFE2siglos-173_1500.jpg",
+
+        "lowres": "SFE2siglos-173_500.jpg",
+
+        "data": "Rosario, c. 1893",
+
+        "autor": "Santiago y Vicente Pusso",
+
+        "txt": "anorámica tomada desde el Palacio de Justicia de los Tribunales Provinciales, hoy facultad de Derecho de la Universidad Nacional de Rosario, hacia el este. Por la calle Córdoba, el solar del Coliseo Taurino y la plaza San Martín. Al fondo, la igle­sia Catedral.",
+
+        "coleccion": "Archivo fotográfico de la Escuela Superior de Museología de Rosario",
+
+        "claseSlider": "ancho"
+    },
+
+    "img43": {
+        "src": "SFE2siglos-127_1500.jpg",
+
+        "lowres": "SFE2siglos-127_500.jpg",
+
+        "data": "San Jerónimo Norte, c. 1895",
+
+        "autor": "Isidoro Mulin",
+
+        "txt": "Festejo popular en un 1º de agosto, fecha que conmemora la fundación de la Confederación Helvética. La carroza es una alegoría de la Confederación. La Colonia San Jerónimo, fundada en 1858, estuvo integrada durante mucho tiempo sólo por valesanos.",
+
+        "coleccion": "Colección Lorenzo Macagno",
+
+        "claseSlider": "ancho"
+    },
+
+    "img44": {
+        "src": "SFE2siglos-128_1500.jpg",
+
+        "lowres": "SFE2siglos-128_500.jpg",
+
+        "data": "Aurelia, c. 1895",
+
+        "autor": "Emilio Galassi",
+
+        "txt": "Cazadores de liebres en la casa de Presencia Griesser de Jacob, de Colonia Aurelia.",
+
+        "coleccion": "Colección Pedro Burcher",
+
+        "claseSlider": "ancho"
+    },
+
+    "img45": {
+        "src": "SFE2siglos-130_2000.jpg",
+
+        "lowres": "SFE2siglos-130_800.jpg",
+
+        "data": "Gálvez, c. 1895",
+
+        "autor": "Isidoro Mulin",
+
+        "txt": "Vista panorámica compuesta por dos fotos de la plaza y el pueblo. Al fondo y a la izquierda, la estación del Ferrocarril de Santa Fe. La vestimenta de la gente frente a la iglesia sugiere que se trata de un domingo, posiblemente después de misa.",
+
+        "coleccion": "Colección Familia Cicconi",
+
+        "claseSlider": "alto"
+    },
+
+    "img46": {
+        "src": "SFE2siglos-133_1500.jpg",
+
+        "lowres": "SFE2siglos-133_500.jpg",
+
+        "data": "San Justo, c. 1895",
+
+        "autor": "José de Iriondo",
+
+        "txt": "Corral de palo a pique en la estancia San Simón, propiedad del gobernador Simón de Iriondo, padre de José, autor de la fotografía.",
+
+        "coleccion": "Museo de la Ciudad Autónoma de Buenos Aires",
+
+        "claseSlider": "ancho"
+    },
+
+    "img47": {
+        "src": "SFE2siglos-219_1500.jpg",
+
+        "lowres": "SFE2siglos-219_500.jpg",
+
+        "data": "Venado Tuerto, 1987",
+
+        "autor": "Augusto Lutsch",
+
+        "txt": "Gira política de José Gálvez por los departamentos del sur.",
+
+        "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
+
+        "claseSlider": "ancho"
+    },
+
+    "img48": {
+        "src": "SFE2siglos-218_1500.jpg",
+
+        "lowres": "SFE2siglos-218_500.jpg",
+
+        "data": "Firmat, c. 1898",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Comparsa.",
+
+        "coleccion": "Colección Nelson Real",
+
+        "claseSlider": "ancho"
+    },
+
+    "img49": {
+        "src": "SFE2siglos-122_1500.jpg",
+
+        "lowres": "SFE2siglos-122_500.jpg",
+
+        "data": "María Juana, c. 1898",
+
+        "autor": "Isidoro Mulín",
+
+        "txt": "Antiguo Molino Victoria, de Antonio Boero. Comenzó su actividad en abril de 1888.",
+
+        "coleccion": "Colección Familia Boero",
+
+        "claseSlider": "ancho"
+    },
+
+    "img50": {
+        "src": "SFE2siglos-186_1500.jpg",
+
+        "lowres": "SFE2siglos-186_500.jpg",
+
+        "data": "Rosario, c. 1900",
+
+        "autor": "Santiago y Vicente Pusso",
+
+        "txt": "Estación Rosario Norte del Ferrocarril Central Argentino. En el frente, uno de los primeros tranvías eléctricos junto a ca­rros de alquiler en plena actividad.",
+
+        "coleccion": "Archivo fotográfico de la Escuela Superior de Museología de Rosario",
+
+        "claseSlider": "ancho"
+    },
+
+    "img51": {
+        "src": "SFE2siglos-86_1500.jpg",
+
+        "lowres": "SFE2siglos-86_500.jpg",
+
+        "data": "Helvecia, 1900",
+
+        "autor": "Honorio Franco",
+
+        "txt": "«Eduardo Callegari en su taller, esposa e hijos; obreros y cliente Ciriaco Quesada».",
+
+        "coleccion": "Colección Rubén Franco",
+
+        "claseSlider": "ancho"
+    },
+
+    "img52": { 
+        "src": "SFE2siglos-137_1500.jpg",
+
+        "lowres": "SFE2siglos-137_500.jpg",
+
+        "data": "San Carlos Centro, c. 1900",
+
+        "autor": "H. Molina",
+
+        "txt": "«Academia de Corte y Confección de la señora de Passaponti. Alumnas y profesoras».",
+
+        "coleccion": "Museo Histórico de la Colonia San Carlos Centro",
+
+        "claseSlider": "ancho"
+    },
+
+    "img53": {
+        "src": "SFE2siglos-193_1500.jpg",
+
+        "lowres": "SFE2siglos-193_500.jpg",
+
+        "data": "Rosario, 1902",
+
+        "autor": "Santiago y Vicente Pusso",
+
+        "txt": "Inauguración del parque de la Independencia, el 1º de diciembre de 1902. Vista tomada desde «la Montañita» realizada con la tierra de la excavación del lago artificial.",
+
+        "coleccion": "Archivo fotográfico de la Escuela Superior de Museología de Rosario",
+
+        "claseSlider": "ancho"
+    },
+
+    "img54": {
+ 
+        "src": "SFE2siglos-72_1500.jpg",
+
+        "lowres": "SFE2siglos-72_500.jpg",
+
+        "data": "San Jorge, c. 1902",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Alumnos y maestros de la escuela elemental.",
+
+        "coleccion": "Colección Rogelio Priamo",
+
+        "claseSlider": "ancho"
+    },
+
+    "img55": {
+ 
+        "src": "SFE2siglos-156_1500.jpg",
+
+        "lowres": "SFE2siglos-156_500.jpg",
+
+        "data": "Santa Fe, c. 1903",
+
+        "autor": "José Beleno",
+
+        "txt": "Tendido de la primera red de desagües de la ciudad.",
+
+        "coleccion": "Colección Pedro Cánaves",
+
+        "claseSlider": "ancho"
+    },
+
+    "img56": {
+        "src": "SFE2siglos-138_1500.jpg",
+
+        "lowres": "SFE2siglos-138_500.jpg",
+
+        "data": "Esperanza, 1904",
+
+        "autor": "Fernando Paillet",
+
+        "txt": "Los hermanos Garnica, a la izquierda, esperancinos, fueron capturados por «indios del Gran Chaco». El que tiene la guitarra estuvo cautivo 21 años, el otro, 17. En 1904 volvieron a Colonia Esperanza. Los acompañó un compadre indio, a la derecha con la lanza, que vivió con ellos un tiempo y regresó a su tribu. Datos extraídos del libro La ciudad de Esperanza del padre Pedro Grenón.",
+
+        "coleccion": "Museo de la Colonización de Esperanza",
+
+        "claseSlider": "ancho"
+    },
+
+    "img57": {
+ 
+        "src": "SFE2siglos-78_1500.jpg",
+
+        "lowres": "SFE2siglos-78_500.jpg",
+
+        "data": "Rosario, c. 1904",
+
+        "autor": "Santiago y Vicente Pusso",
+
+        "txt": "Plaza 25 de Mayo, desde Comercio (Laprida) y Córdoba. A la izquierda, el Palacio Municipal; a la derecha, la casa parro­quial y la iglesia Catedral.",
+
+        "coleccion": "Archivo fotográfico de la Escuela Superior de Museología de Rosario",
+
+        "claseSlider": "alto"
+    },
+
+    "img58": { 
+        "src": "SFE2siglos-146_1500.jpg",
+
+        "lowres": "SFE2siglos-146_500.jpg",
+
+        "data": "Santa Fe, c. 1904",
+
+        "autor": "José Beleno",
+
+        "txt": "La primitiva iglesia de Nuestra Señora de Guadalupe que se demolió en 1909 para construir la gran basílica actual, inaugurada al año siguiente. La palmera de la izquierda, frente al atrio, aún sigue en su lugar.",
+
+        "coleccion": "Colección Pedro Cánaves",
+
+        "claseSlider": "ancho"
+    },
+
+    "img59": {
+        "src": "SFE2siglos-223_1500.jpg",
+
+        "lowres": "SFE2siglos-223_500.jpg",
+
+        "data": "Rufino, 1904",
+
+        "autor": "José Della Mattia",
+
+        "txt": "Transporte y carga del cereal en los galpones del Ferrocarril Buenos Aires al Pacífico.",
+
+        "coleccion": "Colección Carlos Della Mattia",
+
+        "claseSlider": "ancho"
+    },
+
+    "img60": {
+ 
+        "src": "SFE2siglos-158_2000.jpg",
+
+        "lowres": "SFE2siglos-158_800.jpg",
+
+        "data": "Santa Fe, c. 1905",
+
+        "autor": "José Femminini",
+
+        "txt": "Plazoleta del Puerto, actual plaza Colón. En sus jardines, la pirámide conmemorativa del descubrimiento de América que hoy se encuentra en la plaza España. A la derecha, en la calle Rivadavia desde Rioja a Salta, se destaca el edificio de la empresa naviera de Carlos Sarsotti.",
+
+        "coleccion": "Museo Histórico Provincial «Brigadier General Estanislao López»",
+
+        "claseSlider": "alto"
+    },
+
+    "img61": {
+        "src": "SFE2siglos-157_1500.jpg",
+
+        "lowres": "SFE2siglos-157_500.jpg",
+
+        "data": "Santa Fe, c. 1905",
+
+        "autor": "José Femminini",
+
+        "txt": "Obreros trabajando en la construcción del galpón central de locomotoras del Ferrocarril de Santa Fe. Desde fines de 2010 funciona allí el espacio cultural público «La Redonda. Arte y vida cotidiana».",
+
+        "coleccion": "Museo Regional Ferroviario de Santa Fe",
+
+        "claseSlider": "ancho"
+    },
+
+    "img62": {
+        "src": "SFE2siglos-189_1500.jpg",
+
+        "lowres": "SFE2siglos-189_500.jpg",
+
+        "data": "Rosario, 1905",
+
+        "autor": "Arturo Francisco",
+
+        "txt": "Refinería Argentina de azúcar, que inició sus actividades en 1889. Hacia 1890 surgió en torno a su edificio principal y a los talleres del Ferrocarril Central Argentino el primer y más populoso barrio obrero de la ciudad (hoy Islas Malvinas).",
+
+        "coleccion": "Archivo General de la Nación",
+
+        "claseSlider": "ancho"
+    },
+
+    "img63": {  
+        "src": "SFE2siglos-203_1500.jpg",
+
+        "lowres": "SFE2siglos-203_500.jpg",
+
+        "data": "Rosario, c. 1905",
+
+        "autor": "Carlos Boschetti",
+
+        "txt": "Muelles del puerto.",
+
+        "coleccion": "Colección Familia Boschetti",
+
+        "claseSlider": "ancho"
+    },
+
+    "img64": { 
+        "src": "SFE2siglos-214_1500.jpg",
+
+        "lowres": "SFE2siglos-214_500.jpg",
+
+        "data": "Casilda, c. 1905",
+
+        "autor": "Donato Stigliano",
+
+        "txt": "Juan Pescio, el fundador del poblado Nueva Roma (actual barrio de la ciudad) presenta en un bar local el proyecto del monumento a Colón, que se observa en el fondo. El monumento, de 25 metros de diámetro por 250 metros de alto, iba a ubicarse en una plaza a determinar y preveía espacios para un teatro, exposiciones permanentes, observatorio astronómico, casas de comercio, etc.",
+
+        "coleccion": "Museo y Archivo Histórico de Casilda «Santos Tostecarelli»",
+
+        "claseSlider": "ancho"
+    },
+
+    "img65": { 
+        "src": "SFE2siglos-87_1500.jpg",
+
+        "lowres": "SFE2siglos-87_500.jpg",
+
+        "data": "Malabrigo, c.1905",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Carpintería Rincón de Italia de Felice Vitanzi, en Colonia Ella.",
+
+        "coleccion": "Colección Magnano-Coronel",
+
+        "claseSlider": "ancho"
+    },
+
+    "img66": {
+        "src": "SFE2siglos-215_1500.jpg",
+
+        "lowres": "SFE2siglos-215_500.jpg",
+
+        "data": "Cañada de Gómez, c. 1906",
+
+        "autor": "Antonio Vadell",
+
+        "txt": "Una clase del profesor Carlos Gianetti en la escuela Humberto I, creada por la Sociedad Italiana «Unione e Benevolenza» en 1883.",
+
+        "coleccion": "Museo Histórico Municipal de Cañada de Gómez",
+
+        "claseSlider": "ancho"
+    },
+
+    "img67": {
+ 
+        "src": "SFE2siglos-144_1500.jpg",
+
+        "lowres": "SFE2siglos-144_500.jpg",
+
+        "data": "San Justo, 1906",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Unión del Norte Foot-ball Club.",
+
+        "coleccion": "Museo Histórico Municipal «Rosa Giussani de Piva» de San Justo",
+
+        "claseSlider": "ancho"
+    },
+
+    "img68": {
+ 
+        "src": "SFE2siglos-95_1500.jpg",
+
+        "lowres": "SFE2siglos-95_500.jpg",
+
+        "data": "Tostado, 1906",
+
+        "autor": "Emilio Galassi",
+
+        "txt": "Ceremonia patria en la plaza.",
+
+        "coleccion": "Museo Histórico Regional de Tostado",
+
+        "claseSlider": "ancho"
+    },
+
+    "img69": { 
+        "src": "SFE2siglos-206_3000.jpg",
+
+        "lowres": "SFE2siglos-206_1000.jpg",
+
+        "data": "Rosario, 1907",
+
+        "autor": "Richard Gaspary",
+
+        "txt": "Panorámica de las instalaciones del puerto con la infraestructura ferroviaria de la empresa concesionaria, Hersent et fils & Schneider, y el edificio de administración de la empresa, hoy ocupado por el Canal 5 de Rosario.",
+
+        "coleccion": "Ente Administrador Puerto Rosario (ENAPRO)",
+
+        "claseSlider": "alto"
+    },
+
+    "img70": {
+        "src": "SFE2siglos-211_1500.jpg",
+
+        "lowres": "SFE2siglos-211_500.jpg",
+
+        "data": "Carcarañá, 1907",
+
+        "autor": "Francisco Hernán",
+
+        "txt": "«Aparato langosticida Carcarañá».",
+
+        "coleccion": "Archivo General de la Nación",
+
+        "claseSlider": "ancho"
+    },
+
+    "img71": { 
+        "src": "SFE2siglos-224_1500.jpg",
+
+        "lowres": "SFE2siglos-224_500.jpg",
+
+        "data": "Correa, 1907",
+
+        "autor": "Manuel Sanz",
+
+        "txt": "Salida de la iglesia en ocasión de la fiesta de Reyes.",
+
+        "coleccion": "Archivo General de la Nación",
+
+        "claseSlider": "ancho"
+    },
+
+    "img72": {
+ 
+        "src": "SFE2siglos-170_1500.jpg",
+
+        "lowres": "SFE2siglos-170_500.jpg",
+
+        "data": "Santa Fe, c. 1908",
+
+        "autor": "José Beleno",
+
+        "txt": "Obras del nuevo puerto. Construcción de los muelles del dique 1. Al fondo, la costa de la calle Rivadavia y el centro actual de la ciudad, donde sobresale la torre de la iglesia del Huerto.",
+
+        "coleccion": "Colección Pedro Cánaves",
+
+        "claseSlider": "ancho"
+    },
+
+    "img73": {
+    
+        "src": "SFE2siglos-145_1500.jpg",
+
+        "lowres": "SFE2siglos-145_500.jpg",
+
+        "data": "Las Tunas, 1908",
+
+        "autor": "Augusto Rognón",
+
+        "txt": "Baile en festejos de las bodas de oro de José Jullier y señora, en la casa de su hijo Emilio.",
+
+        "coleccion": "Colección Emilio Jullier",
+
+        "claseSlider": "ancho"
+    },
+
+    "img74": {
+  
+        "src": "SFE2siglos-214_1500.jpg",
+
+        "lowres": "SFE2siglos-214_500.jpg",
+
+        "data": "Progreso, 1909",
+
+        "autor": "Fernando Paillet",
+
+        "txt": "Integrantes de la Sociedad Italiana de Colonia Progreso, fotografiados el 20 de septiembre de 1909.",
+
+        "coleccion": "Museo de la Colonización de Esperanza",
+
+        "claseSlider": "ancho"
+    },
+
+    "img75": {
+ 
+        "src": "SFE2siglos-187_1500.jpg",
+
+        "lowres": "SFE2siglos-187_500.jpg",
+
+        "data": "Rosario, c. 1910",
+
+        "autor": "Santiago y Vicente Pusso",
+
+        "txt": "Un tranvía eléctrico y otros carruajes con tracción a caballo frente a la Estación Rosario Central del Ferrocarril Central Argentino. En la esquina de las calles Wheelwright y Corrientes, el restaurante Alto Piemonte.",
+
+        "coleccion": "Archivo fotográfico de la Escuela Superior de Museología de Rosario",
+
+        "claseSlider": "ancho"
+    },
+
+    "img76": {
+ 
+        "src": "SFE2siglos-99_1500.jpg",
+
+        "lowres": "SFE2siglos-99_500.jpg",
+
+        "data": "San Cristóbal, c. 1910",
+
+        "autor": "Atribuida a Leopoldo Mannucci",
+
+        "txt": "«Interior de la Confitería del señor G. Vaudet».",
+
+        "coleccion": "Colección Osvaldo Giussani",
+
+        "claseSlider": "ancho"
+    },
+
+    "img77": {
+        "src": "SFE2siglos-101_1500.jpg",
+
+        "lowres": "SFE2siglos-101_500.jpg",
+
+        "data": "Villa Saralegui, c. 1910",
+
+        "autor": "Augusto Lutsch",
+
+        "txt": "«Estancia Saralegui. Baño de hacienda bovina».",
+
+        "coleccion": "Museo Histórico Municipal «Rosa Giussani de Piva» de San Justo",
+
+        "claseSlider": "ancho"
+    },
+
+    "img78": { 
+ 
+        "src": "SFE2siglos-102_1500.jpg",
+
+        "lowres": "SFE2siglos-102_500.jpg",
+
+        "data": "Villa Saralegui, c. 1910",
+
+        "autor": "Augusto Lutsch",
+
+        "txt": "«Estancia Saralegui. Emparvando alfalfa».",
+
+        "coleccion": "Museo Histórico Municipal «Rosa Giussani de Piva» de San Justo",
+
+        "claseSlider": "ancho"
+    },
+
+    "img79": { 
+        "src": "SFE2siglos-217_1500.jpg",
+
+        "lowres": "SFE2siglos-217_500.jpg",
+
+        "data": "Villa Eloísa, c 1910",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Corte y emparve de cereales en campo Mascotti.",
+
+        "coleccion": "Museo Histórico Municipal de Cañada de Gómez",
+
+        "claseSlider": "alto"
+    },
+
+    "img80": {
+ 
+        "src": "SFE2siglos-211_1500.jpg",
+
+        "lowres": "SFE2siglos-211_500.jpg",
+
+        "data": "Ataliva, c. 1910",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Carlos Ronco y familia durante la cosecha en su campo.",
+
+        "coleccion": "Museo y Archivo Histórico Municipal «Basilio M. Donato» de Sunchales",
+
+        "claseSlider": "ancho"
+    },
+
+    "img81": {
+        "src": "SFE2siglos-136_1500.jpg",
+
+        "lowres": "SFE2siglos-136_500.jpg",
+
+        "data": "Colonia Maua, 1910",
+
+        "autor": "Autor no identificado",
+
+        "txt": "Escuela elemental.",
+
+        "coleccion": "Colección Familia Cipolat",
+
+        "claseSlider": "ancho"
+    },
+
+    "img82": {
+        "src": "SFE2siglos-225_1500.jpg",
+
+        "lowres": "SFE2siglos-225_500.jpg",
+
+        "data": "Melincué, c. 1910",
+
+        "autor": "Augusto Lutsch",
+
+        "txt": "Mangrullo de Melincué, único resto que permanece en pie del antiguo fuerte fundado en 1776 para contener los malo­nes y que dio origen a la localidad. En un principio estaba hecho con troncos, pero en 1868 fue reconstruido en ladrillos por el empresario rosarino Luis Laflor, para contribuir con la defensa del lugar. Fue declarado monumento histórico na­cional en 1944.",
+
+        "coleccion": "Archivo General de la Nación",
+
+        "claseSlider": "ancho"
+    },
+
+    "img83": { 
+        "src": "SFE2siglos-171_1500.jpg",
+
+        "lowres": "SFE2siglos-171_500.jpg",
+
+        "data": "Santa Fe, 1911",
+
+        "autor": "José Beleno",
+
+        "txt": "Barco ultramarino «Ministre Beerthaet», de bandera belga, descargando mercadería o lastre en barriles. Primer navío llega­do al nuevo puerto el 1º de enero de 1911.",
+
+        "coleccion": "Colección Pedro Cánaves",
 
         "claseSlider": "ancho"
     }
