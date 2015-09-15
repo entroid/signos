@@ -68,8 +68,6 @@ define([
                 $("#lightSlider img").load(function(){
                     currentimg++;
                     if(currentimg==totalimg){
-                         $("#lightSlider").show();
-
                          $("#lightSlider").lightSlider({
                                 item: 2,
                                 autoWidth: true,
@@ -94,6 +92,9 @@ define([
                                 }]
                             });
                     }
+
+                    $(".fa-spinner.fa-pulse").css("opacity", "0");
+                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"}); 
                 })
 
                 var popupContainer = '<div id="popupContent"></div>';

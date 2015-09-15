@@ -68,10 +68,9 @@ define([
 
                 $("#lightSlider img").load(function(){
                     currentimg++;
-                    if(currentimg==totalimg){
-                         $("#lightSlider").show();
+                    if(currentimg==totalimg){                       
 
-                         $("#lightSlider").lightSlider({
+                        $("#lightSlider").lightSlider({
                                 item: 2,
                                 autoWidth: true,
                                 slideMargin:60,
@@ -93,7 +92,10 @@ define([
                                         slideMargin:30,
                                     }
                                 }]
-                            });
+                        });
+                        
+                        $(".fa-spinner.fa-pulse").css("opacity", "0");
+                        $(".sliderWrapper").css({"height": "auto", "opacity":"1"});                       
                     }
                 })
 

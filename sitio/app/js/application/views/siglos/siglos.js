@@ -61,15 +61,12 @@ define([
 
             pluginsInit: function (este) {
 
-                $("#lightSlider").hide();
                 var totalimg = $("#lightSlider img").size();
                 var currentimg = 0;
 
                 $("#lightSlider img").load(function(){
                     currentimg++;
                     if(currentimg==totalimg){
-                         $("#lightSlider").show();
-                         $(".spinner").hide();
 
                          $("#lightSlider").lightSlider({
                                 item: 2,
@@ -95,6 +92,9 @@ define([
                                 }]
                             });
                     }
+
+                    $(".fa-spinner.fa-pulse").css("opacity", "0");
+                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
                 })
 
                 var popupContainer = '<div id="popupContent"></div>';

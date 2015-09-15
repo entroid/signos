@@ -1093,7 +1093,9 @@ Nav Overlay
     -o-transition: all 80ms;
     transition: all 80ms; /* ease-in-out */
 }
-
+.hoverContainer:hover h3{
+    color: #fe8000;
+}
 #lightSlider .hoverContainer:hover img{
   /*box-shadow: 6px 7px 0 0 #666;*/
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.7);
@@ -1159,16 +1161,19 @@ Nav Overlay
 
 .sliderWrapper {
     overflow: hidden;
-    padding: 6px;
+    /*padding: 6px;*/
     margin-top: -6px;
+    min-height: 400px;
+    height:0;
+    opacity:0;
 }
 
 .sliderWrapper .lSAction{
     bottom: -33px;
-    right: 0;
     margin-left: -230px;
     position: absolute;
-    width: 490px;
+    right: 0;
+    width: 454px;
     z-index: 1;
 }
 
@@ -1216,9 +1221,9 @@ Nav Overlay
 /* pager */
 .sliderWrapper .lSSlideOuter .lSPager{
     margin-bottom: 20px;
-    margin-top: 28px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
+    margin-top: 26px !important; /* para sobreescribir la horripilante practica de lightslider de meter css inline por js */
     text-align:right;
-    padding-right:82px;
+    padding-right:54px;
     /*background-image: repeating-linear-gradient(45deg, gray 0px, gray 25px, transparent 25px, transparent 50px, gray 50px);*/
 }
 
@@ -1299,7 +1304,7 @@ Nav Overlay
 .navBook nav ul li {position:relative; margin-bottom:15px;}
 .navBook nav li a{font-size: 0.9em; font-style: italic; /*color: #777;*/line-height: 0.8rem;}
 .navBook nav li a:hover{color:#fe8000;}
-.navBook nav li a span{display:block;}
+.navBook nav li a span{display:block;margin-bottom:4px;}
 
 menu li {cursor:pointer;}
 
@@ -1549,14 +1554,22 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     margin-top:50px;
 }
 
-.spinner{
-    background: url('../img/fancybox_loading@2x.gif') no-repeat;
-    width: 48px;
-    height: 48px;
-    margin-left: auto;
-    margin-right: auto;
+/*.spinner{
+    min-height:400px;
+    position:relative;
+    width:100%;
+    height:100%;
+}*/
+
+.fa-spinner.fa-pulse{
+    display: inline-block;
+    font-size: 2em;
+    left: 46%;
+    position: absolute;
+    top: 44%;
 }
 
+/************************** SIGLOS **************************/
 .siglos-info h2,
 .siglos-info h3{
     float:left;
@@ -1580,9 +1593,22 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 #siglosBook .lSPager li{
-    display: none;
+    /*display: none;*/
 }
 
 #siglosBook .sliderWrapper .lSAction{
-    bottom: 0;
+    bottom: -42px;
+    margin-left: 0;
+    width: 90px;
+}
+
+#siglosBook .lSAction > .lSPrev {
+    left:0;
+}
+#siglosBook .sliderWrapper .lSSlideOuter .lSPager{
+    width: 93%;
+}
+
+#siglosBook .navBook nav, .navBook menu.grillaBtns{
+    margin-right: 33px;
 }
