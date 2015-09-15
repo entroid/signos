@@ -716,7 +716,9 @@
 
         "coleccion": "Colección Familia Cicconi",
 
-        "claseSlider": "alto"
+        "claseSlider": "alto",
+
+        "type":"panoramica"
     },
 
     "img46": {
@@ -960,7 +962,9 @@
 
         "coleccion": "Museo Histórico Provincial «Brigadier General Estanislao López»",
 
-        "claseSlider": "alto"
+        "claseSlider": "alto",
+
+        "type":"panoramica"
     },
 
     "img61": {
@@ -1106,7 +1110,9 @@
 
         "coleccion": "Ente Administrador Puerto Rosario (ENAPRO)",
 
-        "claseSlider": "alto"
+        "claseSlider": "alto",
+
+        "type":"panoramica"
     },
 
     "img70": {

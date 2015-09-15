@@ -80,6 +80,10 @@ define([
                                 /*enableDrag: false,*/
                                 prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
+                                onSliderLoad: function(){
+                                    $(".fa-spinner.fa-pulse").css("opacity", "0");
+                                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+                                },
 
                                 responsive : [{
                                     breakpoint:768,

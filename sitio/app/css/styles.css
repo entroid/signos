@@ -1612,3 +1612,16 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 #siglosBook .navBook nav, .navBook menu.grillaBtns{
     margin-right: 33px;
 }
+
+#siglosBook .navBook nav li a{
+    color:#fe8000;
+}
+
+#siglosBook .navBook nav li a:hover{
+    color:#262325;
+    opacity:1;
+}
+
+#siglosBook .hoverContainer h3 span{
+    font-weight:normal;
+}
