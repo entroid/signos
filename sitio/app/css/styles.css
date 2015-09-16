@@ -1396,15 +1396,17 @@ menu li {cursor:pointer;}
 
 #txt, #grillaContent{
     background-color: white;
-    height: 100%;
     left: 0;
     min-height: 100%;
     opacity: 0;
-    overflow: auto;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: -1;
+}
+
+#txt{
+    height: 100%;
 }
 
 #txt.fondoAdentro, #grillaContent.fondoAdentro{
@@ -1413,7 +1415,8 @@ menu li {cursor:pointer;}
     /*height: 100%;*/
 }
 #txt h1{transform: translate(0px, -150%);transition-delay: 0.1s; opacity:0;}
-#txt.adentro h1{height: 100%;transition-delay: 0.2s; transform: translate(0px, 0px);opacity:1;margin-top:-3px;}
+#txt.adentro h1{transition-delay: 0.2s; transform: translate(0px, 0px);opacity:1;margin-top:-3px;}
+#txt.adentro h2{margin-top:50px;}
 
 #txt p{transform: translate(0px, -150%); transition-delay: 0s; opacity:0;}
 #txt.adentro p{transition-delay: 0.1s; transform: translate(0px, 0px);opacity:1;}
@@ -1434,7 +1437,8 @@ menu li {cursor:pointer;}
 #txt .cerrar:hover{text-decoration:underline;}
 #txt .cerrar i{margin-right:10px;font-size: 1.6em;}
 
-#txt .txtArea{padding: 0 13%;font-size:1em;}
+#txt .txtArea{padding: 0 13%;font-size:1em;overflow: auto;
+    height: 100%;}
 
 .grilla{padding-right: 20px;}
 .grilla .row{margin-bottom: 30px;}
