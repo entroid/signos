@@ -2,9 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!views/paucke/helpers/pauckeBio.html',
-    'text!views/paucke/helpers/pauckeMemorias.html',
-    'text!views/paucke/helpers/pauckeNotas.html',
+    'text!views/siglos/helpers/siglosBio.html',
+    'text!views/siglos/helpers/siglosMemorias.html',
+    'text!views/siglos/helpers/siglosNotas.html',
 
     ], function($, _, Backbone, Bio, Memorias, Notas) {
         var TxtPaucke = Backbone.View.extend({
