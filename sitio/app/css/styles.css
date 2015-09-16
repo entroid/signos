@@ -1437,8 +1437,8 @@ menu li {cursor:pointer;}
 #txt .cerrar:hover{text-decoration:underline;}
 #txt .cerrar i{margin-right:10px;font-size: 1.6em;}
 
-#txt .txtArea{padding: 0 13%;font-size:1em;overflow: auto;
-    height: 100%;}
+#txt .txtArea{padding: 0 13%;font-size:1em; height: 100%;}
+#txt .txtSiglos{height: 70%; overflow: auto;}
 
 .grilla{padding-right: 20px;}
 .grilla .row{margin-bottom: 30px;}
