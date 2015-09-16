@@ -34,8 +34,28 @@ define([
                 })                    
 
                  
+                $(".imglink").click(este.abrirImagen)
+                $(".modalFoto .cerrarModal").click(este.cerrarSegundoModal)
+            },
 
-                
+            abrirImagen:function(e){
+
+                e.preventDefault();
+                var imagen = $(e.target).attr("href");
+                 if (window.matchMedia('(max-width: 768px)').matches){
+                        $(".siglosMemorias .modalFoto .imgwrapper").html('<img src="img/libros/siglos/'+imagen+'"/>')
+                        $(".siglosMemorias .modalFoto").show()
+
+                 }else{
+
+                    $(".fotoSiglos").html('<img src="img/libros/siglos/'+imagen+'"/>')
+               
+                }
+
+            },
+
+            cerrarSegundoModal:function(e){
+                $(".siglosMemorias .modalFoto").hide()
             }
         });
         
