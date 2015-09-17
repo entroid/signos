@@ -35,7 +35,9 @@ define([
 
                  
                 $(".imglink").click(este.abrirImagen)
-                $(".modalFoto .cerrarModal").click(este.cerrarSegundoModal)
+                $(".modalFoto .cerrarModal").click(este.cerrarSegundoModal);
+
+                $('.notas').tipr();
             },
 
             abrirImagen:function(e){
