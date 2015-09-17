@@ -153,10 +153,24 @@ define([
                         // tooltip
                       $('.traduccion-btn').tipr();
                        
+                      var url = location.href; 
+                      Backbone.history.navigate( '/modal',{ trigger:true, replace: false })
+
+
+                      cambiaHash = function(event){
+                            if(location.hash == "#paucke"){
+                                $('#popupContent').popup('hide');
+                            }
+                      };
+
+                      window.addEventListener("hashchange", cambiaHash, false);
+
                     },
 
                     onclose: function() { 
                         $('#popupContent').removeClass('cartaSlide');
+                        window.removeEventListener("hashchange");
+                        Backbone.history.navigate( '/paucke',{ trigger:true, replace: false })
                     }
                 });              
 
