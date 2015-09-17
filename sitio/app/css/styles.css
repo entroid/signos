@@ -1422,10 +1422,13 @@ menu li {cursor:pointer;}
 #txt.adentro p{transition-delay: 0.1s; transform: translate(0px, 0px);opacity:1;}
 
 #txt h3{font-style:italic;}
-#txt h4{color: #666;
+#txt h4{
+    color: #666;
     font-weight: normal;
     margin-bottom: 30px;
-    text-align: right;}
+    text-align: right;
+    margin-top: 0;
+}
 
 #txt .cerrar{
     cursor: pointer;
@@ -1438,7 +1441,10 @@ menu li {cursor:pointer;}
 #txt .cerrar i{margin-right:10px;font-size: 1.6em;}
 
 #txt .txtArea{padding: 0 13%;font-size:1em; height: 100%;}
-#txt .txtSiglos{height: 70%; overflow: auto;}
+#txt .txtArea .row{height:100%;}
+#txt .txtSiglos{height: 80%; overflow: auto;}
+#txt .txtSiglos a{text-decoration: underline; color: #fe8000;}
+#txt .txtSiglos span{display:inline-block;cursor:pointer; color: #fe8000;}
 
 .grilla{padding-right: 20px;}
 .grilla .row{margin-bottom: 30px;}
@@ -1635,9 +1641,20 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 #siglosBook .hoverContainer h3 span{
     font-weight:normal;
 }
+.siglosMemorias .fotoSiglos{
+    padding-right: 50px;
+    max-height: 422px;
+    overflow: hidden;
+}
 
 .siglosMemorias .fotoSiglos img{
     max-width: 100%;
+    max-height: 250px;
+}
+.siglosMemorias .fotoSiglos p{
+    font-size: .8em;
+    color: #666;
+    text-align: justify;
 }
 
 .siglosMemorias .modalFoto{

@@ -39,7 +39,8 @@ define([
                 this.jsonData ;
                 var este = this;
                 $.ajax({
-
+                    
+                    dataType: "json",
                     url: 'js/application/views/siglos/helpers/json/detalle.json',
 
                 }).done(function(data) {       

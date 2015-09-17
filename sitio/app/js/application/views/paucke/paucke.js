@@ -41,6 +41,7 @@ define([
 
                 $.ajax({
 
+                    dataType: "json",
                     url: 'js/application/views/paucke/helpers/json/detalle.json',
 
                 }).done(function(data) {       

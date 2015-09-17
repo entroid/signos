@@ -40,6 +40,7 @@ define([
                 var este = this;
                 $.ajax({
 
+                    dataType: "json",
                     url: 'js/application/views/signos/helpers/json/detalle.json',
 
                 }).done(function(data) {       

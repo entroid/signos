@@ -2,9 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!views/signos/helpers/SignosBio.html',
-    'text!views/signos/helpers/SignosMemorias.html',
-    'text!views/signos/helpers/SignosNotas.html',
+    'text!views/signos/helpers/signosBio.html',
+    'text!views/signos/helpers/signosMemorias.html',
+    'text!views/signos/helpers/signosNotas.html',
 
     ], function($, _, Backbone, Bio, Memorias, Notas) {
         var TxtSignos = Backbone.View.extend({
