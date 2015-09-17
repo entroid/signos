@@ -1439,6 +1439,8 @@ menu li {cursor:pointer;}
 
 #txt .txtArea{padding: 0 13%;font-size:1em; height: 100%;}
 #txt .txtSiglos{height: 70%; overflow: auto;}
+#txt .txtSiglos a{text-decoration: underline; color: #fe8000;}
+#txt .txtSiglos span{cursor:pointer; color: #fe8000;}
 
 .grilla{padding-right: 20px;}
 .grilla .row{margin-bottom: 30px;}
