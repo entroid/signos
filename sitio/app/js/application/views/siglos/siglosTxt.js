@@ -44,13 +44,18 @@ define([
 
                 e.preventDefault();
                 var imagen = $(e.target).attr("href");
-                 if (window.matchMedia('(max-width: 768px)').matches){
-                        $(".siglosMemorias .modalFoto .imgwrapper").html('<img src="img/libros/siglos/'+imagen+'"/>')
-                        $(".siglosMemorias .modalFoto").show()
+                var txt = $(e.target).attr("data-txt");
 
-                 }else{
+                var content = imagen ? '<img src="img/libros/siglos/'+imagen+'"/><p>' +txt + '</p>' : '<p>' +txt + '</p>';
 
-                    $(".fotoSiglos").html('<img src="img/libros/siglos/'+imagen+'"/>')
+
+                if (window.matchMedia('(max-width: 768px)').matches){
+                        $(".siglosMemorias .modalFoto .imgwrapper").html(content);
+                        $(".siglosMemorias .modalFoto").show();
+
+                }else{
+
+                    $(".fotoSiglos").html(content);
                
                 }
 
