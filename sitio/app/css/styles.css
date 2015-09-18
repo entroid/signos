@@ -1443,8 +1443,8 @@ menu li {cursor:pointer;}
 #txt .txtArea{padding: 0 13%;font-size:1em; height: 100%;}
 #txt .txtArea .row{height:100%;}
 #txt .txtSiglos{height: 80%; overflow: auto;}
-#txt .txtSiglos a{text-decoration: underline; color: #fe8000;}
-#txt .txtSiglos span{display:inline-block;cursor:pointer; color: #fe8000;}
+#txt .txtSiglos a{text-decoration: underline; color: #fe8000; font-weight:bold;}
+#txt .txtSiglos span{display:inline-block;cursor:pointer; color: #fe8000; font-weight:bold;}
 
 .grilla{padding-right: 20px;}
 .grilla .row{margin-bottom: 30px;}
@@ -1642,9 +1642,9 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     font-weight:normal;
 }
 .siglosMemorias .fotoSiglos{
+    max-height: 405px;
+    overflow: auto;
     padding-right: 50px;
-    max-height: 422px;
-    overflow: hidden;
 }
 
 .siglosMemorias .fotoSiglos img{
@@ -1671,3 +1671,10 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .siglosMemorias .modalFoto .imgwrapper img{
     max-width: 100%;
 }
+
+#txt .siglosMemorias.txtArea{
+    padding-right:0;
+}
+
+.siglosMemorias h1{margin-bottom:10px;}
+.siglosMemorias h3{margin-bottom: 30px; margin-top: 0;}

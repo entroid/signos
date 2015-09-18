@@ -34,7 +34,8 @@ define([
                 })                    
 
                  
-                $(".imglink").click(este.abrirImagen)
+                $(".imglink").click(este.abrirImagen);
+                $(".imglink").hover(este.abrirImagen);
                 $(".modalFoto .cerrarModal").click(este.cerrarSegundoModal);
 
                 $('.notas').tipr();
