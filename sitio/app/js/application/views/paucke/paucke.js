@@ -124,7 +124,7 @@ define([
                                 item: 1,
                                 mode: 'slide',
                                 easing: 'linear',
-                                speed: '400',
+                                speed: '50',
                                 keyPress: true,
                                 controls: true,
                                 prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left"></i></span>',
@@ -159,7 +159,7 @@ define([
 
 
                       cambiaHash = function(event){
-                            if(location.hash == "#paucke"){
+                            if(location.hash == "#pauckeback" || location.hash == "#paucke"){
                                 $('#popupContent').popup('hide');
                             }
                       };
@@ -171,7 +171,7 @@ define([
                     onclose: function() { 
                         $('#popupContent').removeClass('cartaSlide');
                         window.removeEventListener("hashchange");
-                        Backbone.history.navigate( '/paucke',{ trigger:true, replace: false })
+                        Backbone.history.navigate( '/pauckeback',{ trigger:true, replace: false })
                     }
                 });              
 

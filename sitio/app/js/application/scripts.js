@@ -8,9 +8,24 @@ $(".nav-toggle").click(function(e) {
 });
 
 /* When user clicks a link */
-$(".overlay ul li a").click(function() {
-    $(".nav-toggle").toggleClass("active");
-    $(".overlay-boxify").toggleClass("open");
+$(".overlay ul li a").click(function(e) {
+    //alert("a")
+    e.preventDefault();
+    var url = $(this).attr("href");
+    console.log(url)
+    if(url.charAt(0) == "#"){
+        url = url.replace("#","")
+         Backbone.history.navigate( '/'+url,{ trigger:true, replace: false })
+        $("#popupContent").remove();
+    }else{
+        location.href=window.location.href.split('#')[0];
+    }
+    // $(".nav-toggle").toggleClass("active");
+   // $(".overlay-boxify").removeClass("open");
+   // console.log($(".overlay-boxify").hasClass("open"))
+    //location.href=$(e.target).attr("href");
+    //window.location.reload()
+    //$(".overlay-boxify").toggleClass("open");
 });
 
 /* When user clicks outside */
@@ -34,3 +49,5 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+
+
