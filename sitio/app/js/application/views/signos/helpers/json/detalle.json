@@ -13,14 +13,16 @@
 					"lowres":"img.jpg",
 					"src":"img.jpg",
 					"extracto":"lorem ipsum",
-					"texto":"lorem ipsum..."
+					"texto":"lorem ipsum...",
+					"tipo":"vertical"
 				},
 				{
 					"titulo":"La gesta del territorio",
 					"lowres":"img.jpg",
 					"src":"img.jpg",
 					"extracto":"lorem ipsum",
-					"texto":"lorem ipsum..."
+					"texto":"lorem ipsum...",
+					"tipo":"panoramica"
 				}
 			]
 		},
@@ -36,14 +38,16 @@
 					"lowres":"img.jpg",
 					"src":"img.jpg",
 					"extracto":"lorem ipsum",
-					"texto":"lorem ipsum..."
+					"texto":"lorem ipsum...",
+					"tipo":"vertical"
 				},
 				{
 					"titulo":"La gesta del territorio",
 					"lowres":"img.jpg",
 					"src":"img.jpg",
 					"extracto":"lorem ipsum",
-					"texto":"lorem ipsum..."
+					"texto":"lorem ipsum...",
+					"tipo":"vertical"
 				}
 			]
 		}
