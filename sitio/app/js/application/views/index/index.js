@@ -13,6 +13,12 @@ define([
 
                 $(this.el).html(_.template(indexTemplate));
 
+                if (window.matchMedia('(min-width: 768px)').matches){
+                    $('.hero .paucke img').attr('src', 'img/bkg/home-bckg-paucke.jpg');
+                    $('.hero .siglos img').attr('src', 'img/bkg/home-bckg-siglos.jpg');
+                    $('.hero .signos img').attr('src', 'img/bkg/home-bckg-signos.jpg');
+                }
+
             /***************** Slide me (background slide) ******************/
                 $('.hero').slideme({
                     autoslide : true,
