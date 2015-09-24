@@ -3,23 +3,23 @@
 	"capitulos":{
 
 		"cap1": { 
-			"src": "dummy.png",
+			"src": "SFE2siglos-171_1500.jpg",
 
 			"titulo": "Santa Fe Colonial",
 			"subcapitulos":[
 
 				{
 					"titulo":"La gesta del territorio",
-					"lowres":"dummy.png",
-					"src":"dummy.png",
+					"lowres":"img.jpg",
+					"src":"img.jpg",
 					"extracto":"lorem ipsum",
 					"texto":"lorem ipsum...",
 					"tipo":"vertical"
 				},
 				{
 					"titulo":"La gesta del territorio",
-					"lowres":"dummy.png",
-					"src":"dummy.png",
+					"lowres":"img.jpg",
+					"src":"img.jpg",
 					"extracto":"lorem ipsum",
 					"texto":"lorem ipsum...",
 					"tipo":"panoramica"
@@ -28,23 +28,23 @@
 		},
 
 		"cap2": { 
-			"src": "dummy.png",
+			"src": "SFE2siglos-171_1500.jpg",
 
 			"titulo": "Santa Fe Colonial",
 			"subcapitulos":[
 
 				{
 					"titulo":"La gesta del territorio",
-					"lowres":"dummy.png",
-					"src":"dummy.png",
+					"lowres":"img.jpg",
+					"src":"img.jpg",
 					"extracto":"lorem ipsum",
 					"texto":"lorem ipsum...",
 					"tipo":"vertical"
 				},
 				{
 					"titulo":"La gesta del territorio",
-					"lowres":"dummy.png",
-					"src":"dummy.png",
+					"lowres":"img.jpg",
+					"src":"img.jpg",
 					"extracto":"lorem ipsum",
 					"texto":"lorem ipsum...",
 					"tipo":"vertical"
