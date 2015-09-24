@@ -45,7 +45,7 @@ define([
                     url: 'js/application/views/signos/helpers/json/detalle.json',
 
                 }).done(function(data) {       
-
+                    console.log(data)
                     este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
                     _.each(este.jsonData.capitulos,function(elem,ind){
                         $("#main-menu ul").append('<li>'+elem.titulo+'</li>')
@@ -206,6 +206,7 @@ define([
                 var totalWidth = $(window).width();
                 e.preventDefault();
                 e.stopPropagation();
+                var este = this;
                 var target = e.target;
                 $("#signosBook #second-row").show();
                  $("#signosBook #second-row").animate({
@@ -219,6 +220,58 @@ define([
                  },500,function(){
                     console.log("fin de anim")
                  })
+                 var cap = $(e.target).data("src");
+                 var contenidosSlide = [];
+                 _.each(este.jsonData.capitulos[cap].subcapitulos,function(elem,ind){
+                    $("#second-row .subcaps ul").append("<li>"+elem.titulo+"</li>");
+                    _.each(elem.contenido,function(subel,indice){
+                        contenidosSlide.push(subel);
+                    })
+                 })
+                 console.log(contenidosSlide)
+                 _.each(contenidosSlide,function(obj,indixe){
+    
+                     $("#subcapslider").append('<li class="'+indixe+' '+obj.tipo+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>')
+
+                 })
+
+                var totalimg = $("#subcapslider img").size();
+                var currentimg = 0;
+
+                $("#subcapslider img").load(function(){
+                    currentimg++;
+                    if(currentimg==totalimg){
+
+                        var slider = $("#subcapslider").lightSlider({
+                                    item: 2,
+                                    autoWidth: true,
+                                    slideMargin:60,
+                                    mode: 'slide',
+                                    easing: 'linear',
+                                    speed: '400',
+                                    keyPress: true,
+                                    controls: true,
+                                    /*enableDrag: false,*/
+                                    prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
+                                    nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
+                                    onSliderLoad: function(){
+                                        $(".fa-spinner.fa-pulse").css("opacity", "0");
+                                        $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+                                    },
+
+                                    responsive : [{
+                                        breakpoint:768,
+                                        settings: {
+                                            item:1,
+                                            autoWidth: false,
+                                            slideMove:1,
+                                            slideMargin:30,
+                                        }
+                                    }]
+                                });
+                    slider.refresh()
+                    }
+                 })
 
                // var url = $(target).attr('data-src');
                 //this.ajaxOverlay(url);              
@@ -229,6 +282,9 @@ define([
                     left:"100%"
                  },500,function(){
                     $("#signosBook #second-row").hide();
+                     $("#second-row .subcaps ul").html("")
+                     $("#second-row .lSSlideOuter").remove();
+                     $("#second-row").append('<ul id="subcapslider"></ul>')
                  })
 
                  $("#signosBook #first-row").animate({
