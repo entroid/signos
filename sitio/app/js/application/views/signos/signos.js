@@ -29,7 +29,8 @@ define([
                 'click #signosBook .navBook nav a': 'openTxt',
                 'click #signosBook .cerrar': 'cerrar',
                 'click #signosBook .grillaBtn i': 'openGrilla',
-                'click #signosBook .sliderBtn span': 'openSlider'
+                'click #signosBook .sliderBtn span': 'openSlider',
+                'click #signosBook #back':"backtocaps"
             },
 
             render: function() {
@@ -46,6 +47,10 @@ define([
                 }).done(function(data) {       
 
                     este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
+                    _.each(este.jsonData.capitulos,function(elem,ind){
+                        $("#main-menu ul").append('<li>'+elem.titulo+'</li>')
+                    })
+                    
                     var SliderModel = Backbone.Model.extend({});
                     var sliderModel = new SliderModel({jsonData:data})
                     var slidersignos = new SliderSignos({model:sliderModel});
@@ -53,9 +58,9 @@ define([
                     este.pluginsInit(este);
                     $('.tooltipBtn').tipr();
 
-                    $(".hoverContainer img").mouseup(function (){
+                    /*$(".hoverContainer img").mouseup(function (){
                             $(this).preventDefault;
-                    });
+                    });*/
                     
                 }); 
             },
@@ -69,6 +74,7 @@ define([
                 $("#lightSlider img").load(function(){
                     currentimg++;
                     if(currentimg==totalimg){
+                        $("#lightSlider").show();
                          $("#lightSlider").lightSlider({
                                 item: 2,
                                 autoWidth: true,
@@ -197,11 +203,39 @@ define([
             },
 
             lightbox: function (e) {
+                var totalWidth = $(window).width();
                 e.preventDefault();
                 e.stopPropagation();
                 var target = e.target;
-                var url = $(target).attr('data-src');
-                this.ajaxOverlay(url);              
+                $("#signosBook #second-row").show();
+                 $("#signosBook #second-row").animate({
+                    left:"2%"
+                 },500,function(){
+                    console.log("fin de anim")
+                 })
+
+                 $("#signosBook #first-row").animate({
+                    left:"-"+totalWidth+"px"
+                 },500,function(){
+                    console.log("fin de anim")
+                 })
+
+               // var url = $(target).attr('data-src');
+                //this.ajaxOverlay(url);              
+            },
+
+            backtocaps:function(){
+                 $("#signosBook #second-row").animate({
+                    left:"100%"
+                 },500,function(){
+                    $("#signosBook #second-row").hide();
+                 })
+
+                 $("#signosBook #first-row").animate({
+                    left:"0"
+                 },500,function(){
+                    console.log("fin de anim")
+                 })
             },
             
             stopProp: function(e){

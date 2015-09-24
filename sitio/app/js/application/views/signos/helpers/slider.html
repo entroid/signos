@@ -1,8 +1,11 @@
 <ul id="lightSlider" class="imgs">
-<%_.each(jsonData,function(elem,ind){%>
+<%_.each(jsonData.capitulos,function(elem,ind){%>
+	
+	<%console.log(elem)%>	
+
     <li class="<%=ind%> <%=elem.claseSlider%>">
         <div class="hoverContainer">
-            <img src="img/libros/paucke/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+            <img src="img/libros/signos/<%=elem.src%>" data-src="<%=ind%>" alt="">
             <h3 class="transitions-fast"><%=elem.titulo%></h3>
         </div>
     </li>
