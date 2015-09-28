@@ -21,8 +21,10 @@ define([
             events: {
                 //'click #lightSlider li img': 'lightbox',
                 //'click #grilla .hoverContainer *': 'stopProp',
-                'click #signosBook .hoverContainer img': 'lightbox',
-                'click #signosBook .hoverContainer h3': 'lightbox',
+                'click #signosBook #lightSlider .hoverContainer img': 'lightbox',
+                'click #signosBook #lightSlider .hoverContainer h3': 'lightbox',
+                'click #signosBook #subcapslider .hoverContainer img': 'lightboxSub',
+                'click #signosBook #subcapslider .hoverContainer h3': 'lightboxSub',
                 //'click #grilla .hoverContainer h3': 'hoverLightbox',
                 //'click #lightSlider .hoverTitle *': 'stopProp',
                 //'click #lightSlider .hoverTitle': 'hoverLightbox',
@@ -167,12 +169,12 @@ define([
 
             },
 
-            ajaxOverlay: function(url) {
+            ajaxOverlay: function(obj) {
                 if(!$("#popupContent").size()){
                     $("body").append('<div id="popupContent"></div>')
                 }
                 var este = this;
-                var dataToShow = este.jsonData[url];
+                var dataToShow = obj;
 
                 if(!dataToShow.type){
                     var modal = _.template(modaltemplate,{dataToShow:dataToShow});
@@ -230,8 +232,9 @@ define([
                  })
                  console.log(contenidosSlide)
                  _.each(contenidosSlide,function(obj,indixe){
-    
-                     $("#subcapslider").append('<li class="'+indixe+' '+obj.tipo+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>')
+                    var $li = $('<li class="'+indixe+' '+obj.claseSlider+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>');
+                    $li.data("obj",obj);
+                    $("#subcapslider").append($li);
 
                  })
 
@@ -275,6 +278,12 @@ define([
 
                // var url = $(target).attr('data-src');
                 //this.ajaxOverlay(url);              
+            },
+
+            lightboxSub:function(e){
+                var $li = $(e.target).parents("li");
+                var obj = $li.data("obj");
+                this.ajaxOverlay(obj);
             },
 
             backtocaps:function(){

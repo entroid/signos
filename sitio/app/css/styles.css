@@ -1111,23 +1111,31 @@ Nav Overlay
     margin:0;
 }
 
-#lightSlider li.ancho .hoverContainer{
+#lightSlider li.ancho .hoverContainer,
+#subcapslider li.ancho .hoverContainer{
     width: 400px;
 }
-#lightSlider li.ancho img{
+
+
+#lightSlider li.ancho img,
+#subcapslider li.ancho img{
     width: 100%;
 }
-#lightSlider li.alto{
+#lightSlider li.alto,
+#subcapslider li.alto{
    /* min-width: 300px;*/
 }
-#lightSlider li.alto .hoverContainer{
+#lightSlider li.alto .hoverContainer,
+#subcapslider li.alto .hoverContainer{
     height: 400px;
 }
-#lightSlider li.alto img{
+#lightSlider li.alto img,
+#subcapslider li.alto img{
     height: 90%;
 }
 
-#lightSlider li.alto h3{
+#lightSlider li.alto h3,
+#subcapslider li.alto h3{
     max-width: 283px;
 }
 /*#lightSlider li.panoramica .hoverContainer{
