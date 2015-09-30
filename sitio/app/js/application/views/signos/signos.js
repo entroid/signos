@@ -277,9 +277,9 @@ define([
 
                 })
 
-                $('#signosBook .subcaps li').click(function (e){
+                /*$('#signosBook .subcaps li').click(function (e){
                         este.gotoSlider2(e);
-                    }); 
+                    }); */
                 
                // var url = $(target).attr('data-src');
                 //this.ajaxOverlay(url);              
@@ -407,12 +407,12 @@ define([
                 slider.goToSlide(index);
             },
 
-            gotoSlider2: function(e) {
+            /*gotoSlider2: function(e) {
                 var index = $(e.target).attr('data-index');
                 console.log(e.target)
 
                 slider2.goToSlide(index);
-            }
+            }*/
         });
         
         return new SignosView;

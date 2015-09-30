@@ -1334,7 +1334,7 @@ menu li {cursor:pointer;}
     height: 420px;
 }
 #signosBook .libroTitle{
-    background-position: -102px 0;
+    background-position: -104px 0;
     background-size: 155px 500px;
     height: 500px;
 }
@@ -1737,4 +1737,25 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 #signosBook .subcapSignos .lSAction{
     width: 274px;
+}
+
+#back{    
+    cursor: pointer;
+    height: 35px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #848484;
+}
+
+#back span {
+    text-transform: uppercase;    
+    font-weight: bold;
+}
+
+#back span:hover{
+    opacity: .7;
+}
+
+#back i{
+    font-size: 1.3em;
+    margin-right: 8px;
 }
