@@ -1174,7 +1174,7 @@ Nav Overlay
     opacity:0;
 }
 
-.sliderWrapper .lSAction{
+.lSSlideWrapper .lSAction{
     bottom: -33px;
     margin-left: -230px;
     position: absolute;
@@ -1701,8 +1701,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     top:0;
     left:100%;
     width: 98%;
-    border: 1px solid;
-    height: 600px;
+    /*border: 1px solid;
+    height: 600px;*/
     display: none;
     position: absolute;
 }
@@ -1736,5 +1736,5 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 #signosBook .subcapSignos .lSAction{
-    width: 293px;
+    width: 274px;
 }

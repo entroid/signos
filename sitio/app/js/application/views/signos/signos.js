@@ -15,7 +15,7 @@ define([
     'tooltip'
 
     ], function($, _, Backbone, signosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSignos,GrillaSignos,signosTxt,mlens, tooltip) {
-        var sllider;
+        var sllider, slider2;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
 
@@ -34,7 +34,7 @@ define([
                 'click #signosBook .grillaBtn i': 'openGrilla',
                 'click #signosBook .sliderBtn span': 'openSlider',
                 'click #signosBook #back':"backtocaps",
-                'click #signosBook #main-menu':"gotoSlider"
+                'click #signosBook #main-menu li':"gotoSlider"
 
             },
 
@@ -225,17 +225,17 @@ define([
                  var cap = $(e.target).data("src");
                  var contenidosSlide = [];
                  _.each(este.jsonData.capitulos[cap].subcapitulos,function(elem,ind){
-                    $("#second-row .subcaps ul").append("<li>"+elem.titulo+"</li>");
+                    $("#second-row .subcaps ul").append("<li data-index='" + ind + "'>"+elem.titulo+"</li>");
                     _.each(elem.contenido,function(subel,indice){
                         contenidosSlide.push(subel);
-                    })
-                 })
+                    });
+                 });
                  _.each(contenidosSlide,function(obj,indixe){
                     var $li = $('<li class="'+indixe+' '+obj.claseSlider+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>');
                     $li.data("obj",obj);
                     $("#subcapslider").append($li);
 
-                 })
+                 });                 
 
                 var totalimg = $("#subcapslider img").size();
                 var currentimg = 0;
@@ -244,37 +244,43 @@ define([
                     currentimg++;
                     if(currentimg==totalimg){
 
-                        var slider = $("#subcapslider").lightSlider({
-                                    item: 2,
-                                    autoWidth: true,
-                                    slideMargin:60,
-                                    mode: 'slide',
-                                    easing: 'linear',
-                                    speed: '400',
-                                    keyPress: true,
-                                    controls: true,
-                                    /*enableDrag: false,*/
-                                    prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                                    nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
-                                    onSliderLoad: function(){
-                                        $(".fa-spinner.fa-pulse").css("opacity", "0");
-                                        $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                                    },
+                        slider2 = $("#subcapslider").lightSlider({
+                            item: 2,
+                            autoWidth: true,
+                            slideMargin:60,
+                            mode: 'slide',
+                            easing: 'linear',
+                            speed: '400',
+                            keyPress: true,
+                            controls: true,
+                            /*enableDrag: false,*/
+                            prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
+                            nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
+                            onSliderLoad: function(){
+                                $(".fa-spinner.fa-pulse").css("opacity", "0");
+                                $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+                            },
 
-                                    responsive : [{
-                                        breakpoint:768,
-                                        settings: {
-                                            item:1,
-                                            autoWidth: false,
-                                            slideMove:1,
-                                            slideMargin:30,
-                                        }
-                                    }]
-                                });
-                    slider.refresh()
-                    }
-                 })
+                            responsive : [{
+                                breakpoint:768,
+                                settings: {
+                                    item:1,
+                                    autoWidth: false,
+                                    slideMove:1,
+                                    slideMargin:30,
+                                }
+                            }]
+                        });
 
+                        slider2.refresh();                            
+                    }                   
+
+                })
+
+                $('#signosBook .subcaps li').click(function (e){
+                        este.gotoSlider2(e);
+                    }); 
+                
                // var url = $(target).attr('data-src');
                 //this.ajaxOverlay(url);              
             },
@@ -397,11 +403,16 @@ define([
 
             gotoSlider: function(e) {
                 var index = $(e.target).attr('data-index');
-                console.log(slider);
 
                 slider.goToSlide(index);
-            }
+            },
 
+            gotoSlider2: function(e) {
+                var index = $(e.target).attr('data-index');
+                console.log(e.target)
+
+                slider2.goToSlide(index);
+            }
         });
         
         return new SignosView;
