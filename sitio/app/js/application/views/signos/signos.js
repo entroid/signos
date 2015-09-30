@@ -298,7 +298,7 @@ define([
                     $("#signosBook #second-row").hide();
                      $("#second-row .subcaps ul").html("")
                      $("#second-row .lSSlideOuter").remove();
-                     $("#second-row").append('<ul id="subcapslider"></ul>')
+                     $("#second-row .sliderWrapper").append('<ul id="subcapslider"></ul>')
                  })
 
                  $("#signosBook #first-row").animate({
