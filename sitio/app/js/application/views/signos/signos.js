@@ -15,6 +15,7 @@ define([
     'tooltip'
 
     ], function($, _, Backbone, signosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSignos,GrillaSignos,signosTxt,mlens, tooltip) {
+        var sllider;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
 
@@ -32,7 +33,9 @@ define([
                 'click #signosBook .cerrar': 'cerrar',
                 'click #signosBook .grillaBtn i': 'openGrilla',
                 'click #signosBook .sliderBtn span': 'openSlider',
-                'click #signosBook #back':"backtocaps"
+                'click #signosBook #back':"backtocaps",
+                'click #signosBook #main-menu':"gotoSlider"
+
             },
 
             render: function() {
@@ -46,11 +49,10 @@ define([
                     dataType: "json",
                     url: 'js/application/views/signos/helpers/json/detalle.json',
 
-                }).done(function(data) {       
-                    console.log(data)
+                }).done(function(data) { 
                     este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
                     _.each(este.jsonData.capitulos,function(elem,ind){
-                        $("#main-menu ul").append('<li>'+elem.titulo+'</li>')
+                        $("#main-menu ul").append('<li data-index="' + ind.split("cap").pop() + '">'+elem.titulo+'</li>')
                     })
                     
                     var SliderModel = Backbone.Model.extend({});
@@ -77,7 +79,7 @@ define([
                     currentimg++;
                     if(currentimg==totalimg){
                         $("#lightSlider").show();
-                         $("#lightSlider").lightSlider({
+                         slider = $("#lightSlider").lightSlider({
                                 item: 2,
                                 autoWidth: true,
                                 slideMargin:60,
@@ -214,13 +216,11 @@ define([
                  $("#signosBook #second-row").animate({
                     left:"2%"
                  },500,function(){
-                    console.log("fin de anim")
                  })
 
                  $("#signosBook #first-row").animate({
                     left:"-"+totalWidth+"px"
                  },500,function(){
-                    console.log("fin de anim")
                  })
                  var cap = $(e.target).data("src");
                  var contenidosSlide = [];
@@ -230,7 +230,6 @@ define([
                         contenidosSlide.push(subel);
                     })
                  })
-                 console.log(contenidosSlide)
                  _.each(contenidosSlide,function(obj,indixe){
                     var $li = $('<li class="'+indixe+' '+obj.claseSlider+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>');
                     $li.data("obj",obj);
@@ -299,7 +298,6 @@ define([
                  $("#signosBook #first-row").animate({
                     left:"0"
                  },500,function(){
-                    console.log("fin de anim")
                  })
             },
             
@@ -396,6 +394,13 @@ define([
                     $(trad).addClass('showTt');
                 }
             },
+
+            gotoSlider: function(e) {
+                var index = $(e.target).attr('data-index');
+                console.log(slider);
+
+                slider.goToSlide(index);
+            }
 
         });
         

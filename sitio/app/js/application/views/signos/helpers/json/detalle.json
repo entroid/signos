@@ -2,10 +2,10 @@
 
 	"capitulos":{
 
-		"cap1": { 
+		"cap0": { 
 			"src": "Singos-Cap1-Portada.jpg",
 
-			"claseSlider": "ancho",
+			"claseSlider": "alto",
 
 			"titulo": "Santa Fe Colonial",
 
@@ -127,9 +127,9 @@
 			]
 		},
 
-		"cap2": { 
+		"cap1": { 
 			"src": "signos-Cap2-Portada.jpg",
-			"claseSlider": "ancho",
+			"claseSlider": "alto",
 			"titulo": "Santa Fe Criolla",
 			"pie": "Tropa de carretas, acuarela de Jean-Leon Pallière, c. 1858. Colección privada. Bonifacio del Carril, Monumenta Iconographica, 1964",
 			"subcapitulos":[
@@ -315,7 +315,7 @@
 			]
 		},
 
-		"cap3": { 
+		"cap2": { 
 			"src": "Singos-Cap3-Portada.jpg",
 			"claseSlider": "ancho",
 			"pie": "Puerto de Rosario, fotografía de Santiago y Vicente Pusso, c. 1898. Archivo fotográfico de la Escuela Superior de Museología de Rosario",
@@ -470,7 +470,7 @@
 			]
 		},
 
-		"cap4": { 
+		"cap3": { 
 			"src": "Singos-Cap4-Portada.jpg",
 			"claseSlider": "ancho",
 			"pie": "Casa Gris, sede del Poder Ejecutivo de la provincia de Santa Fe, inaugurada en 1917 frente a Plaza 25 de Mayo en el mismo solar que ocupara el Cabildo, ciudad de Santa Fe, c. 1930. Archivo diario El Litoral",
@@ -566,8 +566,8 @@
 			]
 		},
 
-		"cap5": { 
-			"src": "Singos-Cap4-Portada.jpg",
+		"cap4": { 
+			"src": "Signos-Cap5-Portada.jpg",
 			"claseSlider": "ancho",
 			"pie": "Desfile organizado por el Grupo Federado de Bombal, departamento Constitución, 25 de enero de 1958. Archivo de la Federación Agraria Argentina",
 			"titulo": "Santa Fe Rural",
@@ -757,7 +757,7 @@
 			]
 		},
 
-		"cap6": { 
+		"cap5": { 
 			"src": "Singos-Cap6-Portada.jpg",
 			"claseSlider": "ancho",
 			"pie": "Galpón central de locomotoras del Ferrocarril de Santa Fe, fotografía de José Femminini, Santa Fe, c. 1911. Desde fines de 2010 funciona allí el espacio cultural público «La Redonda. Arte y Vida Cotidiana». Museo Ferroviario Regional de Santa Fe",
@@ -912,8 +912,9 @@
 			]
 		},
 
-		"cap7": { 
+		"cap6": { 
 			"src": "Signos-Cap7-Portada.jpg",
+			"claseSlider": "ancho",
 			"pie": "Reactores de deshidrogenación de la planta de butadieno, Petroquímica Argentina Sociedad Anónima (PASA), San Lorenzo, c. 1970. Museo Histórico Provincial «Dr. Julio Marc»",
 			"titulo": "Santa Fe Económica (1960-2010)",
 			"subcapitulos":[
@@ -997,8 +998,9 @@
 				}
 			]
 		},
-		"cap8": { 
+		"cap7": { 
 			"src": "Singos-Cap8-Portada.jpg",
+			"claseSlider": "ancho",
 			"pie": "Acto en defensa de la democracia tras los alzamientos de militares «carapintadas» en la Semana Santa de 1987, Monumento a la Bandera, Rosario, 19 de abril de 1987. Archivo diario La Capital",
 			"titulo": "Santa Fe Política (1955-2010)",
 			"subcapitulos":[
