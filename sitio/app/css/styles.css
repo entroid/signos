@@ -1759,3 +1759,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     font-size: 1.3em;
     margin-right: 8px;
 }
+
+#signosBook .navBook li.selected{
+    color: #000;
+}
