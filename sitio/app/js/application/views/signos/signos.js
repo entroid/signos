@@ -35,7 +35,8 @@ define([
                 'click #signosBook .sliderBtn span': 'openSlider',
                 'click #signosBook #back':"backtocaps",
                 'click #signosBook #main-menu li':"gotoSlider",
-                'click #signosBook nav.subcaps li':"gotoSubCapSlider"
+                'click #signosBook nav.subcaps li':"gotoSubCapSlider",
+                'click #signosBook .info':"openTxtMenu"
 
             },
 
@@ -402,9 +403,12 @@ define([
             },
 
             gotoSlider: function(e) {
-                var index = $(e.target).attr('data-index');
+                var target = $(e.target),
+                    index = $(target).attr('data-index');
 
                 slider.goToSlide(index);
+                $('#signosBook #main-menu li').removeClass('selected');
+                $(target).addClass('selected');
             },
 
             gotoSubCapSlider: function(e) {
@@ -466,6 +470,12 @@ define([
 
                 })
                
+            },
+            openTxtMenu: function (e) {
+                var el = $(e.target),
+                    menu = $(el).siblings('nav');
+
+                $(menu).toggleClass('active');
             }
         });
         
