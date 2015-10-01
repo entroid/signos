@@ -29,7 +29,7 @@ define([
                 //'click #grilla .hoverContainer h3': 'hoverLightbox',
                 //'click #lightSlider .hoverTitle *': 'stopProp',
                 //'click #lightSlider .hoverTitle': 'hoverLightbox',
-                'click #signosBook .navBook nav a': 'openTxt',
+                'click #signosBook .informacion nav a': 'openTxt',
                 'click #signosBook .cerrar': 'cerrar',
                 'click #signosBook .grillaBtn i': 'openGrilla',
                 'click #signosBook .sliderBtn span': 'openSlider',
@@ -342,9 +342,10 @@ define([
                         }); 
                     }
                 }            */               
-
+                console.log(seccion)
                 var signosTxt = new signosTxt();
                 signosTxt.render(seccion);
+                
                 
 
                 /*este.timeOut(ajaxCall, 100);*/
