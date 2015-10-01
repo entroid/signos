@@ -405,8 +405,6 @@ define([
                             onSliderLoad: function(){
                                 $(".fa-spinner.fa-pulse").css("opacity", "0");
                                 $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                            },
-                            onSliderLoad:function(){
                                 $("#subcapslider").parents(".lSSlideOuter").addClass("sub"+cap)
                             },
                             responsive : [{
