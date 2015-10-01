@@ -77,6 +77,7 @@ define([
 
             pluginsInit: function (este) {
 
+
                 $("#lightSlider").hide();
                 var totalimg = $("#lightSlider img").size();
                 var currentimg = 0;
@@ -234,60 +235,7 @@ define([
                     $("#second-row .subcaps ul").append("<li data-cap='"+cap+"' data-index='" + ind + "'>"+elem.titulo+"</li>");
                  });
                  $("#second-row .subcaps li:eq(0)").addClass("selected");
-                 
-                 _.each(este.jsonData.capitulos[cap].subcapitulos[0].contenido,function(obj,indixe){
-                    var $li = $('<li class="'+indixe+' '+obj.claseSlider+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>');
-                    $li.data("obj",obj);
-                    $("#subcapslider").append($li);
-
-                 });                 
-                
-                var totalimg = $("#subcapslider img").size();
-                var currentimg = 0;
-
-                $("#subcapslider img").load(function(){
-                    currentimg++;
-                    if(currentimg==totalimg){
-
-                        slider2 = $("#subcapslider").lightSlider({
-                            item: 2,
-                            autoWidth: true,
-                            slideMargin:60,
-                            mode: 'slide',
-                            easing: 'linear',
-                            speed: '400',
-                            keyPress: true,
-                            controls: true,
-                            /*enableDrag: false,*/
-                            prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                            nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
-                            onSliderLoad: function(){
-                                $(".fa-spinner.fa-pulse").css("opacity", "0");
-                                $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                            },
-
-                            responsive : [{
-                                breakpoint:768,
-                                settings: {
-                                    item:1,
-                                    autoWidth: false,
-                                    slideMove:1,
-                                    slideMargin:30,
-                                }
-                            }]
-                        });
-
-                        slider2.refresh();                            
-                    }                   
-
-                })
-
-                /*$('#signosBook .subcaps li').click(function (e){
-                        este.gotoSlider2(e);
-                    }); */
-                
-               // var url = $(target).attr('data-src');
-                //this.ajaxOverlay(url);              
+                 $("#second-row .subcaps li:eq(0)").trigger("click");
             },
 
             lightboxSub:function(e){
@@ -425,7 +373,8 @@ define([
 
                 //$("#second-row .subcaps ul").html("")
                 $("#second-row .lSSlideOuter").remove();
-                $("#second-row .sliderWrapper").append('<ul id="subcapslider"></ul>')
+                $("#second-row .sliderWrapper").append('<ul id="subcapslider"></ul>');
+
                 console.log(this.jsonData.capitulos[cap].subcapitulos[index])
 
                  _.each(this.jsonData.capitulos[cap].subcapitulos[index].contenido,function(obj,indixe){
@@ -457,8 +406,8 @@ define([
                             onSliderLoad: function(){
                                 $(".fa-spinner.fa-pulse").css("opacity", "0");
                                 $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+                                $("#subcapslider").parents(".lSSlideOuter").addClass("sub"+cap)
                             },
-
                             responsive : [{
                                 breakpoint:768,
                                 settings: {
