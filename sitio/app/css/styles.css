@@ -1802,6 +1802,9 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .hitos {
     cursor: pointer;
     margin-top: 50px;
+    position: absolute;
+    bottom: -125px;
+    background: #FFF;
 }
 
 .hitos h3{
@@ -1823,5 +1826,16 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .hitos img:hover {
     opacity: 1;
-
 }
+
+.hitoswrap{
+    position: absolute;
+    top:0;
+    left: 10px;
+    height: 100%;
+}
+
+.hitosMenu{
+    background-color: #FFF;
+    }
+

@@ -36,7 +36,8 @@ define([
                 'click #signosBook #back':"backtocaps",
                 'click #signosBook #main-menu li':"gotoSlider",
                 'click #signosBook nav.subcaps li':"gotoSubCapSlider",
-                'click #signosBook .info':"openTxtMenu"
+                'click #signosBook .info':"openTxtMenu",
+                'click #signosBook .hitos':"openHitos"
 
             },
 
@@ -67,7 +68,9 @@ define([
                     slidersignos.render();
                     este.pluginsInit(este);
                     $('.tooltipBtn').tipr();
-
+                    var altura = $(".hitoswrap").height();
+                    $(".hitosMenu").height(altura);
+                
                     /*$(".hoverContainer img").mouseup(function (){
                             $(this).preventDefault;
                     });*/
@@ -430,6 +433,17 @@ define([
                     menu = $(el).siblings('nav');
 
                 $(menu).toggleClass('active');
+            },
+
+            openHitos:function(){
+                $(".hitosMenu").slideToggle();
+                if($(".hitos i").hasClass("fa-angle-down")){
+                    $(".hitos i").removeClass("fa-angle-down");
+                    $(".hitos i").addClass("fa-angle-up");
+                }else{
+                    $(".hitos i").addClass("fa-angle-down");
+                    $(".hitos i").removeClass("fa-angle-up");
+                }                
             }
         });
         
