@@ -57,6 +57,10 @@ define([
                         $("#main-menu ul").append('<li data-index="' + ind.split("cap").pop() + '">'+elem.titulo+'</li>')
                     })
                     
+                    _.each(este.jsonData.hitos,function(elemhit,indixe){
+                        $("#hitos-menu ul").append('<li data-index="' + indixe + '">'+elemhit.titulo+'</li>')
+                    })
+
                     var SliderModel = Backbone.Model.extend({});
                     var sliderModel = new SliderModel({jsonData:data})
                     var slidersignos = new SliderSignos({model:sliderModel});
