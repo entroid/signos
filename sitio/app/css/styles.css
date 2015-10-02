@@ -1803,7 +1803,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     cursor: pointer;
     margin-top: 50px;
     position: absolute;
-    bottom: -125px;
+    bottom: -94px;
     background: #FFF;
 }
 
@@ -1830,8 +1830,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .hitoswrap{
     position: absolute;
-    top:0;
-    left: 10px;
+    top:40px;
+    left: 15px;
     height: 100%;
 }
 
