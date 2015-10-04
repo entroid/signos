@@ -1830,9 +1830,9 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .hitoswrap{
     position: absolute;
-    top:40px;
+    /*top:40px;*/
     left: 15px;
-    height: 100%;
+    /*height: 100%;*/
     width:100%;
 }
 
