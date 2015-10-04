@@ -37,7 +37,7 @@ define([
                 'click #signosBook #main-menu li':"gotoSlider",
                 'click #signosBook nav.subcaps li':"gotoSubCapSlider",
                 'click #signosBook .info':"openTxtMenu",
-                'click #signosBook .hitos':"openHitos"
+                'click #signosBook .hitosOpen':"openHitos"
 
             },
 
