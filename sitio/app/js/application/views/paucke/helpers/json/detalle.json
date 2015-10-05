@@ -258,6 +258,8 @@
 
     "img19": {
         "lowres":"carta-low.jpg",
+        "titulo": "Naipes",
+        "claseSlider": "naipes",
         "slide": [
             "carta-1.jpg",
             "carta-2.jpg",
@@ -268,7 +270,8 @@
             "carta-7.jpg",
             "carta-8.jpg",
             "carta-9.jpg",
-            "carta-10.jpg"
+            "carta-10.jpg",
+            "paucke-1500_10.png"
         ],
         "type":"slide"
 

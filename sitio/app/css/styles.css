@@ -1248,9 +1248,6 @@ Nav Overlay
   height: 100%;
   width:100%;
 }
-#popupContent.cartaSlide{
-    width:auto;
-}
 
 #popupContent .lSPager.lSpg > li a{background-color: #fff;}
 .popup_visible #popupContent {
@@ -1284,7 +1281,7 @@ Nav Overlay
 .grilla .hoverContainer img{width: 100%;}
 .grilla .hoverContainer h3{margin-top: 15px;text-align: lef;}
 
-
+.lightSlider .naipes h3{color:white;}
 /***** lightSlider2  *****/
 #lightSlider2{
         padding:100px;
@@ -1370,7 +1367,7 @@ menu li {cursor:pointer;}
     transition: color 100ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
 }
 
-#popupContent.cartaSlide{background-color:black; height:auto;}
+#popupContent.cartaSlide{background-color:black; height:auto;width:auto;}
 
 .cartaSlide .popupContent_close{color:white;right: 0;top: 0;}
 
@@ -1799,11 +1796,26 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     opacity: 1;
 }
 
+.hitoswrap{
+    /*position: relative;
+    top:0px;
+    left: 15px;*/
+    width:100%;
+    z-index: 10;
+    position: absolute;
+    top:330px;
+}
+
+.hitoswrap.active{    
+    top: -42px;
+    
+}
+
 .hitos {
     cursor: pointer;
     margin-top: 50px;
-    position: absolute;
-    bottom: -94px;
+    /*position: absolute;
+    bottom: -94px;*/
     background: #FFF;
 }
 
@@ -1828,15 +1840,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     opacity: 1;
 }
 
-.hitoswrap{
-    position: absolute;
-    /*top:40px;*/
-    left: 15px;
-    /*height: 100%;*/
-    width:100%;
-}
-
 .hitosMenu{
     background-color: #FFF;
-    }
+    height: 320px !important;
+}
 

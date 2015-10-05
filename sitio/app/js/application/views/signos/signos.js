@@ -436,14 +436,17 @@ define([
             },
 
             openHitos:function(){
-                $(".hitosMenu").slideToggle();
+                $(".hitoswrap").toggleClass('active');                             
+
                 if($(".hitos i").hasClass("fa-angle-down")){
                     $(".hitos i").removeClass("fa-angle-down");
                     $(".hitos i").addClass("fa-angle-up");
                 }else{
                     $(".hitos i").addClass("fa-angle-down");
                     $(".hitos i").removeClass("fa-angle-up");
-                }                
+                }  
+
+                $(".hitosMenu").slideToggle('fast');                
             }
         });
         
