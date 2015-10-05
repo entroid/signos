@@ -436,8 +436,11 @@ define([
             },
 
             openHitos:function(){
-                $(".hitoswrap").toggleClass('active');                             
-
+                $(".hitoswrap").toggleClass('active');   
+                if (!($(document).height() > $(window).height())) { 
+                console.log("se aplica")                         
+                    $("body").css("overflow","hidden")
+                }
                 if($(".hitos i").hasClass("fa-angle-down")){
                     $(".hitos i").removeClass("fa-angle-down");
                     $(".hitos i").addClass("fa-angle-up");
@@ -446,7 +449,9 @@ define([
                     $(".hitos i").removeClass("fa-angle-up");
                 }  
 
-                $(".hitosMenu").slideToggle('fast');                
+                $(".hitosMenu").slideToggle(400,function(){
+                    $("body").css("overflow","visible")
+                });                
             }
         });
         
