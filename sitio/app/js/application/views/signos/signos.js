@@ -14,7 +14,7 @@ define([
     'mlens',
     'tooltip'
 
-    ], function($, _, Backbone, signosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSignos,GrillaSignos,signosTxt,mlens, tooltip) {
+    ], function($, _, Backbone, signosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSignos,GrillaSignos,SignosTxt,mlens, tooltip) {
         var sllider, slider2;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
@@ -297,8 +297,8 @@ define([
                         }); 
                     }
                 }            */               
-                console.log(seccion)
-                var signosTxt = new signosTxt();
+                console.log(SignosTxt)
+                var signosTxt = new SignosTxt();
                 signosTxt.render(seccion);
                 
                 

@@ -7,7 +7,7 @@ define([
     'text!views/signos/helpers/signosNotas.html',
 
     ], function($, _, Backbone, Bio, Memorias, Notas) {
-        var TxtSignos = Backbone.View.extend({
+        var SignosTxt = Backbone.View.extend({
             el: '#txt',
 
             events: {
@@ -39,5 +39,5 @@ define([
             }
         });
         
-        return TxtSignos;
+        return SignosTxt;
     });
