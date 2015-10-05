@@ -437,10 +437,7 @@ define([
 
             openHitos:function(){
                 $(".hitoswrap").toggleClass('active');   
-                if (!($(document).height() > $(window).height())) { 
-                console.log("se aplica")                         
-                    $("body").css("overflow","hidden")
-                }
+                    $("#signosBook").css("overflow","hidden")
                 if($(".hitos i").hasClass("fa-angle-down")){
                     $(".hitos i").removeClass("fa-angle-down");
                     $(".hitos i").addClass("fa-angle-up");
@@ -450,7 +447,7 @@ define([
                 }  
 
                 $(".hitosMenu").slideToggle(400,function(){
-                    $("body").css("overflow","visible")
+                    $("#signosBook").css("overflow","visible")
                 });                
             }
         });
