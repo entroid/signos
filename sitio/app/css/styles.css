@@ -1371,6 +1371,8 @@ menu li {cursor:pointer;}
 
 .cartaSlide .popupContent_close{color:white;right: 0;top: 0;}
 
+.cartas .img10 img{width:397px; }
+
 .modalContent blockquote {    
     border-left: medium none;
     font-size: 1.03em;
