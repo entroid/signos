@@ -125,6 +125,19 @@
       bottom: 0;
     width: 100%;
   }
+
+    #lightSlider li.alto img, #subcapslider li.alto img{
+      width: 100%;
+      height: auto;
+  }
+
+  .sliderWrapper .lSAction{
+    display: none !important;
+  }
+
+  #lightSlider{
+    margin-left: -4px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
