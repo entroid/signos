@@ -1774,8 +1774,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     margin-right: 20px;
 }
 
-.signosMenu{
-    border-left:1px solid #262325;
+.navBookSignos{
+    border-right:1px solid #262325;
 }
 
 .informacion nav{
@@ -1846,4 +1846,3 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     background-color: #FFF;
     height: 320px !important;
 }
-
