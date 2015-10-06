@@ -268,35 +268,14 @@ define([
             },
 
             openTxt: function(e){
-                e.preventDefault();
+                e.preventDefault();                  
 
                 var target = e.currentTarget,
-                    seccion = $(target).attr('data-seccion');/*,
-                   url = 'js/application/views/paucke/helpers/' + seccion + '.html',
-                    element,
-                    este = this,
-                    cont = seccion === 'grilla' ? $('#grillaContent') : $('#txt');*/
+                    seccion = $(target).attr('data-seccion'),
+                    menu = $(target).parents('nav');
 
-                /*$('#txt .txtArea').fadeOut();                    
+                $(menu).toggleClass('active');
 
-                if (seccion){
-                    var ajaxCall = function(){
-                        $.ajax({
-                          url: url,
-                          dataType: 'html',
-                        }).done(function(data) {
-                            var hacerVisible = function(){                             
-                                $(cont).addClass('adentro fondoAdentro');
-                            }
-
-                            $(cont).html(data);
-
-                            este.timeOut(hacerVisible, 100);
-                                      
-                            
-                        }); 
-                    }
-                }            */               
                 console.log(SignosTxt)
                 var signosTxt = new SignosTxt();
                 signosTxt.render(seccion);
