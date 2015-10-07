@@ -152,7 +152,7 @@
     z-index: 100;
   }
 
-  .content-1{
+  .modalContent .content-1{
     padding: 50px;
   }
   .traduccion-btn{
@@ -164,8 +164,20 @@
     padding: 0;
     margin-top: 30px;
   }
-  .modalContent blockquote span{
+  .modalContent blockquote .izq{
     display: none;
+  }
+
+  .navBook nav ul li{
+    margin-bottom: 40px;
+  }
+
+  #siglosBook .sliderWrapper .lSAction{
+    width: 454px;
+    bottom: 0;
+  }
+  #signosBook .sliderWrapper .lSAction{
+    width: 454px;
   }
 }
 
@@ -221,6 +233,8 @@
   .content-1{
     padding: 50px 15px;
   }
+
+  .sliderWrapper .lSSlideOuter .lSPager{display: none;}
 }
 
 @media only screen and (max-width: 640px) {
@@ -376,6 +390,8 @@
   #txt .cerrar{
     left: 20px;
   }
+
+  .siglos-info h2, .siglos-info h3{font-size: 0.8rem;margin-bottom: 30px;}
 
 }
 
