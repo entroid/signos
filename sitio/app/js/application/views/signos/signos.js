@@ -22,20 +22,20 @@ define([
             events: {
                 //'click #lightSlider li img': 'lightbox',
                 //'click #grilla .hoverContainer *': 'stopProp',
-                'click #signosBook #lightSlider .hoverContainer img': 'lightbox',
-                'click #signosBook #lightSlider .hoverContainer h3': 'lightbox',
-                'click #signosBook #subcapslider .hoverContainer img': 'lightboxSub',
-                'click #signosBook #subcapslider .hoverContainer h3': 'lightboxSub',
+                //'click #signosBook #lightSlider .hoverContainer img': 'lightbox',
+                //'click #signosBook #lightSlider .hoverContainer h3': 'lightbox',
+                //'click #signosBook #subcapslider .hoverContainer img': 'lightboxSub',
+                //'click #signosBook #subcapslider .hoverContainer h3': 'lightboxSub',
                 //'click #grilla .hoverContainer h3': 'hoverLightbox',
                 //'click #lightSlider .hoverTitle *': 'stopProp',
                 //'click #lightSlider .hoverTitle': 'hoverLightbox',
                 'click #signosBook .informacion nav a': 'openTxt',
                 'click #signosBook .cerrar': 'cerrar',
-                'click #signosBook .grillaBtn i': 'openGrilla',
-                'click #signosBook .sliderBtn span': 'openSlider',
-                'click #signosBook #back':"backtocaps",
-                'click #signosBook #main-menu li':"gotoSlider",
-                'click #signosBook nav.subcaps li':"gotoSubCapSlider",
+                //'click #signosBook .grillaBtn i': 'openGrilla',
+                //'click #signosBook .sliderBtn span': 'openSlider',
+                //'click #signosBook #back':"backtocaps",
+                //'click #signosBook #main-menu li':"gotoSlider",
+                //'click #signosBook nav.subcaps li':"gotoSubCapSlider",
                 'click #signosBook .info':"openTxtMenu",
                 'click #signosBook .hitosOpen':"openHitos"
 
@@ -66,7 +66,7 @@ define([
                     var sliderModel = new SliderModel({jsonData:data})
                     var slidersignos = new SliderSignos({model:sliderModel});
                     slidersignos.render();
-                    este.pluginsInit(este);
+                    //este.pluginsInit(este);
                     $('.tooltipBtn').tipr();
                     var altura = $(".hitoswrap").height();
                     $(".hitosMenu").height(altura);
@@ -78,49 +78,14 @@ define([
                 }); 
             },
 
-            pluginsInit: function (este) {
+           /* pluginsInit: function (este) {
 
 
                 $("#lightSlider").hide();
                 var totalimg = $("#lightSlider img").size();
                 var currentimg = 0;
 
-                $("#lightSlider img").load(function(){
-                    currentimg++;
-                    if(currentimg==totalimg){
-                        $("#lightSlider").show();
-                         slider = $("#lightSlider").lightSlider({
-                                item: 2,
-                                autoWidth: true,
-                                slideMargin:60,
-                                mode: 'slide',
-                                easing: 'linear',
-                                speed: '400',
-                                keyPress: true,
-                                controls: true,
-                                /*enableDrag: false,*/
-                                prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                                nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
-                                onSliderLoad: function(){
-                                    $(".fa-spinner.fa-pulse").css("opacity", "0");
-                                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                                },
-
-                                responsive : [{
-                                    breakpoint:768,
-                                    settings: {
-                                        item:1,
-                                        autoWidth: false,
-                                        slideMove:1,
-                                        slideMargin:30,
-                                    }
-                                }]
-                            });
-                    }
-
-                    $(".fa-spinner.fa-pulse").css("opacity", "0");
-                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"}); 
-                })
+               
 
                 var popupContainer = '<div id="popupContent"></div>';
                 $('body').append(popupContainer);
@@ -158,14 +123,10 @@ define([
                         //zoom
                         $(".modalContent .content-1 img").mlens({
                             imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
-                            /*imgSrc2x: $(".modalContent .content-1 img").attr("data-big2x"),*/  // path of the hi-res @2x version of the image //for retina displays (optional)
                             lensShape: "circle",                // shape of the lens (circle/square)
                             lensSize: 180,                  // size of the lens (in px)
                             borderSize: 1,                  // size of the lens border (in px)
                             borderColor: "#fff",                // color of the lens border (#hex)
-                            /*borderRadius: 0, */               // border radius (optional, only if the shape is square)
-                            /*imgOverlay: $(".modalContent .content-1 img").attr("data-overlay"),*/ // path of the overlay image (optional)
-                            /*overlayAdapt: true,*/ // true if the overlay image has to adapt to the lens size (true/false)
                             zoomLevel: 1.1                                    // zoom level multiplicator (number)
                         });
 
@@ -179,9 +140,9 @@ define([
                     }
                 });              
 
-            },
+            },*/
 
-            ajaxOverlay: function(obj) {
+           /* ajaxOverlay: function(obj) {
                 if(!$("#popupContent").size()){
                     $("body").append('<div id="popupContent"></div>')
                 }
@@ -214,8 +175,8 @@ define([
 
                 $('.modalContent').removeClass('hide');
                 
-            },
-
+            },*/
+/*
             lightbox: function (e) {
                 var totalWidth = $(window).width();
                 e.preventDefault();
@@ -266,7 +227,7 @@ define([
             stopProp: function(e){
                 e.stopPropagation();
             },
-
+*/
             openTxt: function(e){
                 e.preventDefault();
 
@@ -316,7 +277,7 @@ define([
             timeOut: function(fn, temp) {
                 setTimeout(fn, temp);
             },
-
+            /*
             openGrilla: function(e) {
                 this.cerrar(e, $('#txt'));
 
@@ -403,7 +364,6 @@ define([
                             speed: '400',
                             keyPress: true,
                             controls: true,
-                            /*enableDrag: false,*/
                             prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
                             nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
                             onSliderLoad: function(){
@@ -427,7 +387,7 @@ define([
 
                 })
                
-            },
+            },*/
             openTxtMenu: function (e) {
                 var el = $(e.target),
                     menu = $(el).siblings('nav');
