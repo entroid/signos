@@ -123,7 +123,6 @@ define([
 
             opensubs:function(e){
                 if($(e.target).find(".subcaps").hasClass("open")){
-                    console.log("a")
                     $(e.target).find(".subcaps").removeClass("open").slideUp();
                 }else{
                      $(".subcaps.open").slideUp(function(){
