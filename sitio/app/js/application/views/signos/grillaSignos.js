@@ -6,7 +6,7 @@ define([
 
     ], function($, _, Backbone, grilla) {
         var GrillaSignos = Backbone.View.extend({
-            el: '.sliderWrapper',
+            el: '.grillaSignos',
 
             events: {
                 /*'click #lightSlider li img': 'lightbox'*/

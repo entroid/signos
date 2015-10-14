@@ -9,7 +9,7 @@ define([
     'lightslider',
     'popup',
     'views/signos/SliderSignos',
-    'views/signos/grillaSignos',
+    'views/signos/GrillaSignos',
     'views/signos/signosTxt',
     'mlens',
     'tooltip'
@@ -20,24 +20,11 @@ define([
             el: '#contenido',
 
             events: {
-                //'click #lightSlider li img': 'lightbox',
-                //'click #grilla .hoverContainer *': 'stopProp',
-                //'click #signosBook #lightSlider .hoverContainer img': 'lightbox',
-                //'click #signosBook #lightSlider .hoverContainer h3': 'lightbox',
-                //'click #signosBook #subcapslider .hoverContainer img': 'lightboxSub',
-                //'click #signosBook #subcapslider .hoverContainer h3': 'lightboxSub',
-                //'click #grilla .hoverContainer h3': 'hoverLightbox',
-                //'click #lightSlider .hoverTitle *': 'stopProp',
-                //'click #lightSlider .hoverTitle': 'hoverLightbox',
                 'click #signosBook .informacion nav a': 'openTxt',
                 'click #signosBook .cerrar': 'cerrar',
-                //'click #signosBook .grillaBtn i': 'openGrilla',
-                //'click #signosBook .sliderBtn span': 'openSlider',
-                //'click #signosBook #back':"backtocaps",
-                //'click #signosBook #main-menu li':"gotoSlider",
-                //'click #signosBook nav.subcaps li':"gotoSubCapSlider",
                 'click #signosBook .info':"openTxtMenu",
-                'click #signosBook .hitosOpen':"openHitos"
+                'click #signosBook .hitosOpen':"openHitos",
+                'click #signosBook .main-ul .main-title':"opensubs"
 
             },
 
@@ -55,7 +42,14 @@ define([
                 }).done(function(data) { 
                     este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
                     _.each(este.jsonData.capitulos,function(elem,ind){
-                        $("#main-menu ul").append('<li data-index="' + ind.split("cap").pop() + '">'+elem.titulo+'</li>')
+                        $titleLi = $('<li data-index="' + ind.split("cap").pop() + '" class="main-title">'+elem.titulo+'</li>');
+                        $subcapul = $('<ul class="subcaps"/>')
+                        _.each(elem.subcapitulos,function(subcaps,numb){
+                                $subcapul.append('<li data-subindex="'+numb+'">'+subcaps.titulo+'</li>');
+                         })
+                        $titleLi.append($subcapul);
+                        $("#main-menu ul.main-ul").append($titleLi);
+
                     })
                     
                     _.each(este.jsonData.hitos,function(elemhit,indixe){
@@ -64,170 +58,17 @@ define([
 
                     var SliderModel = Backbone.Model.extend({});
                     var sliderModel = new SliderModel({jsonData:data})
-                    var slidersignos = new SliderSignos({model:sliderModel});
-                    slidersignos.render();
+                    var grillaSignos = new GrillaSignos({model:sliderModel});
+                    grillaSignos.render();
                     //este.pluginsInit(este);
                     $('.tooltipBtn').tipr();
                     var altura = $(".hitoswrap").height();
                     $(".hitosMenu").height(altura);
                 
-                    /*$(".hoverContainer img").mouseup(function (){
-                            $(this).preventDefault;
-                    });*/
                     
                 }); 
             },
 
-           /* pluginsInit: function (este) {
-
-
-                $("#lightSlider").hide();
-                var totalimg = $("#lightSlider img").size();
-                var currentimg = 0;
-
-               
-
-                var popupContainer = '<div id="popupContent"></div>';
-                $('body').append(popupContainer);
-                
-                //popup
-                $('#popupContent').popup({
-                    color: '#fff',
-                    opacity: 0.9,
-                    transition: 'all 0.3s',
-                    pagecontainer: '#contenido',
-                    blur: true,
-                    scrolllock: true,
-                    onopen: function() {       
-
-                        //naipes        
-                        if($('.cartas #lightSlider2').length){
-                            $('#popupContent').addClass('cartaSlide');
-                            var lightSlider2 = $("#lightSlider2").lightSlider({
-                                item: 1,
-                                mode: 'slide',
-                                easing: 'linear',
-                                speed: '400',
-                                keyPress: true,
-                                controls: true,
-                                prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left"></i></span>',
-                                nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
-                            });
-                        }
-
-                        $('.traduccion-btn').click(function(e){
-                            var el = $(this)
-                            este.openTrad(e, el);
-                        });        
-
-                        //zoom
-                        $(".modalContent .content-1 img").mlens({
-                            imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
-                            lensShape: "circle",                // shape of the lens (circle/square)
-                            lensSize: 180,                  // size of the lens (in px)
-                            borderSize: 1,                  // size of the lens border (in px)
-                            borderColor: "#fff",                // color of the lens border (#hex)
-                            zoomLevel: 1.1                                    // zoom level multiplicator (number)
-                        });
-
-                        // tooltip
-                      $('.traduccion-btn').tipr();
-                       
-                    },
-
-                    onclose: function() { 
-                        $('#popupContent').removeClass('cartaSlide');
-                    }
-                });              
-
-            },*/
-
-           /* ajaxOverlay: function(obj) {
-                if(!$("#popupContent").size()){
-                    $("body").append('<div id="popupContent"></div>')
-                }
-                var este = this;
-                var dataToShow = obj;
-
-                if(!dataToShow.type){
-                    var modal = _.template(modaltemplate,{dataToShow:dataToShow});
-                    }else{
-                        if(dataToShow.type == "panoramica" || dataToShow.type == "alone" ){
-                        var modal = _.template(modalpanoramicatemplate,{dataToShow:dataToShow});
-                        }else if(dataToShow.type == "slide"){
-                          var modal = _.template(modalslidetemplate,{dataToShow:dataToShow});
-                        }
-                    }
-                var content = modal;
-                var close = '<i class="popupContent_close fa fa-times-circle"></i>';
-
-                $('#popupContent').html(content).popup('show')
-                $('.modalContent > div:first-child').append(close);
-
-
-                if ( dataToShow.type == "alone" ){                  
-                    $('.modalContent').addClass('alone').removeClass('hide');
-                }
-
-                if ( !dataToShow.fragmento ) {
-                    $('.modalContent blockquote').addClass('hide');
-                }
-
-                $('.modalContent').removeClass('hide');
-                
-            },*/
-/*
-            lightbox: function (e) {
-                var totalWidth = $(window).width();
-                e.preventDefault();
-                e.stopPropagation();
-                var este = this;
-                var target = e.target;
-                $("#signosBook #second-row").show();
-                 $("#signosBook #second-row").animate({
-                    left:"2%"
-                 },500,function(){
-                 })
-
-                 $("#signosBook #first-row").animate({
-                    left:"-"+totalWidth+"px"
-                 },500,function(){
-                 })
-                 var cap = $(e.target).data("src");
-                
-                 _.each(este.jsonData.capitulos[cap].subcapitulos,function(elem,ind){
-                    $("#second-row .subcaps ul").append("<li data-cap='"+cap+"' data-index='" + ind + "'>"+elem.titulo+"</li>");
-                 });
-                 $("#second-row .subcaps li:eq(0)").addClass("selected");
-                 $("#second-row .subcaps li:eq(0)").trigger("click");
-            },
-
-            lightboxSub:function(e){
-                var $li = $(e.target).parents("li");
-                var obj = $li.data("obj");
-                this.ajaxOverlay(obj);
-            },
-
-            backtocaps:function(){
-                 $("#signosBook #second-row").animate({
-                    left:"100%"
-                 },500,function(){
-                    $("#signosBook #second-row").hide();
-                     $("#second-row .subcaps ul").html("")
-                     $("#second-row .lSSlideOuter").remove();
-                     $("#second-row .sliderWrapper").append('<ul id="subcapslider"></ul>')
-                 })
-
-                 $("#signosBook #first-row").animate({
-                    left:"0"
-                 },500,function(){
-                 })
-            },
-            
-            stopProp: function(e){
-                e.stopPropagation();
-            },
-*/
             openTxt: function(e){
                 e.preventDefault();                  
 
@@ -256,117 +97,7 @@ define([
             timeOut: function(fn, temp) {
                 setTimeout(fn, temp);
             },
-            /*
-            openGrilla: function(e) {
-                this.cerrar(e, $('#txt'));
-
-                $('#txt').removeClass
-                $('.navBook .sliderBtn').removeClass('inactive').fadeIn('100');
-                $('.navBook .grillaBtn').addClass('inactive').fadeOut('100');
-                //this.openTxt(e);
-
-                var jsonData = this.jsonData;
-                var GrillaModel = Backbone.Model.extend({});
-                var grillaModel = new GrillaModel({jsonData:jsonData})
-                var grillasignos = new GrillaSignos({model:grillaModel});
-                grillasignos.render();              
-                
-            },
-            openSlider: function(e) {
-                this.cerrar(e, $('#txt'));
-
-                $('.navBook .sliderBtn').addClass('inactive').fadeOut('100');
-                $('.navBook .grillaBtn').removeClass('inactive').fadeIn('100');
-
-                var jsonData = this.jsonData;
-                var SliderModel = Backbone.Model.extend({});
-                var sliderModel = new SliderModel({jsonData:jsonData})
-                var slidersignos = new SliderSignos({model:sliderModel});
-                slidersignos.render();
-                this.pluginsInit();
-            },
-            openTrad: function(e, el) {
-                var target = el;
-                var trad = $('.tips');
-
-                if($(target).hasClass('active')) {
-                    $(target).removeClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
-                    $(trad).removeClass('showTt');
-                } else {
-                    $(target).addClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
-                    $(trad).addClass('showTt');
-                }
-            },
-
-            gotoSlider: function(e) {
-                var target = $(e.target),
-                    index = $(target).attr('data-index');
-
-                slider.goToSlide(index);
-                $('#signosBook #main-menu li').removeClass('selected');
-                $(target).addClass('selected');
-            },
-
-            gotoSubCapSlider: function(e) {
-
-                var cap = $(e.target).attr('data-cap');
-                var index = $(e.target).attr('data-index');
-                $("#second-row .subcaps li").removeClass("selected");
-                $(e.target).addClass("selected");
-
-                //$("#second-row .subcaps ul").html("")
-                $("#second-row .lSSlideOuter").remove();
-                $("#second-row .sliderWrapper").append('<ul id="subcapslider"></ul>');
-
-                console.log(this.jsonData.capitulos[cap].subcapitulos[index])
-
-                 _.each(this.jsonData.capitulos[cap].subcapitulos[index].contenido,function(obj,indixe){
-                    var $li = $('<li class="'+indixe+' '+obj.claseSlider+'"><div class="hoverContainer"><img src="img/libros/signos/'+obj.lowres+'"/></div></li>');
-                    $li.data("obj",obj);
-                    $("#subcapslider").append($li);
-
-                 });                 
-                
-                var totalimg = $("#subcapslider img").size();
-                var currentimg = 0;
-
-                $("#subcapslider img").load(function(){
-                    currentimg++;
-                    if(currentimg==totalimg){
-
-                        slider2 = $("#subcapslider").lightSlider({
-                            item: 2,
-                            autoWidth: true,
-                            slideMargin:60,
-                            mode: 'slide',
-                            easing: 'linear',
-                            speed: '400',
-                            keyPress: true,
-                            controls: true,
-                            prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                            nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
-                            onSliderLoad: function(){
-                                $(".fa-spinner.fa-pulse").css("opacity", "0");
-                                $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                                $("#subcapslider").parents(".lSSlideOuter").addClass("sub"+cap)
-                            },
-                            responsive : [{
-                                breakpoint:768,
-                                settings: {
-                                    item:1,
-                                    autoWidth: false,
-                                    slideMove:1,
-                                    slideMargin:30,
-                                }
-                            }]
-                        });
-
-                        slider2.refresh();                            
-                    }                   
-
-                })
-               
-            },*/
+ 
             openTxtMenu: function (e) {
                 var el = $(e.target),
                     menu = $(el).siblings('nav');
@@ -388,6 +119,22 @@ define([
                 $(".hitosMenu").slideToggle(400,function(){
                     $("#signosBook").css("overflow","visible")
                 });                
+            },
+
+            opensubs:function(e){
+                if($(e.target).find(".subcaps").hasClass("open")){
+                    console.log("a")
+                    $(e.target).find(".subcaps").removeClass("open").slideUp();
+                }else{
+                     $(".subcaps.open").slideUp(function(){
+                        $(this).removeClass("open")
+                     });
+                     $(e.target).find(".subcaps").slideDown(function(){
+                        $(this).addClass("open")
+                     });
+                   
+
+                }
             }
         });
         

@@ -1847,3 +1847,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     height: 320px !important;
 }
 
+.subcaps{
+    display: none;
+}
+

@@ -1,10 +1,10 @@
 <div id="grilla" class="grilla imgs">
     <div class='row'>
     <%counter=0%>
-    <%_.each(jsonData,function(elem,ind){%>
-        <%if(counter%5 == 0){%><%if(counter != 0){%></div><%}%><div class="col-md-3 col-sm-3 col-12-xs"> <%}%>
+    <%_.each(jsonData.capitulos,function(elem,ind){%>
+        <%if(counter%3 == 0){%><%if(counter != 0){%></div><%}%><div class="col-md-3 col-sm-3 col-12-xs"> <%}%>
             <div class="hoverContainer">
-                <img src="img/libros/paucke/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+                <img src="img/libros/signos/<%=elem.src%>" data-src="<%=ind%>" alt="">
                 <h3 class="transitions-fast"><%=elem.titulo%></h3>
             </div>
     <%counter++%>
