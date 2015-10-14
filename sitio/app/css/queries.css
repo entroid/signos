@@ -52,6 +52,22 @@
   }
 }
 
+
+/** desktop only **/
+@media only screen and (min-width: 992px){
+  #pauckeBook .informacion .info {
+    display: none;;
+  }
+  #pauckeBook .informacion nav {
+      transition-delay: 0s; 
+      transform: translate(0px, 0px);
+      opacity: 1;
+      position: static;
+      border-top: none;
+  }
+}
+
+
 @media only screen and (max-width: 1382px) {
   /* 1382 =================================================== */
   body {
@@ -74,8 +90,28 @@
     text-align: center;
   }
 
-  .libroTitle{
-    display: none;
+  #pauckeBook .libroTitle, #siglosBook .libroTitle, #signosBook .libroTitle{
+    background-image: none;
+    float: none;
+    font-size: 2.5em;
+    height: auto;
+    margin-bottom: 60px;
+    text-align: center;
+    text-indent: unset;
+    width: auto;
+  }
+
+  #pauckeBook .libroTitle span{
+    color: #fe8000;
+  }
+
+  #siglosBook .libroTitle span{
+    font-weight: bold;
+  }
+
+  #signosBook .libroTitle span{
+    color: #009997;
+    font-weight: bold;
   }
 
   .sliderWrapper .lSSlideOuter .lSPager{
@@ -85,11 +121,63 @@
 
   .sliderWrapper .lSAction{
     right: 50%;
-    margin-right: -245px;    
+    margin-right: -219px;    
   }
 
   .overlay nav{
     margin-left: 40px;
+  }
+
+  .info{
+    width: 250px;
+    border-radius: 3px;    
+    margin: 0 auto;
+    font-style: normal;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 1px solid #262325;
+  }
+
+  .info:hover{margin-right: auto;color:#333;background-color: #dedede;}
+
+  .grillaBtns{display: none;}
+
+  .informacion nav{
+    height: 60vh;
+    left: 0;
+    padding-top: 40px;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .modalContent .content-1{
+    padding: 50px;
+  }
+  .traduccion-btn{
+    top: -40px;
+    left: -42px;
+  }
+
+  .modalContent blockquote{
+    padding: 0;
+    margin-top: 30px;
+  }
+  .modalContent blockquote .izq{
+    display: none;
+  }
+
+  .navBook nav ul li{
+    margin-bottom: 40px;
+  }
+
+  #siglosBook .sliderWrapper .lSAction{
+    width: 454px;
+    bottom: 0;
+  }
+  #signosBook .sliderWrapper .lSAction{
+    width: 454px;
   }
 }
 
@@ -135,9 +223,18 @@
     display: none !important;
   }
 
-  #lightSlider{
-    margin-left: -4px;
+  .lightSlider{
   }
+  
+  .libroTitle span{
+    display: block;
+  }
+
+  .content-1{
+    padding: 50px 15px;
+  }
+
+  .sliderWrapper .lSSlideOuter .lSPager{display: none;}
 }
 
 @media only screen and (max-width: 640px) {
@@ -168,18 +265,18 @@
     .overlay ul li a{
       text-align:center;
     }
-      /*header .logos a{
-        margin-bottom: 5px;
-      }*/
-      .overlay .txtInfo{
-        padding:0;
-        margin-bottom: 60px;
-      }
+    /*header .logos a{
+      margin-bottom: 5px;
+    }*/
+    .overlay .txtInfo{
+      padding:0;
+      margin-bottom: 60px;
+    }
 
-      .text-left{margin-bottom: 30px;}
-      .text-left p{
-        margin-right:0;
-      }
+    .text-left{margin-bottom: 30px;}
+    .text-left p{
+      margin-right:0;
+    }
 
   .sliderWrapper .lSAction{
     left: 0;
@@ -188,16 +285,37 @@
     width: 100%;
   }
 
-  #lightSlider li{
-    width: 85vw;
+  .lightSlider li{
+    text-align: center;
   }
 
   .lightSlider{
-    margin: 0 20px;
+    /*margin: 0 20px;*/
+  }
+
+  #lightSlider, #subcapslider{
+    min-height:100px; 
+  }
+  .sliderWrapper{
+    min-height: 100px;
+  }
+
+  #lightSlider li.alto .hoverContainer, #subcapslider li.alto .hoverContainer{
+    height:50vh; 
   }
 
   #lightSlider li.ancho .hoverContainer{
     width:auto;
+  }
+
+  #pauckeBook .libroTitle, #siglosBook .libroTitle, #signosBook .libroTitle{
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .info{
+    margin-bottom: 15px;
   }
 }
 
@@ -268,6 +386,12 @@
     margin-top: 140px;
     position:absolute;
   }
+
+  #txt .cerrar{
+    left: 20px;
+  }
+
+  .siglos-info h2, .siglos-info h3{font-size: 0.8rem;margin-bottom: 30px;}
 
 }
 

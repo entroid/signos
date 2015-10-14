@@ -29,7 +29,8 @@ define([
                 'click #pauckeBook .navBook nav a': 'openTxt',
                 'click #pauckeBook .cerrar': 'cerrar',
                 'click #pauckeBook .grillaBtn i': 'openGrilla',
-                'click #pauckeBook .sliderBtn span': 'openSlider'
+                'click #pauckeBook .sliderBtn span': 'openSlider',
+                'click #pauckeBook .info':"openTxtMenu"
             },
 
             render: function() {
@@ -229,32 +230,10 @@ define([
                 e.preventDefault();
 
                 var target = e.currentTarget,
-                    seccion = $(target).attr('data-seccion');/*,
-                   url = 'js/application/views/paucke/helpers/' + seccion + '.html',
-                    element,
-                    este = this,
-                    cont = seccion === 'grilla' ? $('#grillaContent') : $('#txt');*/
+                    seccion = $(target).attr('data-seccion'),
+                    menu = $(target).parents('nav');
 
-                /*$('#txt .txtArea').fadeOut();                    
-
-                if (seccion){
-                    var ajaxCall = function(){
-                        $.ajax({
-                          url: url,
-                          dataType: 'html',
-                        }).done(function(data) {
-                            var hacerVisible = function(){                             
-                                $(cont).addClass('adentro fondoAdentro');
-                            }
-
-                            $(cont).html(data);
-
-                            este.timeOut(hacerVisible, 100);
-                                      
-                            
-                        }); 
-                    }
-                }            */               
+                $(menu).toggleClass('active');     
 
                 var pauckeTxt = new PauckeTxt();
                 pauckeTxt.render(seccion);
@@ -314,6 +293,13 @@ define([
                     $(trad).addClass('showTt');
                 }
             },
+
+            openTxtMenu: function (e) {
+                var el = $(e.target),
+                    menu = $(el).siblings('nav');
+
+                $(menu).toggleClass('active');
+            }
 
         });
         
