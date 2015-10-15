@@ -4,17 +4,14 @@ define([
     'backbone',
     'text!views/signos/helpers/signos.html',
     'text!views/signos/helpers/modal.html',
-    'text!views/signos/helpers/modal_panoramica.html',
-    'text!views/signos/helpers/modal_slide.html',
-    'lightslider',
     'popup',
-    'views/signos/SliderSignos',
     'views/signos/GrillaSignos',
     'views/signos/signosTxt',
     'mlens',
-    'tooltip'
-
-    ], function($, _, Backbone, signosTemplate, modaltemplate,modalpanoramicatemplate,modalslidetemplate,lightslider, popup, SliderSignos,GrillaSignos,SignosTxt,mlens, tooltip) {
+    'tooltip',
+    'views/signos/Capitulos',
+ 
+    ], function($, _, Backbone, signosTemplate, modaltemplate, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos) {
         var sllider, slider2;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
@@ -24,7 +21,8 @@ define([
                 'click #signosBook .cerrar': 'cerrar',
                 'click #signosBook .info':"openTxtMenu",
                 'click #signosBook .hitosOpen':"openHitos",
-                'click #signosBook .main-ul .main-title':"opensubs"
+                'click #signosBook .main-ul .main-title span':"opensubs",
+                'click #signosBook .main-ul .subcaps li':"openCapitulos"
 
             },
 
@@ -42,10 +40,10 @@ define([
                 }).done(function(data) { 
                     este.jsonData = (typeof data == 'string') ? jQuery.parseJSON(data) : data; 
                     _.each(este.jsonData.capitulos,function(elem,ind){
-                        $titleLi = $('<li data-index="' + ind.split("cap").pop() + '" class="main-title">'+elem.titulo+'</li>');
+                        $titleLi = $('<li data-index="' + ind.split("cap").pop() + '" class="main-title"><span>'+elem.titulo+'</span></li>');
                         $subcapul = $('<ul class="subcaps"/>')
                         _.each(elem.subcapitulos,function(subcaps,numb){
-                                $subcapul.append('<li data-subindex="'+numb+'">'+subcaps.titulo+'</li>');
+                                $subcapul.append('<li  data-index="' + ind.split("cap").pop() + '" data-subindex="'+numb+'">'+subcaps.titulo+'</li>');
                          })
                         $titleLi.append($subcapul);
                         $("#main-menu ul.main-ul").append($titleLi);
@@ -122,19 +120,28 @@ define([
             },
 
             opensubs:function(e){
-                if($(e.target).find(".subcaps").hasClass("open")){
-                    $(e.target).find(".subcaps").removeClass("open").slideUp();
+                var $li = $(e.target).parent();
+                console.log($li)
+                if($li.find(".subcaps").hasClass("open")){
+                    $li.find(".subcaps").removeClass("open").slideUp();
                 }else{
                      $(".subcaps.open").slideUp(function(){
                         $(this).removeClass("open")
                      });
-                     $(e.target).find(".subcaps").slideDown(function(){
+                     $li.find(".subcaps").slideDown(function(){
                         $(this).addClass("open")
                      });
                    
 
                 }
+            },
+            openCapitulos:function(e){
+                var index = $(e.target).data("index");
+                var subindex = $(e.target).data("subindex");
+                console.log(index)
+                console.log(this.jsonData.capitulos["cap"+index].subcapitulos[subindex]);
             }
+
         });
         
         return new SignosView;
