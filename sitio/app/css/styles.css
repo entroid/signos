@@ -1851,3 +1851,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     display: none;
 }
 
+.ampliar .hidden{
+    display:none;
+}
+

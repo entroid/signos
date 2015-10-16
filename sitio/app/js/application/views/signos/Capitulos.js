@@ -9,12 +9,20 @@ define([
             el: '.grillaSignos',
 
             events: {
-                /*'click #lightSlider li img': 'lightbox'*/
+                'click #capitulos .ampliar a': 'mostrarOculto'
             },
 
             render: function() {
                 jsonData = this.model.get("jsonData")
                 $(this.el).html(_.template(capitulos,{jsonData:jsonData}));
+            },
+
+            mostrarOculto:function(e){
+                e.preventDefault();
+                $(e.target).next().toggleClass("hide");
+                var text = $(e.target).text();
+                $(e.target).text(
+                         text == "mostrar" ? "ocultar" : "mostrar");
             }
         });
         

@@ -138,8 +138,12 @@ define([
             openCapitulos:function(e){
                 var index = $(e.target).data("index");
                 var subindex = $(e.target).data("subindex");
-                console.log(index)
-                console.log(this.jsonData.capitulos["cap"+index].subcapitulos[subindex]);
+                var data = this.jsonData.capitulos["cap"+index].subcapitulos[subindex];
+                console.log(data)
+                var CapitulosModel = Backbone.Model.extend({});
+                var capitulosModel = new CapitulosModel({jsonData:data})
+                var capitulos = new Capitulos({model:capitulosModel});
+                capitulos.render();
             }
 
         });
