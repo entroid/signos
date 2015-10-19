@@ -1309,6 +1309,8 @@ Nav Overlay
 .navBook nav li a:hover{color:#fe8000;}
 .navBook nav li a span{display:block;margin-bottom:4px;}
 
+#signosBook .navBook nav li a:hover{color:#009997;}
+
 menu li {cursor:pointer;}
 
 .libroTitle{
@@ -1331,8 +1333,9 @@ menu li {cursor:pointer;}
     height: 420px;
 }
 #signosBook .libroTitle{
-    background-position: -104px 0;
+    background-position: -94px 0;
     background-size: 139px 450px;
+    float: none;
     height: 450px;
 }
 
@@ -1727,7 +1730,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 #signosBook .signosMenu li:hover {
     color: #262325;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 
 #signosBook .capSignos .lSAction{
@@ -1775,7 +1778,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 .navBookSignos{
-    border-right:1px solid #262325;
+    /*border-right:1px solid #262325;*/
 }
 
 .informacion nav{
@@ -1805,17 +1808,19 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     width:100%;
     z-index: 10;
     position: absolute;
-    top:330px;
+    top:345px;
+    background-color: white;
+    padding-right: 50px;
 }
 
 .hitoswrap.active{    
-    top: -42px;
+    top: -27px;
     
 }
 
 .hitos {
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
     /*position: absolute;
     bottom: -94px;*/
     background: #FFF;
@@ -1847,11 +1852,26 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     height: 320px !important;
 }
 
-.subcaps{
+.main-ul .subcaps{
     display: none;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+#signosBook .main-ul .subcaps li{
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+#signosBook .main-ul .subcaps li:hover{
+    color: #262325;
+    margin-left: 5px;
 }
 
 .ampliar .hidden{
     display:none;
 }
 
+#main-menu{
+    max-height: 353px;
+    overflow-y: auto;
+}
