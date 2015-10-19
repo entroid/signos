@@ -22,8 +22,10 @@ define([
                 'click #signosBook .info':"openTxtMenu",
                 'click #signosBook .hitosOpen':"openHitos",
                 'click #signosBook .main-ul .main-title span':"opensubs",
-                'click #signosBook .main-ul .subcaps li':"openCapitulos"
-
+                'click #signosBook .main-ul .subcaps li':"openCapitulos",
+                'hover #signosBook .main-ul .main-title':"hoverImg",
+                'hover #signosBook .main-ul .main-title':"hoverImg",
+                'hover .grillaSignos .hoverContainer img': "hoverCap"
             },
 
             render: function() {
@@ -144,6 +146,18 @@ define([
                 var capitulosModel = new CapitulosModel({jsonData:data})
                 var capitulos = new Capitulos({model:capitulosModel});
                 capitulos.render();
+            },
+            hoverImg: function(e){                
+                var el = $(e.target),
+                    index = $(el).parent().attr('data-index');
+
+                $('.grillaSignos img[data-src=cap' + index + ']').toggleClass('grillHoverImg');
+            },
+            hoverCap: function(e){
+                var el = $(e.target),
+                    index = $(el).attr('data-src').replace('cap', '');
+                    console.log('#signosBook .main-ul .main-title[data-index=' + index + ']')
+                $('#signosBook .main-ul .main-title[data-index=' + index + ']').toggleClass('active');
             }
 
         });

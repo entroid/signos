@@ -20,9 +20,9 @@ define([
             mostrarOculto:function(e){
                 e.preventDefault();
                 $(e.target).next().toggleClass("hide");
-                var text = $(e.target).text();
-                $(e.target).text(
-                         text == "mostrar" ? "ocultar" : "mostrar");
+                var text = $(e.target).html();
+                $(e.target).html(
+                         text == "<span>[+]</span> Ver más" ? "<span>[-]</span> Ocultar" : "<span>[+]</span> Ver más");
             }
         });
         
