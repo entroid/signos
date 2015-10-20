@@ -1,0 +1,7 @@
+<div id="Portada" class="portada">
+     <img src="img/libros/signos/<%=jsonData.src%>">
+    <%_.each(jsonData.subcapitulos,function(elem,ind){%>
+                <h2><a href="#" data-subindex="<%=ind%>"><%=elem.titulo%></a></h2>
+    <%})%>
+    
+</div>

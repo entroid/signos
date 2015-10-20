@@ -9,12 +9,13 @@ define([
             el: '.grillaSignos',
 
             events: {
-                'click #capitulos .ampliar a': 'mostrarOculto'
             },
 
             render: function() {
                 jsonData = this.model.get("jsonData")
                 $(this.el).html(_.template(capitulos,{jsonData:jsonData}));
+                var este = this;
+                $("#capitulos .ampliar a").bind("click",este.mostrarOculto)
             },
 
             mostrarOculto:function(e){

@@ -1908,3 +1908,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .main-title.active span{
     color: #262325;
 }
+
+.portada img{
+    max-width: 100%;
+}

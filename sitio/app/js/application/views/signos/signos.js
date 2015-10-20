@@ -4,6 +4,7 @@ define([
     'backbone',
     'text!views/signos/helpers/signos.html',
     'text!views/signos/helpers/modal.html',
+    'text!views/signos/helpers/signosPortada.html',
     'popup',
     'views/signos/GrillaSignos',
     'views/signos/signosTxt',
@@ -11,7 +12,7 @@ define([
     'tooltip',
     'views/signos/Capitulos',
  
-    ], function($, _, Backbone, signosTemplate, modaltemplate, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos) {
+    ], function($, _, Backbone, signosTemplate, modaltemplate, signosPortada, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos) {
         var sllider, slider2;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
@@ -23,7 +24,6 @@ define([
                 'click #signosBook .hitosOpen':"openHitos",
                 'click #signosBook .main-ul .main-title span':"opensubs",
                 'click #signosBook .main-ul .subcaps li':"openCapitulos",
-                'hover #signosBook .main-ul .main-title':"hoverImg",
                 'hover #signosBook .main-ul .main-title':"hoverImg",
                 'hover .grillaSignos .hoverContainer img': "hoverCap"
             },
@@ -134,7 +134,11 @@ define([
                         $(this).addClass("open")
                      });
                    
-
+                    var index = $(e.target).parent().data("index");
+                    var capitulo = this.jsonData.capitulos["cap"+index];
+                    $('.grillaSignos').html(_.template(signosPortada,{jsonData:capitulo}));
+                    var este = this;
+                    $("#Portada a").bind("click",este.openCapsInPortada)
                 }
             },
             openCapitulos:function(e){
@@ -158,7 +162,13 @@ define([
                     index = $(el).attr('data-src').replace('cap', '');
                     console.log('#signosBook .main-ul .main-title[data-index=' + index + ']')
                 $('#signosBook .main-ul .main-title[data-index=' + index + ']').toggleClass('active');
+            },
+            openCapsInPortada:function(e){
+                e.preventDefault();
+                var subindex = $(e.target).data("subindex");
+                $(".subcaps.open li[data-subindex="+subindex+"]").trigger("click")
             }
+
 
         });
         
