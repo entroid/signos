@@ -11,8 +11,8 @@ define([
     'mlens',
     'tooltip',
     'views/signos/Capitulos',
- 
-    ], function($, _, Backbone, signosTemplate, modaltemplate, signosPortada, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos) {
+    'mCustomScrollbar'
+    ], function($, _, Backbone, signosTemplate, modaltemplate, signosPortada, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos,mCustomScrollbar) {
         var sllider, slider2;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
@@ -51,7 +51,10 @@ define([
                         $("#main-menu ul.main-ul").append($titleLi);
 
                     })
-                    
+                    $("#main-menu").mCustomScrollbar({
+                            theme:"minimal-dark",
+                            scrollInertia:300,
+                    });
                     _.each(este.jsonData.hitos,function(elemhit,indixe){
                         $("#hitos-menu ul").append('<li data-index="' + indixe + '">'+elemhit.titulo+'</li>')
                     })

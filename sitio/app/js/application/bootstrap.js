@@ -10,7 +10,8 @@ require.config({
         fancybox: '../libs/plugins/jquery.fancybox.pack',
         popup: '../libs/plugins/jquery.popupoverlay',
         mlens: '../libs/plugins/jquery.mlens-1.5',
-        tooltip: '../libs/plugins/tipr.min'
+        tooltip: '../libs/plugins/tipr.min',
+        mCustomScrollbar: '../libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min',
     },
     shim: {
         underscore: {
