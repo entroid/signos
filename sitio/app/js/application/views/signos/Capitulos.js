@@ -20,7 +20,9 @@ define([
                 $("#capitulos .ampliar a").bind("click",este.mostrarOculto)
                 $("#capitulos img").bind("click",este.lightbox);
                  var popupContainer = '<div id="popupContent"></div>';
-                $('body').append(popupContainer);
+                if (!$('#popupContainer')){
+                    $('body').append(popupContainer);
+                }
                 
                 $('#popupContent').popup({
                     color: '#fff',
