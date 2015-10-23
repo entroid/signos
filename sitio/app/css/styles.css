@@ -1813,7 +1813,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     /*width:100%;*/
     z-index: 10;
     position: absolute;
-    top:345px;
+    top:325px;
     background-color: white;
     padding-right: 30px;
 }
@@ -1909,6 +1909,18 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     color: #262325;
 }
 
+.portada{
+    padding-left: 60px;
+    padding-right: 60PX;
+    margin: 0 auto;
+}
 .portada img{
     max-width: 100%;
+}
+.capitulos h2{
+    color: #009997;
+    border-top: 1px solid #848484;
+    font-size: 1.5em;
+    margin: 2.3em 0 0.83em; 
+    padding-top: 0.83em;
 }
