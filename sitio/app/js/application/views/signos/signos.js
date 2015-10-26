@@ -4,14 +4,15 @@ define([
     'backbone',
     'text!views/signos/helpers/signos.html',
     'text!views/signos/helpers/modal.html',
+    'text!views/signos/helpers/signosPortada.html',
     'popup',
     'views/signos/GrillaSignos',
     'views/signos/signosTxt',
     'mlens',
     'tooltip',
     'views/signos/Capitulos',
- 
-    ], function($, _, Backbone, signosTemplate, modaltemplate, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos) {
+    'mCustomScrollbar'
+    ], function($, _, Backbone, signosTemplate, modaltemplate, signosPortada, popup,GrillaSignos,SignosTxt,mlens, tooltip,Capitulos,mCustomScrollbar) {
         var sllider, slider2;
         var SignosView = Backbone.View.extend({
             el: '#contenido',
@@ -22,8 +23,9 @@ define([
                 'click #signosBook .info':"openTxtMenu",
                 'click #signosBook .hitosOpen':"openHitos",
                 'click #signosBook .main-ul .main-title span':"opensubs",
-                'click #signosBook .main-ul .subcaps li':"openCapitulos"
-
+                'click #signosBook .main-ul .subcaps li':"openCapitulos",
+                'hover #signosBook .main-ul .main-title':"hoverImg",
+                'hover .grillaSignos .hoverContainer img': "hoverCap"
             },
 
             render: function() {
@@ -49,7 +51,10 @@ define([
                         $("#main-menu ul.main-ul").append($titleLi);
 
                     })
-                    
+                    $("#main-menu").mCustomScrollbar({
+                            theme:"minimal-dark",
+                            scrollInertia:300,
+                    });
                     _.each(este.jsonData.hitos,function(elemhit,indixe){
                         $("#hitos-menu ul").append('<li data-index="' + indixe + '">'+elemhit.titulo+'</li>')
                     })
@@ -132,7 +137,11 @@ define([
                         $(this).addClass("open")
                      });
                    
-
+                    var index = $(e.target).parent().data("index");
+                    var capitulo = this.jsonData.capitulos["cap"+index];
+                    $('.grillaSignos').html(_.template(signosPortada,{jsonData:capitulo}));
+                    var este = this;
+                    $("#Portada a").bind("click",este.openCapsInPortada)
                 }
             },
             openCapitulos:function(e){
@@ -144,7 +153,25 @@ define([
                 var capitulosModel = new CapitulosModel({jsonData:data})
                 var capitulos = new Capitulos({model:capitulosModel});
                 capitulos.render();
+            },
+            hoverImg: function(e){                
+                var el = $(e.target),
+                    index = $(el).parent().attr('data-index');
+
+                $('.grillaSignos img[data-src=cap' + index + ']').toggleClass('grillHoverImg');
+            },
+            hoverCap: function(e){
+                var el = $(e.target),
+                    index = $(el).attr('data-src').replace('cap', '');
+                    console.log('#signosBook .main-ul .main-title[data-index=' + index + ']')
+                $('#signosBook .main-ul .main-title[data-index=' + index + ']').toggleClass('active');
+            },
+            openCapsInPortada:function(e){
+                e.preventDefault();
+                var subindex = $(e.target).data("subindex");
+                $(".subcaps.open li[data-subindex="+subindex+"]").trigger("click")
             }
+
 
         });
         

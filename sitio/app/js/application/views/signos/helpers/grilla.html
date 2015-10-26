@@ -2,10 +2,10 @@
     <div class='row'>
     <%counter=0%>
     <%_.each(jsonData.capitulos,function(elem,ind){%>
-        <%if(counter%3 == 0){%><%if(counter != 0){%></div><%}%><div class="col-md-3 col-sm-3 col-12-xs"> <%}%>
+        <%if(counter%3 == 0){%><%if(counter != 0){%></div><%}%><div class="col-md-4 col-sm-4 col-12-xs"> <%}%>
             <div class="hoverContainer">
                 <img src="img/libros/signos/<%=elem.src%>" data-src="<%=ind%>" alt="">
-                <h3 class="transitions-fast"><%=elem.titulo%></h3>
+                <!--<h3 class="transitions-fast"><%=elem.titulo%></h3>-->
             </div>
     <%counter++%>
     <%})%>

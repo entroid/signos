@@ -1,22 +1,25 @@
 <div id="capitulos" class="capitulos">
-    <div class='row'>
+    
     <%_.each(jsonData,function(elem,ind){%>
                 <%if(ind=="titulo"){%>
-                <h3 class="transitions-fast"><%=elem%></h3>
+                <h1 class="transitions-fast"><%=elem%></h1>
                 <%}else{%>
                     <%_.each(elem,function(obj,indx){%>
                         <%if(obj.claseSlider=="ampliar"){%>
                         <div class="ampliar">
-                            <a href="#">mostrar</a>
-                            <div class="hide"><%=obj.texto%></div>
+                            <a href="#"><span>[+]</span> Ver más</a>
+                            <div class="hide transitions-fast"><%=obj.texto%></div>
                         </div>
                         <%}else{%>
-                            <h3><%=obj.titulo%></h3>
-                            <div class="extracto">
-                                <%=obj.extracto%>
+                            <h2><%=obj.titulo%></h2>                            
+                            
+                            <div class="imagen">    
+                                <img src="img/libros/signos/<%=obj.lowres%>" data-src="<%=obj.src%>" data-extract="<%=obj.extracto%>"/>
+                                <div class="extracto">
+                                    <%=obj.extracto%>
+                                </div>
                             </div>
-                            <hr />
-                            <img src="img/libros/signos/<%=obj.lowres%>" />
+
                             <div class="texto <%=obj.claseSlider%>">
                                 <%=obj.texto%>
                             </div>
@@ -24,5 +27,5 @@
                     <%})%>
                 <%}%>
     <%})%>
-    </div>
+    
 </div>

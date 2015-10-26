@@ -1106,6 +1106,11 @@ Nav Overlay
   margin: -3px 3px 3px -3px; 
 }
 
+.grillHoverImg{
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
+  margin: -3px 3px 3px -3px; 
+}
+
 #pauckeBook #lightSlider .img19 .hoverContainer:hover img{
     box-shadow: none;
     margin:0;
@@ -1309,6 +1314,8 @@ Nav Overlay
 .navBook nav li a:hover{color:#fe8000;}
 .navBook nav li a span{display:block;margin-bottom:4px;}
 
+#signosBook .navBook nav li a:hover{color:#009997;}
+
 menu li {cursor:pointer;}
 
 .libroTitle{
@@ -1331,8 +1338,9 @@ menu li {cursor:pointer;}
     height: 420px;
 }
 #signosBook .libroTitle{
-    background-position: -104px 0;
+    background-position: -94px 0;
     background-size: 139px 450px;
+    float: none;
     height: 450px;
 }
 
@@ -1727,7 +1735,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 #signosBook .signosMenu li:hover {
     color: #262325;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 
 #signosBook .capSignos .lSAction{
@@ -1775,7 +1783,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 .navBookSignos{
-    border-right:1px solid #262325;
+    /*border-right:1px solid #262325;*/
 }
 
 .informacion nav{
@@ -1802,20 +1810,22 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     /*position: relative;
     top:0px;
     left: 15px;*/
-    width:100%;
+    /*width:100%;*/
     z-index: 10;
     position: absolute;
-    top:330px;
+    top:325px;
+    background-color: white;
+    padding-right: 30px;
 }
 
 .hitoswrap.active{    
-    top: -42px;
+    top: -27px;
     
 }
 
 .hitos {
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
     /*position: absolute;
     bottom: -94px;*/
     background: #FFF;
@@ -1847,11 +1857,70 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     height: 320px !important;
 }
 
-.subcaps{
+.main-ul .subcaps{
     display: none;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+#signosBook .main-ul .subcaps li{
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+#signosBook .main-ul .subcaps li:hover{
+    color: #262325;
+    margin-left: 5px;
 }
 
-.ampliar .hidden{
-    display:none;
+.ampliar div{
+    height: auto;
+    opacity: 1;
+}
+.ampliar a{
+    color: #009997;
+    font-size: .9em;
+}
+.ampliar a span{
+    
+    font-weight: bold;
 }
 
+#main-menu{
+    max-height: 353px;
+    overflow-y: auto;
+}
+
+.imagen{
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.imagen img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.imagen .extracto{
+    font-size: .8em;
+    color: #666;
+}
+
+.main-title.active span{
+    color: #262325;
+}
+
+.portada{
+    padding-left: 60px;
+    padding-right: 60PX;
+    margin: 0 auto;
+}
+.portada img{
+    max-width: 100%;
+}
+.capitulos h2{
+    color: #009997;
+    border-top: 1px solid #848484;
+    font-size: 1.5em;
+    margin: 2.3em 0 0.83em; 
+    padding-top: 0.83em;
+}

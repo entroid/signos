@@ -55,10 +55,10 @@
 
 /** desktop only **/
 @media only screen and (min-width: 992px){
-  #pauckeBook .informacion .info {
-    display: none;;
+  .informacion .info {
+    display: none;
   }
-  #pauckeBook .informacion nav {
+  .informacion nav {
       transition-delay: 0s; 
       transform: translate(0px, 0px);
       opacity: 1;
@@ -178,6 +178,20 @@
   }
   #signosBook .sliderWrapper .lSAction{
     width: 454px;
+  }
+
+  .hitoswrap{
+    top:0;
+    right: 0;
+  }
+  .hitoswrap.active{
+    top:0;
+  }
+  .hitoswrap .hitos{
+    margin-top: 0;
+  }
+  .hitoswrap .hitos h3{
+    margin-top: 0;
   }
 }
 
