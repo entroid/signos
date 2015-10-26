@@ -179,6 +179,20 @@
   #signosBook .sliderWrapper .lSAction{
     width: 454px;
   }
+
+  .hitoswrap{
+    top:0;
+    right: 0;
+  }
+  .hitoswrap.active{
+    top:0;
+  }
+  .hitoswrap .hitos{
+    margin-top: 0;
+  }
+  .hitoswrap .hitos h3{
+    margin-top: 0;
+  }
 }
 
 @media only screen and (max-width: 800px) {
