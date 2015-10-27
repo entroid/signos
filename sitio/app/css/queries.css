@@ -193,6 +193,25 @@
   .hitoswrap .hitos h3{
     margin-top: 0;
   }
+
+  #main-menu{
+    max-height:none;
+    width: 50%;
+
+  }
+  .main-ul{
+    padding-top: 20px;
+    margin-top:100px !important;
+    border-top:1px solid black;
+  }
+  #signosBook .signosMenu li{
+    border-bottom:1px solid black;
+    padding-bottom: 20px;
+  }
+  #signosBook .signosMenu li li{
+    border-bottom:none;
+    padding: 5px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
