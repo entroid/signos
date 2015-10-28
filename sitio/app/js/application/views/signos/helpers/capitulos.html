@@ -11,11 +11,8 @@
                             <div class="hide transitions-fast"><%=obj.texto%></div>
                         </div>
                         <%}else{%>
-                            <%if(indx == "titulo"){%>
-                                <h1><%=obj%></h1>
-                            <%}else{%>
                             <h2><%=obj.titulo%></h2>                            
-                            
+                            <%console.log(obj)%>
                             <div class="imagen">    
                                 <img src="img/libros/signos/<%=obj.lowres%>" data-src="<%=obj.src%>" data-extract="<%=obj.extracto%>"/>
                                 <div class="extracto">
@@ -26,7 +23,6 @@
                             <div class="texto <%=obj.claseSlider%>">
                                 <%=obj.texto%>
                             </div>
-                            <%}%>
                         <%}%>
                     <%})%>
                 <%}%>

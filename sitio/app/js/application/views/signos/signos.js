@@ -23,8 +23,9 @@ define([
                 'click #signosBook .info':"openTxtMenu",
                 'click #signosBook .hitosOpen':"openHitos",
                 'click #signosBook .main-ul .main-title span':"opensubs",
+                'click #signosBook .mainhitos span':"opensubs",
                 'click #signosBook .main-ul .subcaps li':"openCapitulos",
-                'click #hitos-menu li':"openHitosCap",
+                'click #hitos-menu .subcaps li':"openHitosCap",
                 'hover #signosBook .main-ul .main-title':"hoverImg",
                 //'hover .grillaSignos .hoverContainer img': "hoverCap"
             },
@@ -52,12 +53,19 @@ define([
                         $("#main-menu ul.main-ul").append($titleLi);
 
                     })
-                    $("#main-menu").mCustomScrollbar({
+                    $("#main-menu, #hitos-menu").mCustomScrollbar({
                             theme:"minimal-dark",
                             scrollInertia:300,
                     });
                     _.each(este.jsonData.hitos,function(elemhit,indixe){
-                        $("#hitos-menu ul").append('<li data-index="' + indixe + '">'+elemhit.titulo+'</li>')
+                        var $lihitos = $('<li data-index="' + indixe + '"><span>'+elemhit.titulo+'</span></li>');
+                        var $subcapulhitos = $('<ul class="subcaps"/>');
+                          _.each(elemhit.subhitos,function(subhitos,number){ 
+                                    $subcapulhitos.append('<li data-index="'+indixe.split("cap").pop()+'" data-subindex="'+number+'">'+subhitos.titulo+'</li>');
+                          });
+                         $lihitos.append($subcapulhitos);
+                        $("#hitos-menu ul.mainhitos").append($lihitos);
+
                     })
 
                     var SliderModel = Backbone.Model.extend({});
@@ -138,11 +146,12 @@ define([
                         $(this).addClass("open")
                      });
                    
-                    var index = $(e.target).parent().data("index");
+                /*    var index = $(e.target).parent().data("index");
                     var capitulo = this.jsonData.capitulos["cap"+index];
                     $('.grillaSignos').html(_.template(signosPortada,{jsonData:capitulo}));
                     var este = this;
                     $("#Portada a").bind("click",este.openCapsInPortada)
+                */
                 }
             },
             openCapitulos:function(e){
@@ -157,8 +166,8 @@ define([
             },
 
             openHitosCap:function(e){
-
-                var data = this.jsonData.hitos[$(e.target).data("index")].subhitos;
+                console.log($(e.target).data("index"))
+                var data = this.jsonData.hitos["cap"+$(e.target).data("index")].subhitos[$(e.target).data("subindex")];
                 console.log(data)
                 var CapitulosModel = Backbone.Model.extend({});
                 var capitulosModel = new CapitulosModel({jsonData:data})

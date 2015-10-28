@@ -1862,7 +1862,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
    
 }
 
-.main-ul .subcaps{
+.main-ul .subcaps, .mainhitos .subcaps{
     display: none;
     margin-left: 20px;
     margin-top: 15px;
