@@ -59,7 +59,7 @@ define([
                 $(e.target).next().toggleClass("hide");
                 var text = $(e.target).html();
                 $(e.target).html(
-                         text == "<span>[+]</span> Ver más" ? "<span>[-]</span> Ocultar" : "<span>[+]</span> Ver más");
+                         text == "<span>[+]</span> Mostrar páginas" ? "<span>[-]</span> Ocultar páginas" : "<span>[+]</span> Mostrar páginas");
             },
 
             lightbox: function (e) {

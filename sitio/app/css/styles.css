@@ -1719,7 +1719,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 #signosBook .signosMenu li{
-    color: #009997;
+    color: #262325;
     cursor: pointer;
     font-size: 0.8em;
     font-weight: bold;
@@ -1734,7 +1734,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 #signosBook .signosMenu li:hover {
-    color: #262325;
+    color: #009997;
     /*margin-left: 5px;*/
 }
 
@@ -1833,7 +1833,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .hitos h3{
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 0px;
+    margin-bottom:20px;
 }
 
 .hitos h3 i {
@@ -1855,6 +1856,10 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .hitosMenu{
     background-color: #FFF;
     height: 320px !important;
+}
+
+.hitosMenu ul{
+   
 }
 
 .main-ul .subcaps{
@@ -1891,13 +1896,11 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 .imagen{
-    width: 50%;
-    float: left;
-    padding-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    width: 100%;
 }
 .imagen img{
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 15px;
 }
 .imagen .extracto{
@@ -1919,7 +1922,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 .capitulos h2{
     color: #009997;
-    border-top: 1px solid #848484;
+    /*border-top: 1px solid #848484;*/
     font-size: 1.5em;
     margin: 2.3em 0 0.83em; 
     padding-top: 0.83em;
