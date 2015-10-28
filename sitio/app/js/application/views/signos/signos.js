@@ -25,7 +25,7 @@ define([
                 'click #signosBook .main-ul .main-title span':"opensubs",
                 'click #signosBook .main-ul .subcaps li':"openCapitulos",
                 'hover #signosBook .main-ul .main-title':"hoverImg",
-                'hover .grillaSignos .hoverContainer img': "hoverCap"
+                //'hover .grillaSignos .hoverContainer img': "hoverCap"
             },
 
             render: function() {
@@ -155,17 +155,17 @@ define([
                 capitulos.render();
             },
             hoverImg: function(e){                
-                var el = $(e.target),
-                    index = $(el).parent().attr('data-index');
-
-                $('.grillaSignos img[data-src=cap' + index + ']').toggleClass('grillHoverImg');
+                var el = $(e.target);
+                $(".signos_portada").trigger("mostrarImagen",[el])
             },
-            hoverCap: function(e){
+            /*hoverCap: function(e){
                 var el = $(e.target),
                     index = $(el).attr('data-src').replace('cap', '');
                     console.log('#signosBook .main-ul .main-title[data-index=' + index + ']')
                 $('#signosBook .main-ul .main-title[data-index=' + index + ']').toggleClass('active');
-            },
+
+                
+            },*/
             openCapsInPortada:function(e){
                 e.preventDefault();
                 var subindex = $(e.target).data("subindex");

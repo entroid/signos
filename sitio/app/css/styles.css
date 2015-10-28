@@ -1927,3 +1927,14 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     margin: 2.3em 0 0.83em; 
     padding-top: 0.83em;
 }
+
+.signos_portada{
+    position: relative;
+}
+
+.signos_portada img{
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
