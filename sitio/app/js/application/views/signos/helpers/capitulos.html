@@ -11,6 +11,9 @@
                             <div class="hide transitions-fast"><%=obj.texto%></div>
                         </div>
                         <%}else{%>
+                            <%if(indx == "titulo"){%>
+                                <h1><%=obj%></h1>
+                            <%}else{%>
                             <h2><%=obj.titulo%></h2>                            
                             
                             <div class="imagen">    
@@ -23,6 +26,7 @@
                             <div class="texto <%=obj.claseSlider%>">
                                 <%=obj.texto%>
                             </div>
+                            <%}%>
                         <%}%>
                     <%})%>
                 <%}%>

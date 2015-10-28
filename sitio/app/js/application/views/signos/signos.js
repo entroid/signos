@@ -24,6 +24,7 @@ define([
                 'click #signosBook .hitosOpen':"openHitos",
                 'click #signosBook .main-ul .main-title span':"opensubs",
                 'click #signosBook .main-ul .subcaps li':"openCapitulos",
+                'click #hitos-menu li':"openHitosCap",
                 'hover #signosBook .main-ul .main-title':"hoverImg",
                 //'hover .grillaSignos .hoverContainer img': "hoverCap"
             },
@@ -154,6 +155,17 @@ define([
                 var capitulos = new Capitulos({model:capitulosModel});
                 capitulos.render();
             },
+
+            openHitosCap:function(e){
+
+                var data = this.jsonData.hitos[$(e.target).data("index")].subhitos;
+                console.log(data)
+                var CapitulosModel = Backbone.Model.extend({});
+                var capitulosModel = new CapitulosModel({jsonData:data})
+                var capitulos = new Capitulos({model:capitulosModel});
+                capitulos.render();
+            },
+
             hoverImg: function(e){                
                 var el = $(e.target);
                 $(".signos_portada").trigger("mostrarImagen",[el])
