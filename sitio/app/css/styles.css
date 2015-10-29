@@ -1859,7 +1859,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 .hitosMenu ul{
-   
+   padding-right: 10px;
 }
 
 .main-ul .subcaps, .mainhitos .subcaps{
@@ -1867,7 +1867,11 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     margin-left: 20px;
     margin-top: 15px;
 }
-#signosBook .main-ul .subcaps li{
+
+#signosBook.books-cont{
+    border-bottom: none;
+}
+#signosBook .subcaps li{
     color: #666;
     font-size: 0.9em;
     margin-bottom: 15px;
@@ -1898,6 +1902,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .imagen{
     margin-bottom: 40px;
     width: 100%;
+    text-align: center;
 }
 .imagen img{
     max-width: 100%;
@@ -1906,6 +1911,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .imagen .extracto{
     font-size: .8em;
     color: #666;
+    text-align: left;
 }
 
 .main-title.active span{
@@ -1934,7 +1940,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .signos_portada img{
     max-width: 100%;
-    position: absolute;
+    /*position: absolute;
     top: 0;
-    left: 0;
+    left: 0;*/
 }
