@@ -53,7 +53,7 @@ define([
                         $("#main-menu ul.main-ul").append($titleLi);
 
                     })
-                    $("#main-menu, #hitos-menu").mCustomScrollbar({
+                    $("#main-menu .caps, #hitos-menu").mCustomScrollbar({
                             theme:"minimal-dark",
                             scrollInertia:300,
                     });
@@ -76,6 +76,16 @@ define([
                     $('.tooltipBtn').tipr();
                     var altura = $(".hitoswrap").height();
                     $(".hitosMenu").height(altura);
+
+
+                    //mobile menu
+                    var capsBtn = $('#main-menu .capsBtn');
+
+                    $(capsBtn).click(function(){
+                        $(this).siblings('.caps').toggleClass('mobileHidden')
+                    });
+
+
                 
                     
                 }); 
@@ -163,6 +173,10 @@ define([
                 var capitulosModel = new CapitulosModel({jsonData:data})
                 var capitulos = new Capitulos({model:capitulosModel});
                 capitulos.render();
+
+
+                $(e.target).parents('.caps').toggleClass('mobileHidden')
+                
             },
 
             openHitosCap:function(e){
@@ -173,6 +187,8 @@ define([
                 var capitulosModel = new CapitulosModel({jsonData:data})
                 var capitulos = new Capitulos({model:capitulosModel});
                 capitulos.render();
+
+                $(e.target).parents('#hitos-menu').hide();
             },
 
             hoverImg: function(e){                

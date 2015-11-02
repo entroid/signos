@@ -1811,11 +1811,12 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     top:0px;
     left: 15px;*/
     /*width:100%;*/
-    z-index: 10;
-    position: absolute;
-    top:325px;
     background-color: white;
-    padding-right: 30px;
+    padding-right: 15px;
+    position: absolute;
+    top: 325px;
+    z-index: 10;
+    padding-left: 10px;
 }
 
 .hitoswrap.active{    
@@ -1895,8 +1896,10 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 }
 
 #main-menu{
-    max-height: 353px;
+    /*height: 461px;*/
+    max-width: 170px;
     overflow-y: auto;
+    padding-right: 10px;
 }
 
 .imagen{
@@ -1943,4 +1946,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     /*position: absolute;
     top: 0;
     left: 0;*/
+}
+
+#main-menu .capsBtn{
+    display:none;
 }
