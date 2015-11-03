@@ -43,7 +43,7 @@ define([
                             /*borderRadius: 0, */               // border radius (optional, only if the shape is square)
                             /*imgOverlay: $(".modalContent .content-1 img").attr("data-overlay"),*/ // path of the overlay image (optional)
                             /*overlayAdapt: true,*/ // true if the overlay image has to adapt to the lens size (true/false)
-                            zoomLevel: 1.1                                    // zoom level multiplicator (number)
+                            zoomLevel: 1.3                                    // zoom level multiplicator (number)
                         });
 
                     },

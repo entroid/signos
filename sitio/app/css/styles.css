@@ -1907,6 +1907,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 .imagen img{
     max-width: 100%;
     margin-bottom: 15px;
+    cursor: zoom-in;
 }
 .imagen .extracto{
     font-size: .8em;
