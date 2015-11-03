@@ -144,7 +144,7 @@
   .grillaBtns{display: none;}
 
   .informacion nav{
-    height: 60vh;
+    height: auto;
     left: 0;
     padding-top: 40px;
     text-align: center;
@@ -197,7 +197,6 @@
   #main-menu{
     max-height:none;
     width: 50%;
-
   }
   .main-ul{
     padding-top: 20px;
@@ -205,7 +204,7 @@
     border-top:1px solid black;
   }
   #signosBook .signosMenu li{
-    border-bottom:1px solid black;
+    /*border-bottom:1px solid black;*/
     padding-bottom: 20px;
   }
   #signosBook .signosMenu li li{
@@ -268,6 +267,68 @@
   }
 
   .sliderWrapper .lSSlideOuter .lSPager{display: none;}
+
+  /* signos */
+  .mobileHidden{
+    display:none;
+  }
+
+  .main-ul{
+    margin-top:0!important;
+  }
+
+  #main-menu{
+    margin:0;
+    max-width:none;
+    height:auto;
+  }
+
+  #main-menu .caps{
+    background-color: white;
+    max-height: 320px;
+    padding: 0 20px;
+    position: absolute !important;
+    width: 100%;
+    z-index: 100;
+    margin-left: -20px;
+  }
+  #main-menu .caps nav{
+    margin:0;
+  }
+  .capsBtn{
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block !important;
+    margin: 20px 0!important;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+    
+
+  .hitoswrap{
+    width:50%;
+  }
+  .hitoswrap img, .capsBtn i{
+      display:none;
+    }
+
+  #hitos-menu{
+    position: absolute!important;
+    width: 200%;
+    left: -100%;
+    padding: 20px;
+  }
+
+  #hitos-menu .mainhitos{
+
+  }
+
+  .informacion nav{
+    height: 100vh;
+  }
 }
 
 @media only screen and (max-width: 640px) {
