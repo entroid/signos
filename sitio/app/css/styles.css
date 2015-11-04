@@ -1388,7 +1388,7 @@ menu li {cursor:pointer;}
     max-width: 1300px;
     margin: 0 auto; 
     position:relative;
-    box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.2);*/
 }
 .modalContent h1{margin-top:0;}
 .modalContent .content-1 p{font-size:1.1em;}
