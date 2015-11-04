@@ -1895,11 +1895,13 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     font-weight: bold;
 }
 
-#main-menu{
-    /*height: 461px;*/
+#main-menu{    
     max-width: 170px;
     overflow-y: auto;
     padding-right: 10px;
+}
+#main-menu .caps{
+    height: 318px;
 }
 
 .imagen{
@@ -1934,7 +1936,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     color: #009997;
     /*border-top: 1px solid #848484;*/
     font-size: 1.5em;
-    margin: 2.3em 0 0.83em; 
+    margin: 2.3em 0 1.3em; 
     padding-top: 0.83em;
 }
 

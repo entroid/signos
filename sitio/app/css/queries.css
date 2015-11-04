@@ -285,12 +285,13 @@
 
   #main-menu .caps{
     background-color: white;
-    max-height: 320px;
+    /*max-height: 320px;*/
     padding: 0 20px;
     position: absolute !important;
     width: 100%;
     z-index: 100;
     margin-left: -20px;
+    /*height: auto;*/
   }
   #main-menu .caps nav{
     margin:0;
