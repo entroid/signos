@@ -196,7 +196,7 @@ define([
                         }
                     }
                 var content = modal;
-                var close = '<i class="popupContent_close fa fa-times-circle"></i>';
+                var close = '<span class="popupContent_close cerrar-Btn"> <span></span> </span>';
 
                 $('#popupContent').html(content).popup('show')
                 $('.modalContent > div:first-child').append(close);
