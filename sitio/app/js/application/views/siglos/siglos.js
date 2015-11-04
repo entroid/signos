@@ -192,7 +192,7 @@ define([
                         }
                     }
                 var content = modal;
-                var close = '<i class="popupContent_close fa fa-times-circle"></i>';
+                var close = '<span class="popupContent_close cerrar-Btn"> <span></span> </span>';
 
                 $('#popupContent').html(content).popup('show')
                 $('.modalContent > div:first-child').append(close);
@@ -257,7 +257,6 @@ define([
                 //this.openTxt(e);
 
                 var jsonData = this.jsonData;
-                console.log(jsonData)
                 var GrillaModel = Backbone.Model.extend({});
                 var grillaModel = new GrillaModel({jsonData:jsonData})
                 var grillaSiglos = new GrillaSiglos({model:grillaModel});
