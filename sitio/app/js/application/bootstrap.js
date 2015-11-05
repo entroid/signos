@@ -12,6 +12,7 @@ require.config({
         mlens: '../libs/plugins/jquery.mlens-1.5',
         tooltip: '../libs/plugins/tipr.min',
         mCustomScrollbar: '../libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min',
+        waypointsScroll: '../libs/plugins/jquery.waypoints.min',
     },
     shim: {
         underscore: {
@@ -40,6 +41,9 @@ require.config({
             deps: ['jquery']
         },
         tooltip: {
+            deps: ['jquery']
+        },
+        waypointsScroll: {
             deps: ['jquery']
         },
     }

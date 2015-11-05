@@ -14,7 +14,6 @@ define([
 
             render: function() {
                 var jsonData = this.model.get("jsonData")
-                console.log(jsonData)
                 $(this.el).html(_.template(grilla,{jsonData:jsonData}));
             }
         });

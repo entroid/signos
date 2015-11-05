@@ -1985,6 +1985,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .signos_portada{
     position: relative;
+    z-index:100;
 }
 
 .signos_portada img{
