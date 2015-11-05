@@ -1638,6 +1638,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     left: 46%;
     position: absolute;
     top: 44%;
+    z-index: -1;
 }
 
 /************************** SIGLOS **************************/
@@ -1985,7 +1986,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .signos_portada{
     position: relative;
-    z-index:100;
+    /*z-index:100;*/
 }
 
 .signos_portada img{
