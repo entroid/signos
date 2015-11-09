@@ -1483,9 +1483,9 @@
 			"subhitos":[
 
 				{
-					"titulo":"EN LA RIBERA DEL RÍO CORONDA, ACTUAL PUERTO GABOTO",
+					"titulo":"Primer asentamiento español en el Plata ",
 					"contenido": [{
-						"titulo": "Primer asentamiento español en el Plata",
+						"titulo": "EN LA RIBERA DEL RÍO CORONDA, ACTUAL PUERTO GABOTO",
 						"lowres":"hitos-cap1-1.jpg",
 						"src":"hitos-cap1-1.jpg",
 						"claseSlider": "ancho",
@@ -1496,9 +1496,9 @@
 				},
 
 				{
-					"titulo":"NOCHE DE CORPUS CHRISTI DE 1580",
+					"titulo":"La rebelión de los siete jefes",
 					"contenido": [{
-						"titulo": "La rebelión de los siete jefes",
+						"titulo": "NOCHE DE CORPUS CHRISTI DE 1580",
 						"lowres":"hitos-cap1-2.jpg",
 						"src":"hitos-cap1-2.jpg",
 						"claseSlider": "ancho",
@@ -1517,9 +1517,9 @@
 
 			"subhitos":[
 				{
-					"titulo":"UN MECANISMO DE LEGALIDAD PARA EL PODER POLÍTICO",
+					"titulo":"El Estatuto Provincial de 1819",
 					"contenido": [{
-						"titulo": "El Estatuto Provincial de 1819",
+						"titulo": "UN MECANISMO DE LEGALIDAD PARA EL PODER POLÍTICO",
 						"lowres":"hitos-cap2-1.jpg",
 						"src":"hitos-cap2-1.jpg",
 						"claseSlider": "ancho",
@@ -1529,9 +1529,9 @@
 				},
 
 				{
-					"titulo":"UN PROYECTO CONFEDERAL ALTERNATIVO",
+					"titulo":"La Liga de los Pueblos Libres y el federalismo del Litoral",
 					"contenido": [{
-						"titulo": "La Liga de los Pueblos Libres y el federalismo del Litoral",
+						"titulo": "UN PROYECTO CONFEDERAL ALTERNATIVO",
 						"lowres":"hitos-cap2-2.jpg",
 						"src":"hitos-cap2-2.jpg",
 						"claseSlider": "ancho",
@@ -1541,9 +1541,9 @@
 				},
 
 				{
-					"titulo":"UN PROYECTO CONFEDERAL ALTERNATIVO",
+					"titulo":"El Pacto Federal ",
 					"contenido": [{
-						"titulo": "El Pacto Federal",
+						"titulo": "UN PROYECTO CONFEDERAL ALTERNATIVO",
 						"lowres":"hitos-cap2-3.jpg",
 						"src":"hitos-cap2-3.jpg",
 						"claseSlider": "ancho",
@@ -1553,9 +1553,9 @@
 				},
 
 				{
-					"titulo":"EN EL CABILDO DE SANTA FE",
+					"titulo":"El Congreso Constituyente de 1853",
 					"contenido": [{
-						"titulo": "El Congreso Constituyente de 1853",
+						"titulo": "EN EL CABILDO DE SANTA FE",
 						"lowres":"hitos-cap2-4.jpg",
 						"src":"hitos-cap2-4.jpg",
 						"claseSlider": "ancho",
@@ -1573,9 +1573,9 @@
 
 			"subhitos":[
 				{
-					"titulo":"AL OESTE DEL RÍO SALADO",
+					"titulo":"Esperanza, primera colonia agrícola",
 					"contenido": [{
-						"titulo": "Esperanza, primera colonia agrícola",
+						"titulo": "AL OESTE DEL RÍO SALADO",
 						"lowres":"hitos-cap3-1.jpg",
 						"src":"hitos-cap3-1.jpg",
 						"claseSlider": "ancho",
@@ -1585,9 +1585,9 @@
 				},
 
 				{
-					"titulo":"UNA LÍNEA FÉRREA ENTRE ROSARIO Y CÓRDOBA",
+					"titulo":"El Ferrocarril Central Argentino",
 					"contenido": [{
-						"titulo": "El Ferrocarril Central Argentino",
+						"titulo": "UNA LÍNEA FÉRREA ENTRE ROSARIO Y CÓRDOBA",
 						"lowres":"hitos-cap3-2.jpg",
 						"src":"hitos-cap3-2.jpg",
 						"claseSlider": "ancho",
@@ -1597,9 +1597,9 @@
 				},
 
 				{
-					"titulo":"LA CIUDAD DE SANTA FE SE CONECTA A LAS COLONIAS",
+					"titulo":"El Ferrocarril Francés",
 					"contenido": [{
-						"titulo": "El Ferrocarril Francés",
+						"titulo": "LA CIUDAD DE SANTA FE SE CONECTA A LAS COLONIAS",
 						"lowres":"hitos-cap3-3.jpg",
 						"src":"hitos-cap3-3.jpg",
 						"claseSlider": "ancho",
@@ -1609,9 +1609,9 @@
 				},
 
 				{
-					"titulo":"1889. PRIMER EMPRENDIMIENTO PROVINCIAL DE EDUCACIÓN SUPERIOR",
+					"titulo":"La Universidad de Santa Fe",
 					"contenido":[ {
-						"titulo": "La Universidad de Santa Fe",
+						"titulo": "1889. PRIMER EMPRENDIMIENTO PROVINCIAL DE EDUCACIÓN SUPERIOR",
 						"lowres":"hitos-cap3-4.jpg",
 						"src":"hitos-cap3-4.jpg",
 						"claseSlider": "ancho",
@@ -1633,9 +1633,9 @@
 				},
 
 				{
-					"titulo":"1867. NICASIO OROÑO PROMULGA LAS LEYES DE MATRIMONIO CIVIL Y DE CEMENTERIOS",
+					"titulo":"Por un Estado moderno y laico",
 					"contenido": [{
-						"titulo": "Por un Estado moderno y laico",
+						"titulo": "1867. NICASIO OROÑO PROMULGA LAS LEYES DE MATRIMONIO CIVIL Y DE CEMENTERIOS",
 						"lowres":"hitos-cap3-6.jpg",
 						"src":"hitos-cap3-6.jpg",
 						"claseSlider": "ancho",
@@ -1685,9 +1685,9 @@
 
 			"subhitos":[
 				{
-					"titulo":"1912. NACIMIENTO DE LA FEDERACIÓN AGRARIA ARGENTINA",
+					"titulo":"El grito de Alcorta",
 					"contenido": [{
-						"titulo": "El grito de Alcorta",
+						"titulo": "1912. NACIMIENTO DE LA FEDERACIÓN AGRARIA ARGENTINA",
 						"lowres":"hitos-cap5-1.jpg",
 						"src":"hitos-cap5-1.jpg",
 						"claseSlider": "ancho",
@@ -1697,9 +1697,9 @@
 				},
 
 				{
-					"titulo":"LA EXPLOTACIÓN EN EL CHACO SANTAFESINO",
+					"titulo":"La Forestal",
 					"contenido": [{
-						"titulo": "La Forestal",
+						"titulo": "LA EXPLOTACIÓN EN EL CHACO SANTAFESINO",
 						"lowres":"hitos-cap5-2.jpg",
 						"src":"hitos-cap5-2.jpg",
 						"claseSlider": "ancho",
@@ -1717,9 +1717,9 @@
 
 			"subhitos":[
 				{
-					"titulo":"Carga y descarga de embarcaciones en la ciudad mercantil",
+					"titulo":"El puerto de Rosario",
 					"contenido": [{
-						"titulo": "El puerto de Rosario",
+						"titulo": "Carga y descarga de embarcaciones en la ciudad mercantil",
 						"lowres":"hitos-cap6-1.jpg",
 						"src":"hitos-cap6-1.jpg",
 						"claseSlider": "ancho",
@@ -1729,9 +1729,9 @@
 				},
 
 				{
-					"titulo":"1910. SE HABILITA OFICIALMENTE LA MODERNA ESTACIÓN FLUVIAL",
+					"titulo":"El puerto de Santa Fe",
 					"contenido":[ {
-						"titulo": "El puerto de Santa Fe",
+						"titulo": "1910. SE HABILITA OFICIALMENTE LA MODERNA ESTACIÓN FLUVIAL",
 						"lowres":"hitos-cap6-2.jpg",
 						"src":"hitos-cap6-2.jpg",
 						"claseSlider": "ancho",
@@ -1749,9 +1749,9 @@
 
 			"subhitos":[
 				{
-					"titulo":"La integración mesopotámica",
+					"titulo":"El túnel subfluvial",
 					"contenido": [{
-						"titulo": "El túnel subfluvial",
+						"titulo": "La integración mesopotámica",
 						"lowres":"hitos-cap7-1.jpg",
 						"src":"hitos-cap7-1.jpg",
 						"claseSlider": "ancho",
@@ -1761,9 +1761,9 @@
 				},
 
 				{
-					"titulo":"Desarrollo vial e integración territorial",
+					"titulo":"La autopista Santa Fe-Rosario",
 					"contenido": [{
-						"titulo": "La autopista Santa Fe-Rosario",
+						"titulo": "Desarrollo vial e integración territorial",
 						"lowres":"hitos-cap7-2.jpg",
 						"src":"hitos-cap7-2.jpg",
 						"claseSlider": "ancho",
@@ -1781,9 +1781,9 @@
 
 			"subhitos":[
 				{
-					"titulo":"PROTESTA OBRERO ESTUDIANTIL CONTRA LA DICTADURA DE ONGANÍA",
+					"titulo":"1969. El Rosariazo",
 					"contenido": [{
-						"titulo": "1969. El Rosariazo",
+						"titulo": "PROTESTA OBRERO ESTUDIANTIL CONTRA LA DICTADURA DE ONGANÍA",
 						"lowres":"hitos-cap8-1.jpg",
 						"src":"hitos-cap8-1.jpg",
 						"claseSlider": "ancho",
@@ -1793,9 +1793,9 @@
 				},
 
 				{
-					"titulo":"SINDICALISMO CLASISTA Y COMBATIVO EN VILLA CONSTITUCIÓN",
+					"titulo":"1974. El Villazo",
 					"contenido": [{
-						"titulo": "1974. El Villazo",
+						"titulo": "SINDICALISMO CLASISTA Y COMBATIVO EN VILLA CONSTITUCIÓN",
 						"lowres":"hitos-cap8-2.jpg",
 						"src":"hitos-cap8-2.jpg",
 						"claseSlider": "ancho",
@@ -1805,9 +1805,9 @@
 				},
 
 				{
-					"titulo":"juicio y castigo ",
+					"titulo":"El movimiento por los derechos humanos",
 					"contenido":[ {
-						"titulo": "El movimiento por los derechos humanos",
+						"titulo": "juicio y castigo ",
 						"lowres":"hitos-cap8-3.jpg",
 						"src":"hitos-cap8-3.jpg",
 						"claseSlider": "ancho",

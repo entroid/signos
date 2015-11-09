@@ -133,40 +133,27 @@ define([
                             });
                             $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
                         }
+                        
+                    //zoom
+                        //$(".modalContent .content-1 img").mlens();
 
-                        $('.traduccion-btn').click(function(e){
+                    // activar/desactivar zoom
+                        $('.traduccion-btn').tipr().click(function(e){
                             var el = $(this)
-                            este.openTrad(e, el);
-                        });        
+                            este.activarLupa(e, el);
+                        }); 
 
-                        //zoom
-                        $(".modalContent .content-1 img").mlens({
-                            imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
-                            /*imgSrc2x: $(".modalContent .content-1 img").attr("data-big2x"),*/  // path of the hi-res @2x version of the image //for retina displays (optional)
-                            lensShape: "circle",                // shape of the lens (circle/square)
-                            lensSize: 180,                  // size of the lens (in px)
-                            borderSize: 1,                  // size of the lens border (in px)
-                            borderColor: "#fff",                // color of the lens border (#hex)
-                            /*borderRadius: 0, */               // border radius (optional, only if the shape is square)
-                            /*imgOverlay: $(".modalContent .content-1 img").attr("data-overlay"),*/ // path of the overlay image (optional)
-                            /*overlayAdapt: true,*/ // true if the overlay image has to adapt to the lens size (true/false)
-                            zoomLevel: 1.5                                   // zoom level multiplicator (number)
-                        });
-
-                        // tooltip
-                      $('.traduccion-btn').tipr();
-                       
-                      var url = location.href; 
-                      Backbone.history.navigate( '/modal',{ trigger:true, replace: false })
+                        var url = location.href; 
+                        Backbone.history.navigate( '/modal',{ trigger:true, replace: false })
 
 
-                      cambiaHash = function(event){
+                        cambiaHash = function(event){
                             if(location.hash == "#pauckeback" || location.hash == "#paucke"){
                                 $('#popupContent').popup('hide');
                             }
-                      };
+                        };
 
-                      window.addEventListener("hashchange", cambiaHash, false);
+                        window.addEventListener("hashchange", cambiaHash, false);
 
                     },
 
@@ -281,16 +268,27 @@ define([
                 sliderPaucke.render();
                 this.pluginsInit();
             },
-            openTrad: function(e, el) {
+            activarLupa: function(e, el) {
                 var target = el;
                 var trad = $('.tips');
+                var img = $(".modalContent .content-1 img");
 
                 if($(target).hasClass('active')) {
-                    $(target).removeClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
-                    $(trad).removeClass('showTt');
+                    $(target).removeClass('active').attr('data-tip','Activar lupa');                   
+                    $(img).mlens('destroy');
+                    
                 } else {
-                    $(target).addClass('active').find('.fa').toggleClass('fa-eye-slash fa-eye');
-                    $(trad).addClass('showTt');
+                    $(target).addClass('active').attr('data-tip','Desactivar lupa');
+                                       
+                    
+                    $(img).mlens({
+                        imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
+                        lensShape: "circle",                // shape of the lens (circle/square)
+                        lensSize: 180,                  // size of the lens (in px)
+                        borderSize: 1,                  // size of the lens border (in px)
+                        borderColor: "#fff",                // color of the lens border (#hex)
+                        zoomLevel: 1.1                                   // zoom level multiplicator (number)
+                    });
                 }
             },
 

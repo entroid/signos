@@ -6,23 +6,30 @@
                 <%}else{%>
                     <%_.each(elem,function(obj,indx){%>
                         <%if(obj.claseSlider=="ampliar"){%>
-                        <div class="ampliar">
-                            <a href="#"><span>[+]</span> Ver más páginas </a>
-                            <div class="hide transitions-fast"><%=obj.texto%></div>
-                        </div>
+                            <div class="ampliar row">
+                                <div class="col-md-4 col-sm-4 col-xs-12"><a href="#"><span>[+]</span> Ver más páginas</a></div>
+                                <div class="col-md-8 col-sm-8 col-xs-12"><div class="hide transitions-fast"><%=obj.texto%></div></div>
+                            </div>
                         <%}else{%>
-                            <h2><%=obj.titulo%></h2>                            
-                            <%console.log(obj)%>
-                            <div class="imagen">    
-                                <img src="img/libros/signos/<%=obj.lowres%>" data-src="<%=obj.src%>" data-extract="<%=obj.extracto%>"/>
-                                <div class="extracto">
-                                    <%=obj.extracto%>
-                                </div>
-                            </div>
+                            <h2><%=obj.titulo%></h2> 
 
-                            <div class="texto <%=obj.claseSlider%>">
-                                <%=obj.texto%>
-                            </div>
+                            <div class="row">                           
+                                <!--<%console.log(obj)%>-->
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <div class="imagen">    
+                                        <img src="img/libros/signos/<%=obj.lowres%>" data-src="<%=obj.src%>" data-extract="<%=obj.extracto%>"/>
+                                        <div class="extracto">
+                                            <%=obj.extracto%>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                    <div class="texto <%=obj.claseSlider%>">
+                                        <%=obj.texto%>
+                                    </div>
+                                </div>
+                            </div>                            
                         <%}%>
                     <%})%>
                 <%}%>

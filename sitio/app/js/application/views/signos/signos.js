@@ -58,13 +58,13 @@ define([
                             scrollInertia:300,
                     });
                     _.each(este.jsonData.hitos,function(elemhit,indixe){
-                        var $lihitos = $('<li data-index="' + indixe + '"><span>'+elemhit.titulo+'</span></li>');
+                        /*var $lihitos = $('<li data-index="' + indixe + '"><span>'+elemhit.titulo+'</span></li>');*/
                         var $subcapulhitos = $('<ul class="subcaps"/>');
                           _.each(elemhit.subhitos,function(subhitos,number){ 
                                     $subcapulhitos.append('<li data-index="'+indixe.split("cap").pop()+'" data-subindex="'+number+'">'+subhitos.titulo+'</li>');
                           });
-                         $lihitos.append($subcapulhitos);
-                        $("#hitos-menu ul.mainhitos").append($lihitos);
+                         //$lihitos.append($subcapulhitos);
+                        $("#hitos-menu ul.mainhitos").append($subcapulhitos);
 
                     })
 
@@ -80,15 +80,20 @@ define([
 
                     //mobile menu
                     var capsBtn = $('#main-menu .capsBtn');
+                    var hitosBtn = $('.hitos .capsBtn');
 
                     $(capsBtn).click(function(){
                         $(this).siblings('.caps').toggleClass('mobileHidden')
-                    });
-
-
-                
+                    });   
+                    $(hitosBtn).click(function(){
+                        $('#hitos-menu').toggleClass('mobileHidden')
+                    });             
                     
                 }); 
+
+                if(!$("#popupContent").size()){
+                    $("body").append('<div id="popupContent"></div>')
+                }
             },
 
             openTxt: function(e){
@@ -138,9 +143,9 @@ define([
                     $(".hitos i").removeClass("fa-angle-up");
                 }  
 
-                $(".hitosMenu").slideToggle(400,function(){
+                /*$(".hitosMenu").slideToggle(400,function(){
                     $("#signosBook").css("overflow","visible")
-                });                
+                });                */
             },
 
             opensubs:function(e){
@@ -188,7 +193,8 @@ define([
                 var capitulos = new Capitulos({model:capitulosModel});
                 capitulos.render();
 
-                $(e.target).parents('#hitos-menu').hide();
+                $(e.target).parents('#hitos-menu').toggleClass('mobileHidden');
+
             },
 
             hoverImg: function(e){                

@@ -1131,13 +1131,14 @@ Nav Overlay
     color: #fe8000;
 }
 #lightSlider .hoverContainer:hover img, #subcapslider .hoverContainer:hover img{
-  /*box-shadow: 6px 7px 0 0 #666;*/
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.7);
-  margin: -6px 6px 6px -6px; 
+  /*box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.7);
+  margin: -6px 6px 6px -6px; */
+  transform: scale(1.05);
 }
 .grilla .hoverContainer:hover img{
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
-  margin: -3px 3px 3px -3px; 
+  /*box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.7);
+  margin: -3px 3px 3px -3px; */
+  transform: scale(1.05);
 }
 
 .grillHoverImg{
@@ -1393,6 +1394,7 @@ menu li {cursor:pointer;}
 .modalContent h1{margin-top:0;}
 .modalContent .content-1 p{font-size:1.1em;}
 .modalContent .content-1 img{width:100%;}
+.modalContent.modalsignos .content-1 img{width:100%;}
 .cartas .modalContent .content-1 img{width: 397px;}
 .cartas .sliderWrapper {max-width: 580px;}
 
@@ -1576,7 +1578,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .traduccion-btn{
     background-color: #262325;
-    color: white;
+    color:#999;
     cursor: pointer;
     font-size: 1em;
     padding: 7px 13px;
@@ -1594,7 +1596,8 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .traduccion-btn.active{
     /*background-color:white;*/
-    color:#999;
+    
+    color: white;
 }
 
 .ttip{
@@ -1617,9 +1620,9 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     /*opacity:1;*/
 }
 
-.grillaBtns li .tipr_content{    
-     min-width:150px;
-}
+.grillaBtns li .tipr_content{min-width:150px;}
+.traduccion-btn .tipr_content{min-width: 150px;
+    text-align: center;}
 
 .sliderBtn .tipr_container_bottom{
     margin-top:50px;
@@ -1894,14 +1897,14 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 .hitosMenu{
     background-color: #FFF;
-    height: 320px !important;
+    height: 300px !important;
 }
 
 .hitosMenu ul{
    padding-right: 10px;
 }
 
-.main-ul .subcaps, .mainhitos .subcaps{
+.main-ul .subcaps/*, .mainhitos .subcaps*/{
     display: none;
     margin-left: 20px;
     margin-top: 15px;
@@ -1914,6 +1917,14 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     color: #666;
     font-size: 0.9em;
     margin-bottom: 15px;
+}
+#signosBook .mainhitos .subcaps li{
+    color: #262325;
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+}
+#signosBook .mainhitos .subcaps li:hover{
+    color: #009997;
 }
 #signosBook .main-ul .subcaps li:hover{
     color: #262325;
@@ -1932,6 +1943,9 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     
     font-weight: bold;
 }
+.capitulos .texto p {
+    margin-top:0;
+}
 
 #main-menu{    
     max-width: 170px;
@@ -1939,13 +1953,14 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     padding-right: 10px;
 }
 #main-menu .caps{
-    height: 318px;
+    height: 340px;
 }
 
 .imagen{
     margin-bottom: 40px;
     width: 100%;
     text-align: center;
+    padding-right: 25px;
 }
 .imagen img{
     max-width: 100%;
@@ -1957,11 +1972,22 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     color: #666;
     text-align: left;
 }
+.grillaSignos{
+    background-color:white;
+}
 .grillaSignos .imagen img{
     cursor:pointer;
 }
 .modalsignos .ttCont{
- max-width:800px;
+ max-width:500px;
+ margin: 0 auto;
+}
+.hitoswrap  #hitos-menu {
+    display:none;
+}
+
+.hitoswrap.active  #hitos-menu {
+    display:block;
 }
 
 .main-title.active span{

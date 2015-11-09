@@ -20,9 +20,7 @@ define([
                 $("#capitulos .ampliar a").bind("click",este.mostrarOculto)
                 $("#capitulos img").bind("click",este.lightbox);
                  var popupContainer = '<div id="popupContent"></div>';
-                if (!$('#popupContainer')){
-                    $('body').append(popupContainer);
-                }
+                
                 
                 $('#popupContent').popup({
                     color: '#fff',
@@ -32,18 +30,10 @@ define([
                     blur: true,
                     scrolllock: true,
                     onopen: function() {       
-                        //zoom
-                        $(".modalContent .content-1 img").mlens({
-                            imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
-                            /*imgSrc2x: $(".modalContent .content-1 img").attr("data-big2x"),*/  // path of the hi-res @2x version of the image //for retina displays (optional)
-                            lensShape: "circle",                // shape of the lens (circle/square)
-                            lensSize: 180,                  // size of the lens (in px)
-                            borderSize: 1,                  // size of the lens border (in px)
-                            borderColor: "#fff",                // color of the lens border (#hex)
-                            /*borderRadius: 0, */               // border radius (optional, only if the shape is square)
-                            /*imgOverlay: $(".modalContent .content-1 img").attr("data-overlay"),*/ // path of the overlay image (optional)
-                            /*overlayAdapt: true,*/ // true if the overlay image has to adapt to the lens size (true/false)
-                            zoomLevel: 1.3                                    // zoom level multiplicator (number)
+                        // activar/desactivar zoom
+                        $('.traduccion-btn').tipr().click(function(e){
+                            var el = $(this)
+                            este.activarLupa(e, el);
                         });
 
                     },
@@ -56,10 +46,12 @@ define([
 
             mostrarOculto:function(e){
                 e.preventDefault();
-                $(e.target).next().toggleClass("hide");
-                var text = $(e.target).html();
-                $(e.target).html(
-                         text == "<span>[+]</span> Ver más páginas" ? "<span>[-]</span> Ocultar páginas" : "<span>[+]</span> Ver más páginas");
+                var element = $(e.target);
+                var text = $(element).html();
+
+                $(element).parents('.ampliar').find('.transitions-fast').toggleClass("hide");
+                
+                $(element).html(text == "<span>[+]</span> Ver más páginas" ? "<span>[-]</span> Ocultar páginas" : "<span>[+]</span> Ver más páginas");
             },
 
             lightbox: function (e) {
@@ -84,6 +76,30 @@ define([
                 $('.modalContent').removeClass('hide');
                 
             },
+
+            activarLupa: function(e, el) {
+                var target = el;
+                var trad = $('.tips');
+                var img = $(".modalContent .content-1 img");
+
+                if($(target).hasClass('active')) {
+                    $(target).removeClass('active').attr('data-tip','Activar lupa');                   
+                    $(img).mlens('destroy');
+                    
+                } else {
+                    $(target).addClass('active').attr('data-tip','Desactivar lupa');
+                                       
+                    
+                    $(img).mlens({
+                        imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
+                        lensShape: "circle",                // shape of the lens (circle/square)
+                        lensSize: 180,                  // size of the lens (in px)
+                        borderSize: 1,                  // size of the lens border (in px)
+                        borderColor: "#fff",                // color of the lens border (#hex)
+                        zoomLevel: 1                                   // zoom level multiplicator (number)
+                    });
+                }
+            }
         });
         
         return Capitulos;
