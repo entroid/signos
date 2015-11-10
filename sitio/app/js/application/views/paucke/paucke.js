@@ -116,7 +116,8 @@ define([
                     pagecontainer: '#contenido',
                     blur: true,
                     scrolllock: true,
-                    onopen: function() {       
+                    onopen: function() {   
+
 
                         //naipes        
                         if($('.cartas #lightSlider2').length){
@@ -143,24 +144,17 @@ define([
                             este.activarLupa(e, el);
                         }); 
 
-                        var url = location.href; 
-                        Backbone.history.navigate( '/modal',{ trigger:true, replace: false })
-
-
-                        cambiaHash = function(event){
-                            if(location.hash == "#pauckeback" || location.hash == "#paucke"){
-                                $('#popupContent').popup('hide');
-                            }
+                        cambiaHash = function(event){                            
+                            $('#popupContent').popup('hide');
                         };
 
-                        window.addEventListener("hashchange", cambiaHash, false);
+                        window.addEventListener("hashchange", cambiaHash, false);  
 
                     },
 
                     onclose: function() { 
                         $('#popupContent').removeClass('cartaSlide');
-                        window.removeEventListener("hashchange");
-                        Backbone.history.navigate( '/pauckeback',{ trigger:true, replace: false })
+                        window.removeEventListener("hashchange", cambiaHash, false);
                     }
                 });              
 
@@ -266,7 +260,7 @@ define([
                 var sliderModel = new SliderModel({jsonData:jsonData})
                 var sliderPaucke = new SliderPaucke({model:sliderModel});
                 sliderPaucke.render();
-                this.pluginsInit();
+                this.pluginsInit(this);
             },
             activarLupa: function(e, el) {
                 var target = el;

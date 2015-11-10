@@ -137,7 +137,7 @@ define([
                         });        
 
 
-                      var url = location.href; 
+                      /*var url = location.href; 
                       Backbone.history.navigate( '/modal',{ trigger:true, replace: false })
 
 
@@ -147,14 +147,19 @@ define([
                             }
                       };
 
-                      window.addEventListener("hashchange", cambiaHash, false);
+                      window.addEventListener("hashchange", cambiaHash, false);*/
+
+                        cambiaHash = function(event){                            
+                            $('#popupContent').popup('hide');
+                        };
+
+                        window.addEventListener("hashchange", cambiaHash, false);
                        
                     },
 
                     onclose: function() { 
                         $('#popupContent').removeClass('cartaSlide');
-                        window.removeEventListener("hashchange");
-                        Backbone.history.navigate( '/siglosback',{ trigger:true, replace: false })
+                        window.removeEventListener("hashchange", cambiaHash, false);
                     }
                 });              
 

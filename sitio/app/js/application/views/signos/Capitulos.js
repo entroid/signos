@@ -36,10 +36,16 @@ define([
                             este.activarLupa(e, el);
                         });
 
+                        cambiaHash = function(event){                            
+                            $('#popupContent').popup('hide');
+                        };
+
+                        window.addEventListener("hashchange", cambiaHash, false);
+
                     },
 
                     onclose: function() { 
-
+                        window.removeEventListener("hashchange", cambiaHash, false);
                     }
                 }); 
 
