@@ -1287,6 +1287,7 @@ Nav Overlay
   transform: scale(0.8);
   height: 100%;
   width:100%;
+  display:none;
 }
 
 #popupContent .lSPager.lSpg > li a{background-color: #fff;}
@@ -1740,6 +1741,12 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 
 
 /************************** SIGNOS **************************/
+#scrollbar{
+    height: 460px;
+}
+#scrollbar .mCSB_scrollTools_vertical{
+    right:-3%!important;
+}
 
 #signosBook .row{
     position:relative;
@@ -1973,7 +1980,7 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
     text-align: left;
 }
 .grillaSignos{
-    background-color:white;
+    background-color:white;    
 }
 .grillaSignos .imagen img{
     cursor:pointer;

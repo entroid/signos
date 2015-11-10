@@ -19,7 +19,7 @@ define([
                 var este = this;
                 $("#capitulos .ampliar a").bind("click",este.mostrarOculto)
                 $("#capitulos img").bind("click",este.lightbox);
-                 var popupContainer = '<div id="popupContent"></div>';
+                 var popupContainer = '<div id="popupContent"></div>';                
                 
                 
                 $('#popupContent').popup({
@@ -41,7 +41,20 @@ define([
                     onclose: function() { 
 
                     }
-                });   
+                }); 
+
+                if($('#scrollbar.mCustomScrollbar').length){
+                    console.log('entra');
+                    $("#scrollbar").mCustomScrollbar("update");
+                    
+                } else{
+                    $("#scrollbar").mCustomScrollbar({
+                            theme:"minimal-dark",
+                            scrollInertia:300,
+                    }); 
+                }
+
+
             },
 
             mostrarOculto:function(e){

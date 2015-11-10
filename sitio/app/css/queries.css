@@ -210,6 +210,14 @@
     border-bottom:none;
     padding: 5px;
   }
+
+  .grillaSignos{
+
+  }
+  #scrllbar{
+    height:auto;
+    overflow:auto;
+  }
 }
 
 @media only screen and (max-width: 800px) {

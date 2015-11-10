@@ -18,6 +18,12 @@
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <div class="imagen">    
                                         <img src="img/libros/signos/<%=obj.lowres%>" data-src="<%=obj.src%>" data-extract="<%=obj.extracto%>"/>
+
+                                        <!-- por si tiene segunda imagen -->
+                                        <% if (obj.src2) { %>
+                                            <img src="img/libros/signos/<%=obj.lowres2%>" data-src="<%=obj.src2%>"/>
+                                        <% } %>
+
                                         <div class="extracto">
                                             <%=obj.extracto%>
                                         </div>
