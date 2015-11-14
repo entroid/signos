@@ -1325,17 +1325,33 @@ Nav Overlay
 .lightSlider .naipes h3{color:white;}
 /***** lightSlider2  *****/
 #lightSlider2{
-        padding:100px;
+        padding:100px 0;
         box-sizing: unset;
         width:400px;
         min-height:275px;
+        
 }
 
-.cartas #lightSlider2 li{width: 390px;}
+#lightSlider2 li{
+    padding:0 60px;
+    position:relative;
+    height:100%;
+}
 
 .modalContent .cartas{
     background-color:black;
     position: relative;
+}
+
+#lightSlider2 li img{
+    max-width: 100%;
+}
+#lightSlider2 li h3{
+    bottom: -115px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 80%;
 }
 
 /*** Libros nav ***/

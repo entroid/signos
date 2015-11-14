@@ -261,17 +261,46 @@
         "titulo": "Naipes",
         "claseSlider": "naipes",
         "slide": [
-            "carta-1.jpg",
-            "carta-2.jpg",
-            "carta-3.jpg",
-            "carta-4.jpg",
-            "carta-5.jpg",
-            "carta-6.jpg",
-            "carta-7.jpg",
-            "carta-8.jpg",
-            "carta-9.jpg",
-            "carta-10.jpg",
-            "paucke-500_10.png"
+            {    
+                "img": "paucke-500_1.png",
+                "txt": "<span>Lechuza.</span> En mocoví covidaec. Atidite. Iquiquidiquic."
+            },
+            {
+                "img": "paucke-500_2.png",
+                "txt": "<span>Halcón paracuario.</span> En movoví epodegangarab."
+            },
+            {
+                "img": "paucke-500_3.png",
+                "txt": "<span>En español scharrata.</span> En mocoví cotivinic."
+            },
+            {
+                "img": "paucke-500_4.png",
+                "txt": "<span>Faisán paracuario. </span> En mocoví odagdag."
+            },
+            {
+                "img": "paucke-500_5.png",
+                "txt": "<span>En español cigüeña. </span> En mocoví etuque litil."
+            },
+            {
+                "img": "paucke-500_6.png",
+                "txt": "<span>En español loro. </span> En mocoví eclé."
+            },
+            {
+                "img": "paucke-500_7.png",
+                "txt": "<span>En español cardenal. </span> En mocoví dotozol."
+            },
+            {
+                "img": "paucke-500_8.png",
+                "txt": "<span>Paloma salvaje. </span> En español torcaza. En mocoví covinig. Tórtola. Covinigole. Pequeña palomita o un gorrión grande. En mocoví pidiole."
+            },
+            {
+                "img": "paucke-500_9.png",
+                "txt": "En mocoví depodac."
+            },
+            {
+                "img": "paucke-500_10.png",
+                "txt": "<span>Cuervo paracuario. </span> En mocoví dategzan."
+            }
         ],
         "type":"slide"
 

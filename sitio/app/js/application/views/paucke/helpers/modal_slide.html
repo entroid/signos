@@ -4,7 +4,11 @@
         <div class="sliderWrapper">
             <ul id="lightSlider2">
                 <%_.each(dataToShow.slide,function(elem,ind){%>
-                    <li class="img<%=ind%> alto"><img src="img/libros/paucke/cartas/<%=elem%>" alt=""></li>                
+                <%console.log(elem[ind])%>
+                    <li class="img<%=ind%> alto">
+                    	<img src="img/libros/paucke/cartas/<%=elem.img%>" alt="">
+                    	<h3><%=elem.txt%></h3>
+                    </li>                
                 <%})%>
             </ul>
         </div>

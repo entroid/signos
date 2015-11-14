@@ -80,9 +80,9 @@
     },
 
     "img06": {
-        "src": "SFE2siglos_15_1500.jpg",
+        "src": "SFE2siglos-61_1500.jpg",
 
-        "lowres": "SFE2siglos_15_500.jpg",
+        "lowres": "SFE2siglos-61_500.jpg",
 
         "data": "San Lorenzo, 1866",
 
@@ -340,7 +340,7 @@
 
         "lowres": "SFE2siglos-150_500.jpg",
 
-        "data": "Rosario, 1866",
+        "data": "Santa Fe, c. 1890",
 
         "autor": "José de Iriondo",
 
@@ -472,7 +472,7 @@
 
         "autor": "Ernesto H. Schlie",
 
-        "txt": "Estación del Ferrocarril de Santa Fe a las Colonias. Instituto de Arte Americano e Investigaciones Estéticas «Mario Buschiazzo».",
+        "txt": "«Colonia Emilia. Casa de Colono» Biblioteca Nacional",
 
         "coleccion": "Biblioteca Nacional",
 
@@ -480,9 +480,10 @@
     },
 
     "img31": {
-        "src": "SFE2siglos-120_1500.jpg",
+        
+        "src": "SFE2siglos-120-1_1500.jpg",
 
-        "lowres": "SFE2siglos-120_500.jpg",
+        "lowres": "SFE2siglos-120-1_500.jpg",
 
         "data": "Rafaela, c. 1890",
 
@@ -496,9 +497,9 @@
     },
 
     "img32": {
-        "src": "SFE2siglos-120-1_1500.jpg",
+        "src": "SFE2siglos-120_1500.jpg",
 
-        "lowres": "SFE2siglos-120-1_500.jpg",
+        "lowres": "SFE2siglos-120_500.jpg",
 
         "data": "San Agustín, c. 1890",
 
@@ -802,9 +803,9 @@
     },
 
     "img51": {
-        "src": "SFE2siglos-86_1500.jpg",
+        "src": "SFE2siglos-86-1_1500.jpg",
 
-        "lowres": "SFE2siglos-86_500.jpg",
+        "lowres": "SFE2siglos-86-1_500.jpg",
 
         "data": "Helvecia, 1900",
 
@@ -851,9 +852,9 @@
 
     "img54": {
  
-        "src": "SFE2siglos-72_1500.jpg",
+        "src": "SFE2siglos-137-1_1500.jpg",
 
-        "lowres": "SFE2siglos-72_500.jpg",
+        "lowres": "SFE2siglos-137-1_500.jpg",
 
         "data": "San Jorge, c. 1902",
 
@@ -960,7 +961,7 @@
 
         "txt": "Plazoleta del Puerto, actual plaza Colón. En sus jardines, la pirámide conmemorativa del descubrimiento de América que hoy se encuentra en la plaza España. A la derecha, en la calle Rivadavia desde Rioja a Salta, se destaca el edificio de la empresa naviera de Carlos Sarsotti.",
 
-        "coleccion": "Museo Histórico Provincial «Brigadier General Estanislao López»",
+        "coleccion": "Archivo general de la provincia de Santa Fe",
 
         "claseSlider": "alto",
 
@@ -1183,9 +1184,9 @@
 
     "img74": {
   
-        "src": "SFE2siglos-214_1500.jpg",
+        "src": "SFE2siglos-139_500.jpg",
 
-        "lowres": "SFE2siglos-214_500.jpg",
+        "lowres": "SFE2siglos-139_500.jpg",
 
         "data": "Progreso, 1909",
 
@@ -1283,9 +1284,9 @@
 
     "img80": {
  
-        "src": "SFE2siglos-211_1500.jpg",
+        "src": "SFE2siglos-134_1500.jpg",
 
-        "lowres": "SFE2siglos-211_500.jpg",
+        "lowres": "SFE2siglos-134_500.jpg",
 
         "data": "Ataliva, c. 1910",
 
