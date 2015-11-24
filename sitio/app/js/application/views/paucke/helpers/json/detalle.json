@@ -14,9 +14,9 @@
     },
 
     "img02": {
-        "src": "se-hacen-tatuar-la-cara-para-ser-bellos.jpg",
+        "src": "paucke-40_1500_web.jpg",
 
-        "lowres": "se-hacen-tatuar-la-cara-para-ser-bellos-low.jpg",
+        "lowres": "paucke-40_634_web.jpg",
 
         "titulo": "Se hacen tatuar la cara para ser bellos",
 
@@ -28,9 +28,9 @@
     },
 
     "img03": {
-        "src": "del-arbol-del-cual-hacen-sus-lanzas.jpg",
+        "src": "paucke-45_1500_web.jpg",
 
-        "lowres": "del-arbol-del-cual-hacen-sus-lanzas-low.jpg",
+        "lowres": "paucke-45_634_web.jpg",
 
         "titulo": "Del árbol del cual hacen sus lanzas",
 
@@ -42,9 +42,9 @@
     },
 
     "img04": {
-        "src": "un-delicioso-asadito-indio.jpg",
+        "src": "paucke-47_1500_web.jpg",
 
-        "lowres": "un-delicioso-asadito-indio-low.jpg",
+        "lowres": "paucke-47_634_web.jpg",
 
         "titulo": "Un delicioso asadito indio",
 
@@ -56,9 +56,9 @@
     },
 
     "img05": {
-        "src": "sus-ceremonias-durante-el-beber-en-exceso.jpg",
+        "src": "paucke-49_1500_web.jpg",
 
-        "lowres": "sus-ceremonias-durante-el-beber-en-exceso-low.jpg",
+        "lowres": "paucke-49_634_web.jpg",
 
         "titulo": "Sus ceremonias durante el beber en exceso",
 
@@ -70,9 +70,9 @@
     },
 
     "img06": {
-        "src": "deshacen-la-choza.jpg",
+        "src": "paucke-51_1500_web.jpg",
 
-        "lowres": "deshacen-la-choza-low.jpg",
+        "lowres": "paucke-51_640_web.jpg",
 
         "titulo": "Deshacen la choza",
 
@@ -84,9 +84,9 @@
     },
 
     "img07": {
-        "src": "combate-entre-indios-salvajes-y-los-mios.jpg",
+        "src": "paucke-54_1500_web.jpg",
 
-        "lowres": "combate-entre-indios-salvajes-y-los-mios-low.jpg",
+        "lowres": "paucke-54_640_web.jpg",
 
         "titulo": "Combate entre indios salvajes y los míos",
 
@@ -98,9 +98,9 @@
     },
 
     "img08": {
-        "src": "de-que-modo-pesca-el-tigre.jpg",
+        "src": "paucke-55_1500_web.jpg",
 
-        "lowres": "de-que-modo-pesca-el-tigre-low.jpg",
+        "lowres": "paucke-55_640_web.jpg",
 
         "titulo": "De qué modo pesca el tigre",
 
@@ -112,9 +112,9 @@
     },
 
     "img09": {
-        "src": "su-fruta.jpg",
+        "src": "paucke-80_1500_web.jpg",
 
-        "lowres": "su-fruta-low.jpg",
+        "lowres": "paucke-80_640_web.jpg",
 
         "titulo": "Su fruta",
 
@@ -126,9 +126,9 @@
     },
 
     "img10": {
-        "src": "un-cocodrilo-sin-cabeza-se-arrastra-de-nuevo-a-las-aguas.jpg",
+        "src": "paucke-92_1500_web.jpg",
 
-        "lowres": "un-cocodrilo-sin-cabeza-se-arrastra-de-nuevo-a-las-aguas-low.jpg",
+        "lowres": "paucke-92_640_web.jpg",
 
         "titulo": "Un cocodrilo sin cabeza se arrastra de nuevo al aguas",
 
@@ -140,9 +140,9 @@
     },
 
     "img11": {
-        "src": "abundancia-de-patos-y-aves.jpg",
+        "src": "paucke-100_1500_web.jpg",
 
-        "lowres": "abundancia-de-patos-y-aves-low.jpg",
+        "lowres": "paucke-100_640_web.jpg",
 
         "titulo": "Abundancia de patos y aves",
 
@@ -154,9 +154,9 @@
     },
 
     "img12": {
-        "src": "como-se-les-prende-con-lazos.jpg",
+        "src": "paucke-104_1500_web.jpg",
 
-        "lowres": "como-se-les-prende-con-lazos-low.jpg",
+        "lowres": "paucke-104_640_web.jpg",
 
         "titulo": "Cómo se les prende con lazos",
 
@@ -168,9 +168,9 @@
     },
 
     "img13": {
-        "src": "el-peje-rey.jpg",
+        "src": "paucke-57_1500_web.jpg",
 
-        "lowres": "el-peje-rey-low.jpg",
+        "lowres": "paucke-57_640_web.jpg",
 
         "titulo": "El peje rey",
 
@@ -182,9 +182,9 @@
     },
 
     "img14": {
-        "src": "caza-a-los-puercos-silvestres.jpg",
+        "src": "paucke-110_1500_web.jpg",
 
-        "lowres": "caza-a-los-puercos-silvestres-low.jpg",
+        "lowres": "paucke-110_640_web.jpg",
 
         "titulo": "Caza a los puercos silvestres",
 
@@ -196,23 +196,9 @@
     },
 
     "img15": {
-        "src": "no-necesitan-ninguna-otra-provision.jpg",
+        "src": "paucke-142_1000_web.jpg",
 
-        "lowres": "no-necesitan-ninguna-otra-provision-low.jpg",
-
-        "titulo": "No necesitan ninguna otra provisión",
-
-        "claseSlider": "ancho",
-
-        "traduccion": "De cómo los indios sacan a hacha y retiran de los árboles la miel.",
-
-        "fragmento": "Mientras el indio donde quiera que vaya encuentra siempre y come si no presa montesa pero a lo menos miel, cuernitos de chivos, raíces de una cierta clase de los árboles, frutas del monte, hasta víboras, cocodrilos, lagartos y otra semejante asquerosidad hedionda ¡más! hasta las hojas de los árboles."
-    },
-
-    "img16": {
-        "src": "vista-de-san-javier.jpg",
-
-        "lowres": "vista-de-san-javier-low.jpg",
+        "lowres": "paucke-142_2500_web.jpg",
 
         "titulo": "Vista de San Javier",
 
@@ -224,10 +210,24 @@
         "type":"panoramica"
     },
 
-    "img17": {
-        "src": "indios-se-arrojan-al-agua.jpg",
+    "img16": {
+        "src": "paucke-118_1500_web.jpg",
 
-        "lowres": "indios-se-arrojan-al-agua-low.jpg",
+        "lowres": "paucke-118_640_web.jpg",
+
+        "titulo": "No necesitan ninguna otra provisión",
+
+        "claseSlider": "ancho",
+
+        "traduccion": "De cómo los indios sacan a hacha y retiran de los árboles la miel.",
+
+        "fragmento": "Mientras el indio donde quiera que vaya encuentra siempre y come si no presa montesa pero a lo menos miel, cuernitos de chivos, raíces de una cierta clase de los árboles, frutas del monte, hasta víboras, cocodrilos, lagartos y otra semejante asquerosidad hedionda ¡más! hasta las hojas de los árboles."
+    },    
+
+    "img17": {
+        "src": "paucke-147_1000_web.jpg",
+
+        "lowres": "paucke-147_1700_web.jpg",
 
         "titulo": "Indios se arrojan al agua",
 
@@ -241,9 +241,9 @@
     },
 
     "img18": {
-        "src": "indio-para-la-guerra.jpg",
+        "src": "paucke-156_1400_web.jpg",
 
-        "lowres": "indio-para-la-guerra-low.jpg",
+        "lowres": "paucke-156_640_web.jpg",
 
         "titulo": "Indio para la guerra",
 

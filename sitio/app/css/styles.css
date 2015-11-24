@@ -1317,6 +1317,10 @@ Nav Overlay
     z-index: 10;
 }
 
+#popupContent .cerrar-Btn span:before, #popupContent .cerrar-Btn span:after{
+    background-color:white;
+}
+
 /* Grilla */
 .grilla .hoverContainer{cursor: pointer; position: relative; margin-bottom: 40px;}
 .grilla .hoverContainer img{width: 100%;}
