@@ -1317,7 +1317,7 @@ Nav Overlay
     z-index: 10;
 }
 
-#popupContent .cerrar-Btn span:before, #popupContent .cerrar-Btn span:after{
+.cartas .cerrar-Btn span:before, .cartas .cerrar-Btn span:after{
     background-color:white;
 }
 
@@ -1414,7 +1414,7 @@ menu li {cursor:pointer;}
 }
 .modalContent h1{margin-top:0;}
 .modalContent .content-1 p{font-size:1.1em;}
-.modalContent .content-1 img{width:100%;}
+.modalContent .content-1 img{max-width:100%;width:auto;}
 .modalContent.modalsignos .content-1 img{width:100%;}
 .cartas .modalContent .content-1 img{width: 397px;}
 .cartas .sliderWrapper {max-width: 580px;}
@@ -1559,7 +1559,8 @@ menu li {cursor:pointer;}
 }
 
 /*** tooltip ***/
-.ttCont{position:relative;}
+.ttCont{position:relative;text-align: center;}
+.ttCont > div:first-child{text-align: center }
 .alone .ttCont{width: 639px; margin: 0 auto;}
 
 .tips{
