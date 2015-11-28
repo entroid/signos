@@ -70,7 +70,7 @@ define([
 
                 $(element).parents('.ampliar').find('.transitions-fast').toggleClass("hide");
                 
-                $(element).html(text == "<span>[+]</span> Ver más páginas" ? "<span>[-]</span> Ocultar páginas" : "<span>[+]</span> Ver más páginas");
+                $(element).html(text == "Ver [+]" ? "Ver [-]" : "Ver [+]");
             },
 
             lightbox: function (e) {

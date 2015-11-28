@@ -138,7 +138,7 @@
 				}
 				
 				// lens wrapping div to attach target lens and hi-res image correctly
-				$image.wrap("<div id='mlens_wrapper_" + instance + "' />");
+				$image.wrap("<div id='mlens_wrapper_" + instance + "' class='mlens-you-fucker' />");
 				$imageWrapper = $image.parent();
 				$imageWrapper.css({"width": $image.css('width') });
 				

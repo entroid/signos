@@ -87,7 +87,9 @@ define([
                     });   
                     $(hitosBtn).click(function(){
                         $('#hitos-menu').toggleClass('mobileHidden')
-                    });             
+                    });    
+
+                    $('body').on('contextmenu', 'img', function(e){ return false; });         
                     
                 }); 
 

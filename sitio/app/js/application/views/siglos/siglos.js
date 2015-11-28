@@ -57,6 +57,8 @@ define([
                     $(".hoverContainer img").mouseup(function (){
                             $(this).preventDefault;
                     });
+
+                    $('body').on('contextmenu', 'img', function(e){ return false; });
                     
                 }); 
             },
@@ -68,7 +70,7 @@ define([
 
                 $("#lightSlider img").load(function(){
                     currentimg++;
-                    if(currentimg==totalimg){
+                    if(currentimg== 1){
 
                          $("#lightSlider").lightSlider({
                                 item: 2,
@@ -97,6 +99,8 @@ define([
                                     }
                                 }]
                             });
+                    } else {
+                        return
                     }
 
                     

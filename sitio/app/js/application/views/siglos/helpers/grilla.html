@@ -1,14 +1,68 @@
 <div id="grilla" class="grilla imgs">
     <div class='row'>
-    <%counter=0%>
-    <!--<%console.log(jsonData)%>-->
-    <%_.each(jsonData,function(elem,ind){%>
-        <%if(counter%5 == 0){%><%if(counter != 0){%></div><%}%><div class="col-md-3 col-sm-3 col-12-xs"> <%}%>
+        <% var counter=0,counter1=0,counter2=0,counter3=0, list1=[], list2=[], list3=[], list4=[];%>
+
+        <div class="col-md-3 col-sm-3 col-12-xs">
+            <%_.each( jsonData, function( elem,ind ){
+                if (counter%4 == 0){%>
+                    <div class="hoverContainer">
+                        <img src="img/libros/siglos/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+                       <h3 class="transitions-fast"><%=elem.data%> <span><%=elem.autor%></span></h3>
+                    </div>
+                <%}
+                counter++;
+            })%>
+        </div>
+        <div class="col-md-3 col-sm-3 col-12-xs">
+            <%_.each( jsonData, function( elem,ind ){
+                if ((counter1-1)%4 == 0 || counter == 1){%>
+                    <div class="hoverContainer">
+                        <img src="img/libros/siglos/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+                       <h3 class="transitions-fast"><%=elem.data%> <span><%=elem.autor%></span></h3>
+                    </div>
+                <%}
+                counter1++;
+            })%>
+        </div>
+        <div class="col-md-3 col-sm-3 col-12-xs">
+            <%_.each( jsonData, function( elem,ind ){
+                if ((counter2-2)%4 == 0 || counter == 2){%>
+                    <div class="hoverContainer">
+                        <img src="img/libros/siglos/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+                       <h3 class="transitions-fast"><%=elem.data%> <span><%=elem.autor%></span></h3>
+                    </div>
+                <%}
+                counter2++;
+            })%>
+        </div>
+        <div class="col-md-3 col-sm-3 col-12-xs">
+            <%_.each( jsonData, function( elem,ind ){
+                if ((counter3-3)%4 == 0 || counter == 3){%>
+                    <div class="hoverContainer">
+                        <img src="img/libros/siglos/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
+                       <h3 class="transitions-fast"><%=elem.data%> <span><%=elem.autor%></span></h3>
+                    </div>
+                <%}
+                counter3++;
+            })%>
+        </div>
+        <!--<%counter=0%>-->
+        
+        <!--<%_.each( jsonData, function( elem,ind ){%>
+            <%if( counter%4 == 0 ){%>
+                <%if( counter != 0 ){%>
+                    </div>
+                <%}%>
+                
+                <div class="col-md-3 col-sm-3 col-12-xs"> 
+            <%}%>
+
             <div class="hoverContainer">
                 <img src="img/libros/siglos/<%=elem.lowres%>" data-src="<%=ind%>" alt="">
                <h3 class="transitions-fast"><%=elem.data%> <span><%=elem.autor%></span></h3>
             </div>
-    <%counter++%>
-    <%})%>
+
+            <%counter++%>
+        <%})%>-->
     </div>
 </div>

@@ -58,6 +58,8 @@ define([
                     $(".hoverContainer img").mouseup(function (){
                             $(this).preventDefault;
                     });
+
+                    $('body').on('contextmenu', 'img', function(e){ return false; });
                     
                 }); 
             },
@@ -70,7 +72,7 @@ define([
 
                 $("#lightSlider img").load(function(){
                     currentimg++;
-                    if(currentimg==totalimg){                       
+                    if(currentimg== 1){                       
 
                         $("#lightSlider").lightSlider({
                                 item: 2,
@@ -102,6 +104,8 @@ define([
                         
                         $(".fa-spinner.fa-pulse").css("opacity", "0");
                         $(".sliderWrapper").css({"height": "auto", "opacity":"1"});                       
+                    } else {
+                        return
                     }
                 })
 
@@ -140,8 +144,11 @@ define([
 
                     // activar/desactivar zoom
                         $('.traduccion-btn').tipr().click(function(e){
-                            var el = $(this)
-                            este.activarLupa(e, el);
+                            var el = $(this);
+                            var cartas = $(el).siblings('div').hasClass('lSSlideOuter');
+                            var img = cartas ? $("#lightSlider2 li img") : $(".modalContent .content-1 img");
+
+                            este.activarLupa(e, el, img);
                         }); 
 
                         cambiaHash = function(event){                            
@@ -262,10 +269,10 @@ define([
                 sliderPaucke.render();
                 this.pluginsInit(this);
             },
-            activarLupa: function(e, el) {
+            activarLupa: function(e, el, img) {
                 var target = el;
                 var trad = $('.tips');
-                var img = $(".modalContent .content-1 img");
+                
 
                 if($(target).hasClass('active')) {
                     $(target).removeClass('active').attr('data-tip','Activar lupa');                   
@@ -274,15 +281,17 @@ define([
                 } else {
                     $(target).addClass('active').attr('data-tip','Desactivar lupa');
                                        
-                    
-                    $(img).mlens({
-                        imgSrc: $(".modalContent .content-1 img").attr("src"),       // path of the hi-res version of the image
-                        lensShape: "circle",                // shape of the lens (circle/square)
-                        lensSize: 180,                  // size of the lens (in px)
-                        borderSize: 1,                  // size of the lens border (in px)
-                        borderColor: "#fff",                // color of the lens border (#hex)
-                        zoomLevel: 1.1                                   // zoom level multiplicator (number)
-                    });
+                    $(img).each(function(){     
+                        console.log(this)
+                        $(this).mlens({
+                            imgSrc: $(this).attr("src"),       // path of the hi-res version of the image
+                            lensShape: "circle",                // shape of the lens (circle/square)
+                            lensSize: 180,                  // size of the lens (in px)
+                            borderSize: 1,                  // size of the lens border (in px)
+                            borderColor: "#fff",                // color of the lens border (#hex)
+                            zoomLevel: 1.1                                   // zoom level multiplicator (number)
+                        });
+                    });                    
                 }
             },
 
