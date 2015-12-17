@@ -2059,3 +2059,24 @@ span.tips i{/*max-width:800px;*/text-align:left; display:block;margin: -100% aut
 #main-menu .capsBtn{
     display:none;
 }
+
+.imgsW{
+    position: absolute;
+    left: -1000%;
+}
+.imgsW .hoverContainer{
+    height: 400px;
+    float: left;
+}
+
+.imgsW img{
+    height: 90%;
+}
+
+.imgsW h3{
+    max-width: 283px;
+}
+
+.naipes{
+    width: 300px; 
+}

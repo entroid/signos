@@ -65,46 +65,58 @@ define([
 
             pluginsInit: function (este) {
 
-                var totalimg = $("#lightSlider img").size();
+                var imgsToLoad = $("#lightSlider .alto .hoverContainer");
+                var totalimg = $(imgsToLoad).size();                
                 var currentimg = 0;
 
-                $("#lightSlider img").load(function(){
-                    currentimg++;
-                    if(currentimg== 1){
+                $('<div class="imgsW"></div>').prependTo( 'body');
+                $(imgsToLoad).clone().appendTo( '.imgsW');
 
-                         $("#lightSlider").lightSlider({
-                                item: 2,
-                                autoWidth: true,
-                                slideMargin:60,
-                                mode: 'slide',
-                                easing: 'linear',
-                                speed: '400',
-                                keyPress: true,
-                                controls: true,
-                                /*enableDrag: false,*/
-                                prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                                nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
-                                onSliderLoad: function(){
-                                    $(".fa-spinner.fa-pulse").css("opacity", "0");
-                                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                                },
+                $( '.imgsW .hoverContainer').each(function(i, imga){
+                    este.getImageSize(imga, function(width, height){
+                        var imagen = $(imga).find('img').attr('data-src');
 
-                                responsive : [{
-                                    breakpoint:768,
-                                    settings: {
-                                        item:1,
-                                        autoWidth: false,
-                                        slideMove:1,
-                                        slideMargin:30,
-                                    }
-                                }]
-                            });
-                    } else {
-                        return
-                    }
-
+                        $('#lightSlider .alto img[data-src=' + imagen + ']').parents('.hoverContainer').width(width);                        
+                    });
                     
-                })
+                    currentimg++
+                });
+
+                if(currentimg === totalimg){
+                    $("#lightSlider").lightSlider({
+                        item: 2,
+                        autoWidth: true,
+                        slideMargin:60,
+                        mode: 'slide',
+                        easing: 'linear',
+                        speed: '400',
+                        keyPress: true,
+                        controls: true,
+                        /*enableDrag: false,*/
+                        prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
+                        nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
+                        onSliderLoad: function(){
+                            $(".fa-spinner.fa-pulse").css("opacity", "0");
+                            $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+                        },
+
+                        responsive : [{
+                            breakpoint:768,
+                            settings: {
+                                item:1,
+                                autoWidth: false,
+                                slideMove:1,
+                                slideMargin:30,
+                            }
+                        }]
+                    });
+                } else {
+                    return
+                }                    
+
+                /*$("#lightSlider img").load(function(){                    
+                    
+                })*/
 
                 var popupContainer = '<div id="popupContent"></div>';
                 $('body').append(popupContainer);
@@ -300,6 +312,41 @@ define([
                     menu = $(el).siblings('nav');
 
                 $(menu).toggleClass('active');
+            },
+
+            getImageSize: function (img, callback){
+                img = $(img);
+
+                
+                var wait = setInterval(function(){        
+                    var w = img.width(),
+                        h = img.height();
+
+                    if(w && h){
+                        done(w, h);
+                    }
+                }, 0);
+
+                var onLoad;
+                img.on('load', onLoad = function(){
+
+                    console.log(img.width())
+                    done(img.width(), img.height());
+                });
+
+
+                var isDone = false;
+                function done(){
+                    if(isDone){
+                        return;
+                    }
+                    isDone = true;
+
+                    clearInterval(wait);
+                    img.off('load', onLoad);
+
+                    callback.apply(this, arguments);
+                }
             }
 
         });

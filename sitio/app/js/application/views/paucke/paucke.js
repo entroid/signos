@@ -66,48 +66,68 @@ define([
 
             pluginsInit: function (este) {
 
-                //$("#lightSlider").hide();
-                var totalimg = $("#lightSlider img").size();
+                var imgsToLoad = $("#lightSlider .alto .hoverContainer");
+                var totalimg = $(imgsToLoad).size();                
                 var currentimg = 0;
+                //var count = 0, lesto = 0;
 
-                $("#lightSlider img").load(function(){
-                    currentimg++;
-                    if(currentimg== 1){                       
+                /*$('<div class="imgsW"></div>').prependTo( 'body');
+                $(imgsToLoad).clone().appendTo( '.imgsW');
+
+                $( '.imgsW .hoverContainer img').each(function(i, img){
+                    este.getImageSize(img, function(width, height){
+                        var imagen = $(img).attr('data-src');   
+                        $('#lightSlider .alto img[data-src=' + imagen + ']').width(width);
+                    });
+                    
+                    currentimg++
+
+                    if(currentimg === totalimg){
+                        lesto = 1;
+                    }                    
+                });*/
+
+                $('#lightSlider .alto img').load(function(){
+
+                    if(++currentimg === totalimg){
 
                         $("#lightSlider").lightSlider({
-                                item: 2,
-                                autoWidth: true,
-                                slideMargin:60,
-                                mode: 'slide',
-                                easing: 'linear',
-                                speed: '400',
-                                keyPress: true,
-                                controls: true,
-                                /*enableDrag: false,*/
-                                prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
-                                nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
-                                onSliderLoad: function(){
-                                    $(".fa-spinner.fa-pulse").css("opacity", "0");
-                                    $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
-                                },
+                            item: 2,
+                            autoWidth: true,
+                            slideMargin:60,
+                            mode: 'slide',
+                            easing: 'linear',
+                            speed: '400',
+                            keyPress: true,
+                            controls: true,
+                            /*enableDrag: false,*/
+                            prevHtml: '<span class="prevBtn"><i class="fa fa-chevron-left transitions-fast"></i></span>',
+                            nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right transitions-fast"></i></span>',
+                            onSliderLoad: function(){
+                                $(".fa-spinner.fa-pulse").css("opacity", "0");
+                                $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+                            },
 
-                                responsive : [{
-                                    breakpoint:768,
-                                    settings: {
-                                        item:1,
-                                        autoWidth: false,
-                                        slideMove:1,
-                                        slideMargin:30,
-                                    }
-                                }]
+                            responsive : [{
+                                breakpoint:768,
+                                settings: {
+                                    item:1,
+                                    autoWidth: false,
+                                    slideMove:1,
+                                    slideMargin:30,
+                                }
+                            }]
                         });
                         
-                        $(".fa-spinner.fa-pulse").css("opacity", "0");
-                        $(".sliderWrapper").css({"height": "auto", "opacity":"1"});                       
+                        //$(".fa-spinner.fa-pulse").css("opacity", "0");
+                        //$(".sliderWrapper").css({"height": "auto", "opacity":"1"});                       
                     } else {
                         return
                     }
+
+                    
                 })
+
 
                 var popupContainer = '<div id="popupContent"></div>';
                 $('body').append(popupContainer);
@@ -281,8 +301,7 @@ define([
                 } else {
                     $(target).addClass('active').attr('data-tip','Desactivar lupa');
                                        
-                    $(img).each(function(){     
-                        console.log(this)
+                    $(img).each(function(){  
                         $(this).mlens({
                             imgSrc: $(this).attr("src"),       // path of the hi-res version of the image
                             lensShape: "circle",                // shape of the lens (circle/square)
@@ -300,6 +319,39 @@ define([
                     menu = $(el).siblings('nav');
 
                 $(menu).toggleClass('active');
+            },
+
+            getImageSize: function (img, callback){
+                img = $(img);
+
+                var wait = setInterval(function(){    
+                    var w = img.width(),
+                        h = img.height();
+
+                    if(w && h){
+                        done(w, h);
+                    }
+                }, 0);
+
+                var onLoad;
+
+                $(img).on('load', onLoad = function(){
+                    done(img.width(), img.height());
+                });
+
+
+                var isDone = false;
+                function done(){
+                    if(isDone){
+                        return;
+                    }
+                    isDone = true;
+
+                    clearInterval(wait);
+                    img.off('load', onLoad);
+
+                    callback.apply(this, arguments);
+                }
             }
 
         });
