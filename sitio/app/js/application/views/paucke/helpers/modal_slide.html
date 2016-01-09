@@ -6,7 +6,7 @@
                 <%_.each(dataToShow.slide,function(elem,ind){%>
                 <%console.log(elem[ind])%>
                     <li class="img<%=ind%> alto">
-                    	<img src="img/libros/paucke/cartas/<%=elem.img%>" alt="">
+                    	<img data-high="img/libros/paucke/cartas/<%=elem.img%>" src="img/libros/paucke/cartas/<%=elem.lowr%>" alt="">
                     	<h3><%=elem.txt%></h3>
                     </li>                
                 <%})%>
@@ -16,6 +16,8 @@
                 <i class="fa fa-search-plus"></i>
                 <!--<span class="ttip transitions-fast">Traducción</span>-->
             </span>
+
+            <i class="fa fa-spinner fa-pulse transitions-mid"></i>
         </div>
 
     </div>

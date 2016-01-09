@@ -36,9 +36,9 @@ define([
             render: function() {
                 $(this.el).html(_.template(siglosTemplate));
                 /* _(this.lightsliderInit).defer();*/
-               
-                this.jsonData ;
                 var este = this;
+                este.jsonData;
+
                 $.ajax({
                     
                     dataType: "json",
@@ -50,8 +50,12 @@ define([
                     var SliderModel = Backbone.Model.extend({});
                     var sliderModel = new SliderModel({jsonData:data})
                     var sliderSiglos = new SliderSiglos({model:sliderModel});
+
                     sliderSiglos.render();
+
+                    console.log(este.jsonData)
                     este.pluginsInit(este);
+
                     $('.tooltipBtn').tipr();
 
                     $(".hoverContainer img").mouseup(function (){
@@ -69,18 +73,22 @@ define([
                 var totalimg = $(imgsToLoad).size();                
                 var currentimg = 0;
 
-                $('<div class="imgsW"></div>').prependTo( 'body');
-                $(imgsToLoad).clone().appendTo( '.imgsW');
+                if(!$('.imgsW').length){
+                    $('<div class="imgsW"></div>').prependTo( 'body');
+                    $(imgsToLoad).clone().appendTo( '.imgsW');
 
-                $( '.imgsW .hoverContainer').each(function(i, imga){
-                    este.getImageSize(imga, function(width, height){
-                        var imagen = $(imga).find('img').attr('data-src');
+                    $( '.imgsW .hoverContainer').each(function(i, imga){
+                        este.getImageSize(imga, function(width, height){
+                            var imagen = $(imga).find('img').attr('data-src');
 
-                        $('#lightSlider .alto img[data-src=' + imagen + ']').parents('.hoverContainer').width(width);                        
+                            $('#lightSlider .alto img[data-src=' + imagen + ']').parents('.hoverContainer').width(width);                        
+                        });
+                        
+                        currentimg++
                     });
-                    
-                    currentimg++
-                });
+                } else {
+                    currentimg = totalimg;
+                }
 
                 if(currentimg === totalimg){
                     $("#lightSlider").lightSlider({
@@ -213,6 +221,10 @@ define([
                 }
 
                 $('.modalContent').removeClass('hide');
+
+                $('.modalContent img').load(function () {
+                    $(".fa-spinner.fa-pulse").css("display", "none");
+                })
                 
             },
 
@@ -270,6 +282,7 @@ define([
                 
             },
             openSlider: function(e) {
+                var este= this;
                 this.cerrar(e, $('#txt'));
 
                 $('.navBook .sliderBtn').addClass('inactive').fadeOut('100');
@@ -280,7 +293,7 @@ define([
                 var sliderModel = new SliderModel({jsonData:jsonData})
                 var sliderSiglos = new SliderSiglos({model:sliderModel});
                 sliderSiglos.render();
-                this.pluginsInit();
+                this.pluginsInit(este);                    
             },
 
             activarLupa: function(e, el) {
@@ -330,7 +343,7 @@ define([
                 var onLoad;
                 img.on('load', onLoad = function(){
 
-                    console.log(img.width())
+                    //console.log(img.width())
                     done(img.width(), img.height());
                 });
 

@@ -157,6 +157,8 @@ define([
                                 nextHtml: '<span class="nextBtn"><i class="fa fa-chevron-right"></i></span>'
                             });
                             $(".sliderWrapper").css({"height": "auto", "opacity":"1"});
+
+                            
                         }
                         
                     //zoom
@@ -219,6 +221,10 @@ define([
                 }
 
                 $('.modalContent').removeClass('hide');
+
+                $('.modalContent img').load(function () {
+                    $(".fa-spinner.fa-pulse").css("display", "none");
+                })
                 
             },
 

@@ -263,43 +263,53 @@
         "slide": [
             {    
                 "img": "paucke-1500_1.png",
-                "txt": "<span>Lechuza.</span> En mocoví covidaec. Atidite. Iquiquidiquic."
+                "txt": "<span>Lechuza.</span> En mocoví covidaec. Atidite. Iquiquidiquic.",
+                "lowr":"paucke-500_1.png"
             },
             {
                 "img": "paucke-1500_2.png",
-                "txt": "<span>Halcón paracuario.</span> En movoví epodegangarab."
+                "txt": "<span>Halcón paracuario.</span> En movoví epodegangarab.",
+                "lowr":"paucke-500_2.png"
             },
             {
                 "img": "paucke-1500_3.png",
-                "txt": "<span>En español scharrata.</span> En mocoví cotivinic."
+                "txt": "<span>En español scharrata.</span> En mocoví cotivinic.",
+                "lowr":"paucke-500_3.png"
             },
             {
                 "img": "paucke-1500_4.png",
-                "txt": "<span>Faisán paracuario. </span> En mocoví odagdag."
+                "txt": "<span>Faisán paracuario. </span> En mocoví odagdag.",
+                "lowr":"paucke-500_4.png"
             },
             {
                 "img": "paucke-1500_5.png",
-                "txt": "<span>En español cigüeña. </span> En mocoví etuque litil."
+                "txt": "<span>En español cigüeña. </span> En mocoví etuque litil.",
+                "lowr":"paucke-500_5.png"
             },
             {
                 "img": "paucke-1500_6.png",
-                "txt": "<span>En español loro. </span> En mocoví eclé."
+                "txt": "<span>En español loro. </span> En mocoví eclé.",
+                "lowr":"paucke-500_6.png"
             },
             {
                 "img": "paucke-1500_7.png",
-                "txt": "<span>En español cardenal. </span> En mocoví dotozol."
+                "txt": "<span>En español cardenal. </span> En mocoví dotozol.",
+                "lowr":"paucke-500_7.png"
             },
             {
                 "img": "paucke-1500_8.png",
-                "txt": "<span>Paloma salvaje. </span> En español torcaza. En mocoví covinig. Tórtola. Covinigole. Pequeña palomita o un gorrión grande. En mocoví pidiole."
+                "txt": "<span>Paloma salvaje. </span> En español torcaza. En mocoví covinig. Tórtola. Covinigole. Pequeña palomita o un gorrión grande. En mocoví pidiole.",
+                "lowr":"paucke-500_8.png"
             },
             {
                 "img": "paucke-1500_9.png",
-                "txt": "En mocoví depodac."
+                "txt": "En mocoví depodac.",
+                "lowr":"paucke-500_9.png"
             },
             {
                 "img": "paucke-1500_10.png",
-                "txt": "<span>Cuervo paracuario. </span> En mocoví dategzan."
+                "txt": "<span>Cuervo paracuario. </span> En mocoví dategzan.",
+                "lowr":"paucke-500_10.png"
             }
         ],
         "type":"slide"

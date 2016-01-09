@@ -19,6 +19,10 @@ define([
                     $('.hero .signos img').attr('src', 'img/bkg/home-bckg-signos.jpg');
                 }
 
+                $('.hero .paucke img').load(function () {
+                    $(".fa-spinner.fa-pulse").css("display", "none");
+                })
+
             /***************** Slide me (background slide) ******************/
                 $('.hero').slideme({
                     autoslide : true,
@@ -41,6 +45,8 @@ define([
                             console.log('leave');
                             $('.hero').slideme('play');
                         })
+
+
                     }, //init slide
                     onEndCallback : this.txtEffect, //end animaton
                     onStartCallback : this.hideTxt, //before start animation

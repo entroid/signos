@@ -99,7 +99,7 @@ define([
                     var elem = $(this);
                     var waypoints = $(elem).waypoint({
                           handler: function(direction) {
-                            console.log(elem);
+                            //console.log(elem);
                              este.abrirImagen2(elem);
                           },
                           context: '#txt .txtSiglos',
