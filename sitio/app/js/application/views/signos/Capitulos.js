@@ -51,13 +51,13 @@ define([
 
                 if($('#scrollbar.mCustomScrollbar').length){
                     console.log('entra');
-                    $("#scrollbar").mCustomScrollbar("update");
+                    $("#scrollbar").mCustomScrollbar("update").mCustomScrollbar("scrollTo",$('.grillaSignos'));
                     
                 } else{
                     $("#scrollbar").mCustomScrollbar({
                             theme:"minimal-dark",
                             scrollInertia:300,
-                    }); 
+                    }).mCustomScrollbar("scrollTo",$('.grillaSignos')); 
                 }
 
 

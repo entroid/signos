@@ -170,7 +170,7 @@ define([
                             var cartas = $(el).siblings('div').hasClass('lSSlideOuter');
                             var img = cartas ? $("#lightSlider2 li img") : $(".modalContent .content-1 img");
 
-                            este.activarLupa(e, el, img);
+                            //este.activarLupa(e, el, img);
                         }); 
 
                         cambiaHash = function(event){                            
