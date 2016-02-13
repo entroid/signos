@@ -24,7 +24,7 @@
 
         "autor": "George H. Alfeld",
 
-        "txt": "«Vista del puerto y del río». Dársena y muelle de Aarón Castellanos. En el fondo, las islas del Paraná frente a la ciudad. Álbum Recuerdos del Rosario de Santa Fe.",
+        "txt": "«Vista del puerto y del río». Dársena y muelle de Aarón Castellanos. En el fondo, las islas del Paraná frente a la ciudad. Álbum <i>Recuerdos del Rosario de Santa Fe</i>.",
 
         "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
 
@@ -40,7 +40,7 @@
 
         "autor": "George H. Alfeld",
 
-        "txt": "«Tienda de la Bola de Oro, calle del Puerto». Hoy calles San Martín y San Luis. Álbum Recuerdos del Rosario de Santa Fe.",
+        "txt": "«Tienda de la Bola de Oro, calle del Puerto». Hoy calles San Martín y San Luis. Álbum <i>Recuerdos del Rosario de Santa Fe</i>.",
 
         "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
 
@@ -56,7 +56,7 @@
 
         "autor": "George H. Alfeld",
 
-        "txt": "«Plaza 25 de Mayo». La columna central, rodeada por la representación de las cuatros estaciones, fue construida por Demetrio Isola en homenaje a la Constitución de 1853. En el fondo, la iglesia Catedral. Álbum Recuerdos del Rosario de Santa Fe.",
+        "txt": "«Plaza 25 de Mayo». La columna central, rodeada por la representación de las cuatros estaciones, fue construida por Demetrio Isola en homenaje a la Constitución de 1853. En el fondo, la iglesia Catedral. Álbum <i>Recuerdos del Rosario de Santa Fe</i>.",
 
         "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
 
@@ -72,7 +72,7 @@
 
         "autor": "George H. Alfeld",
 
-        "txt": "«Ferrocarril Central». Trabajadores en las instalaciones y talleres del Ferrocarril Central Argentino. Álbum Recuerdos del Rosario de Santa Fe.",
+        "txt": "«Ferrocarril Central». Trabajadores en las instalaciones y talleres del Ferrocarril Central Argentino. Álbum <i>Recuerdos del Rosario de Santa Fe</i>.",
 
         "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
 
@@ -88,7 +88,7 @@
 
         "autor": "George H. Alfeld",
 
-        "txt": "«El Convento de San Lorenzo». En rigor, Convento de San Carlos Borromeo. José de San Martín, al mando del Regimiento de Granaderos a Caballo, utilizó sus muros para emboscar al ejército español en el célebre Combate de San Lorenzo, en 1813. Álbum Recuerdos del Rosario de Santa Fe.",
+        "txt": "«El Convento de San Lorenzo». En rigor, Convento de San Carlos Borromeo. José de San Martín, al mando del Regimiento de Granaderos a Caballo, utilizó sus muros para emboscar al ejército español en el célebre Combate de San Lorenzo, en 1813. Álbum <i>Recuerdos del Rosario de Santa Fe</i>.",
 
         "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
 
@@ -104,7 +104,7 @@
 
         "autor": "George H. Alfeld",
 
-        "txt": "«Puente sobre el río Carcarañá». Fotografía de la primera locomotora que recorrió el ramal del Ferrocarril Central Argentino que unió a Rosario con Cañada de Gómez, inaugurado el 1° de mayo de ese mismo año. Álbum Recuerdos del Rosario de Santa Fe.",
+        "txt": "«Puente sobre el río Carcarañá». Fotografía de la primera locomotora que recorrió el ramal del Ferrocarril Central Argentino que unió a Rosario con Cañada de Gómez, inaugurado el 1° de mayo de ese mismo año. Álbum <i>Recuerdos del Rosario de Santa Fe</i>.",
 
         "coleccion": "Museo Histórico Provincial «Dr. Julio Marc»",
 
@@ -186,7 +186,7 @@
 
         "txt": "Ingenio azucarero Manolo, el primero instalado en el Gran Chaco en 1884, propiedad del empresario de origen peruano Manuel Ocampo Samanes, quien fundó y organizó Colonia Ocampo a partir de 1878.",
 
-        "coleccion": "Álbum Vistas de la Colonia Ocampo, Gran Chaco. Colección Matteo Goretti",
+        "coleccion": "Álbum <i>Vistas de la Colonia Ocampo, Gran Chaco</i>. Colección Matteo Goretti",
 
         "claseSlider": "ancho"
     },
@@ -202,7 +202,7 @@
 
         "txt": "Obraje de leña. A lo lejos, entre los árboles, la chimenea del ingenio azucarero Manolo. Esta foto es una de las más antiguas que se conocen sobre el trabajo en montes y cañaverales del norte santafesino.",
 
-        "coleccion": "Álbum Vistas de la Colonia Ocampo, Gran Chaco. Colección Matteo Goretti",
+        "coleccion": "Álbum <i>Vistas de la Colonia Ocampo, Gran Chaco</i>. Colección Matteo Goretti",
 
         "claseSlider": "ancho"
     },
@@ -216,7 +216,7 @@
 
         "autor": "Félix Corte",
 
-        "txt": "Estación del ferrocarril de la empresa maderera que explotaba los montes de la zona de Colonia Ocampo; a la izquierda y al fondo, la chimenea del ingenio azucarero Manolo. Álbum El Chaco Santafesino.",
+        "txt": "Estación del ferrocarril de la empresa maderera que explotaba los montes de la zona de Colonia Ocampo; a la izquierda y al fondo, la chimenea del ingenio azucarero Manolo. Álbum <i>El Chaco Santafesino</i>.",
 
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facul­tad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
@@ -248,7 +248,7 @@
 
         "autor": "Félix Corte",
 
-        "txt": "Astillero sobre el río Tapenagá. En el bote, el doctor Gabriel Carrasco, director y comisario del Censo de Santa Fe, junto a su hijo Eudoro. Vista tomada durante el viaje que realizaron para instalar las comisiones censales, hacer observaciones y recolectar datos. Álbum El Chaco Santafesino.",
+        "txt": "Astillero sobre el río Tapenagá. En el bote, el doctor Gabriel Carrasco, director y comisario del Censo de Santa Fe, junto a su hijo Eudoro. Vista tomada durante el viaje que realizaron para instalar las comisiones censales, hacer observaciones y recolectar datos. Álbum <i>El Chaco Santafesino</i>.",
 
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
@@ -264,7 +264,7 @@
 
         "autor": "Félix Corte",
 
-        "txt": "Iglesia en la plaza central, construida en 1884 a petición del entonces coronel Manuel Obligado, fundador de la ciudad. El edificio se demolió en 1926 para levantar la actual Catedral, pero se conserva una fracción en el solar donde hoy fun­ciona la librería parroquial. Álbum El Chaco Santafesino.",
+        "txt": "Iglesia en la plaza central, construida en 1884 a petición del entonces coronel Manuel Obligado, fundador de la ciudad. El edificio se demolió en 1926 para levantar la actual Catedral, pero se conserva una fracción en el solar donde hoy fun­ciona la librería parroquial. Álbum <i>El Chaco Santafesino</i>.",
 
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
@@ -280,7 +280,7 @@
 
         "autor": "Félix Corte",
 
-        "txt": "Iglesia en la festividad de San José, patrono de Colonia Avellaneda. Álbum El Chaco Santafesino.",
+        "txt": "Iglesia en la festividad de San José, patrono de Colonia Avellaneda. Álbum <i>El Chaco Santafesino</i>.",
 
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
@@ -296,7 +296,7 @@
 
         "autor": "Félix Corte",
 
-        "txt": "Tolderías de aborígenes tobas reducidos, pertenecientes a la tribu del cacique Juan Chará. Álbum El Chaco Santafesino.",
+        "txt": "Tolderías de aborígenes tobas reducidos, pertenecientes a la tribu del cacique Juan Chará. Álbum <i>El Chaco Santafesino</i>.",
 
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
@@ -312,7 +312,7 @@
 
         "autor": "Augusto Lutsch",
 
-        "txt": "Primera Exposición y Feria Industrial de Santa Fe. Noria fabricada en la ciudad por el taller de Carlos Cerana. Álbum 1ª Exposición y Feria Industrial de Santa Fe. 1º de septiembre de 1887.",
+        "txt": "Primera Exposición y Feria Industrial de Santa Fe. Noria fabricada en la ciudad por el taller de Carlos Cerana. Álbum <i>1ª Exposición y Feria Industrial de Santa Fe</i>. 1º de septiembre de 1887.",
 
         "coleccion": "Biblioteca «Pablo Vrillaud» de la Facultad de Ciencias Jurídicas y Sociales de la Universidad Nacional del Litoral",
 
@@ -328,7 +328,7 @@
 
         "autor": "Ernesto H. Schlie",
 
-        "txt": "«Casa Israelita». Es una de las fotos conocidas más antigua de inmigrantes judíos en nuestro país. Las personas fotogra­fiadas serían integrantes de la familia Guibert, llegados al lugar junto a la familia Leibovitz a fines de 1888. Monigotes era entonces apenas un paraje con un aserradero y una pulpería. Al año siguiente arribó al país en el vapor «Wesser» el grueso de los futuros colonos fundadores de Moisés Ville. Álbum Vistas de la provincia de Santa Fe.",
+        "txt": "«Casa Israelita». Es una de las fotos conocidas más antigua de inmigrantes judíos en nuestro país. Las personas fotogra­fiadas serían integrantes de la familia Guibert, llegados al lugar junto a la familia Leibovitz a fines de 1888. Monigotes era entonces apenas un paraje con un aserradero y una pulpería. Al año siguiente arribó al país en el vapor «Wesser» el grueso de los futuros colonos fundadores de Moisés Ville. Álbum <i>Vistas de la provincia de Santa Fe</i>.",
 
         "coleccion": "Museo de la Coloniza­ción de Esperanza",
 
@@ -491,7 +491,7 @@
 
         "txt": "«Fundición y taller mecánico de Fanti y Cía.».",
 
-        "coleccion": "Álbum Vistas de la provincia de Santa Fe. Museo de la Colonización de Esperanza",
+        "coleccion": "Álbum <i>Vistas de la provincia de Santa Fe</i>. Museo de la Colonización de Esperanza",
 
         "claseSlider": "ancho"
     },
@@ -893,7 +893,7 @@
 
         "autor": "Fernando Paillet",
 
-        "txt": "Los hermanos Garnica, a la izquierda, esperancinos, fueron capturados por «indios del Gran Chaco». El que tiene la guitarra estuvo cautivo 21 años, el otro, 17. En 1904 volvieron a Colonia Esperanza. Los acompañó un compadre indio, a la derecha con la lanza, que vivió con ellos un tiempo y regresó a su tribu. Datos extraídos del libro La ciudad de Esperanza del padre Pedro Grenón.",
+        "txt": "Los hermanos Garnica, a la izquierda, esperancinos, fueron capturados por «indios del Gran Chaco». El que tiene la guitarra estuvo cautivo 21 años, el otro, 17. En 1904 volvieron a Colonia Esperanza. Los acompañó un compadre indio, a la derecha con la lanza, que vivió con ellos un tiempo y regresó a su tribu. Datos extraídos del libro <i>La ciudad de Esperanza</i> del padre Pedro Grenón.",
 
         "coleccion": "Museo de la Colonización de Esperanza",
 
