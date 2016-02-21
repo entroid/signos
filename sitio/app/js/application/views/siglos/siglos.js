@@ -75,14 +75,14 @@ define([
 
                 if(!$('.imgsW').length){
                     $('<div class="imgsW"></div>').prependTo( 'body');
-                    $(imgsToLoad).clone().appendTo( '.imgsW');
+                    $(imgsToLoad).appendTo( '.imgsW');
 
                     $( '.imgsW .hoverContainer').each(function(i, imga){
-                        este.getImageSize(imga, function(width, height){
+                        /*este.getImageSize(imga, function(width, height){
                             var imagen = $(imga).find('img').attr('data-src');
 
                             $('#lightSlider .alto img[data-src=' + imagen + ']').parents('.hoverContainer').width(width);                        
-                        });
+                        });*/
                         
                         currentimg++
                     });

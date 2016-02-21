@@ -167,10 +167,11 @@ define([
                     // activar/desactivar zoom
                         $('.traduccion-btn').tipr().click(function(e){
                             var el = $(this);
-                            var cartas = $(el).siblings('div').hasClass('lSSlideOuter');
-                            var img = cartas ? $("#lightSlider2 li img") : $(".modalContent .content-1 img");
+                            //var cartas = $(el).siblings('div').hasClass('lSSlideOuter');
+                            var cartas = "";
+                            var img = cartas ? $("#lightSlider2 li img") : $(".modalContent .content-1 .ttCont img");
 
-                            //este.activarLupa(e, el, img);
+                            este.activarLupa(e, el, img);
                         }); 
 
                         cambiaHash = function(event){                            
@@ -314,7 +315,7 @@ define([
                             lensSize: 180,                  // size of the lens (in px)
                             borderSize: 1,                  // size of the lens border (in px)
                             borderColor: "#fff",                // color of the lens border (#hex)
-                            zoomLevel: 1.1                                   // zoom level multiplicator (number)
+                            zoomLevel: 1.05                                   // zoom level multiplicator (number)
                         });
                     });                    
                 }
